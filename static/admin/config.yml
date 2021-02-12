@@ -76,19 +76,20 @@ collections:
         name: "contactpl"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "contact-page"}
-          - {label: "Polski", name: "pl", widget: object, fields: [
-            {label: "Tytuł", name: "title", widget: "string"},
-            {label: Adres, name: address, widget: object, fields: [{label: Ulica i nr domu, name: ulica, widget: string}, {label: Miasto, name: miasto, widget: string}, {label: Kod pocztowy, name: kod_pocztowy, widget: string}]},
-            {label: Kontakt, name: contact, widget: object, fields: [{label: Telefon 1, name: telefon1, widget: string}, {label: Telefon 2, name: telefon2, widget: string}, {label: Email, name: mail, widget: string}]},
-            {label: Godziny otwarcia, name: open_hours, widget: object, fields: [{label: Dzień pierwszy, name: day_start, widget: string}, {label: Dzień ostatni, name: day_end, widget: string}, {label: Godzina otwarcia, name: hour_start, widget: string}, {label: Godzina zamknięcia, name: hour_end, widget: string}] }
-          ]}
+          - {label: "Tytuł", name: "title", widget: "string"},
+          - {label: "Tytuł formularza", name: "subtitle", widget: "string"}
+          - {label: Adres, name: address, widget: object, fields: [{label: Ulica i nr domu, name: ulica, widget: string}, {label: Miasto, name: miasto, widget: string}, {label: Kod pocztowy, name: kod_pocztowy, widget: string}]},
+          - {label: Kontakt, name: contact, widget: object, fields: [{label: Telefon 1, name: telefon1, widget: string}, {label: Telefon 2, name: telefon2, widget: string}, {label: Email, name: mail, widget: string}]},
+          - {label: Godziny otwarcia, name: open_hours, widget: object, fields: [{label: Dzień pierwszy, name: day_start, widget: string}, {label: Dzień ostatni, name: day_end, widget: string}, {label: Godzina otwarcia, name: hour_start, widget: string}, {label: Godzina zamknięcia, name: hour_end, widget: string}] }
+          
       - file: "src/pages/contact/de.md"
         label: "Kontakt DE"
         name: "contactde"
         fields:
-          - {label: "Deutsh", name: "de", widget: object, fields: [
-            {label: "Tytuł", name: "title", widget: "string"},
-            {label: Adres, name: address, widget: object, fields: [{label: Ulica i nr domu, name: ulica, widget: string}, {label: Miasto, name: miasto, widget: string}, {label: Kod pocztowy, name: kod_pocztowy, widget: string}]},
-            {label: Kontakt, name: contact, widget: object, fields: [{label: Telefon 1, name: telefon1, widget: string}, {label: Telefon 2, name: telefon2, widget: string}, {label: Email, name: mail, widget: string}]},
-            {label: Godziny otwarcia, name: open_hours, widget: object, fields: [{label: Dzień pierwszy, name: day_start, widget: string}, {label: Dzień ostatni, name: day_end, widget: string}, {label: Godzina otwarcia, name: hour_start, widget: string}, {label: Godzina zamknięcia, name: hour_end, widget: string}] }
-          ]}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "contact-page"}
+          - {label: "Tytuł", name: "title", widget: "string"},
+          - {label: "Tytuł formularza", name: "subtitle", widget: "string"}
+          - {label: Adres, name: address, widget: object, fields: [{label: Ulica i nr domu, name: ulica, widget: string}, {label: Miasto, name: miasto, widget: string}, {label: Kod pocztowy, name: kod_pocztowy, widget: string}]},
+          - {label: Kontakt, name: contact, widget: object, fields: [{label: Telefon 1, name: telefon1, widget: string}, {label: Telefon 2, name: telefon2, widget: string}, {label: Email, name: mail, widget: string}]},
+          - {label: Godziny otwarcia, name: open_hours, widget: object, fields: [{label: Dzień pierwszy, name: day_start, widget: string}, {label: Dzień ostatni, name: day_end, widget: string}, {label: Godzina otwarcia, name: hour_start, widget: string}, {label: Godzina zamknięcia, name: hour_end, widget: string}] }
+          
