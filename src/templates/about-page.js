@@ -4,6 +4,9 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
+import { useIntl } from "gatsby-plugin-intl"
+
+
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
@@ -32,14 +35,28 @@ AboutPageTemplate.propTypes = {
 }
 
 const AboutPage = ({ data }) => {
-  const { markdownRemark: post } = data
+  //const { markdownRemark: post } = data
 
+  console.log(data)
+  const intl = useIntl()
+
+  // Raw query data
+  const posts = data.allMarkdownRemark.edges
+  console.log(posts)
+  // Filtering posts by locale
+  const filteredPosts = posts.filter(edge =>
+    edge.node.frontmatter.lang.includes(intl.locale)
+  )
+  console.log(filteredPosts)
+  const { node } = filteredPosts[0] // data.markdownRemark holds your post data
+  const { frontmatter, html } = node;
+  console.log(frontmatter)
   return (
     <Layout>
       <AboutPageTemplate
         contentComponent={HTMLContent}
-        title={post.frontmatter.title}
-        content={post.html}
+        title={frontmatter.title}
+        content={html}
       />
     </Layout>
   )
@@ -52,12 +69,19 @@ AboutPage.propTypes = {
 export default AboutPage
 
 export const aboutPageQuery = graphql`
-  query AboutPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      html
-      frontmatter {
-        title
+query MyQuery {
+  allMarkdownRemark(filter: {frontmatter: {path: {eq: "/onas"}}}) {
+    edges {
+      node {
+        frontmatter {
+          lang
+          title
+        }
+        html
       }
     }
   }
+}
+
+
 `
