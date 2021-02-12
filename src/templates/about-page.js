@@ -70,7 +70,7 @@ export default AboutPage
 
 export const aboutPageQuery = graphql`
 query MyQuery {
-  allMarkdownRemark(filter: {frontmatter: {path: {eq: "/onas"}}}) {
+  allMarkdownRemark(filter: {frontmatter: {path: {eq: "/o-nas"}}}) {
     edges {
       node {
         frontmatter {

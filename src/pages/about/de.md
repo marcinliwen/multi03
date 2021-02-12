@@ -1,6 +1,6 @@
 ---
 templateKey: 'about-page'
-path: /onas
+path: /o-nas
 lang: de
 title: Unsere Walues
 ---
