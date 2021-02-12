@@ -18,7 +18,6 @@ const Language = () => {
               onClick={() => changeLocale(language)}
               style={{
                 color: currentLocale === language ? `#F24C3D` : `black`,
-                margin: 10,
                 textDecoration: `underline`,
                 cursor: `pointer`,
               }}
