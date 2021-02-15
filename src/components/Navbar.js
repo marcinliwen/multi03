@@ -34,8 +34,12 @@ const Navbar = class extends React.Component {
       }
     )
   }
-
+  
+  
+  
   render() {
+  
+  const phone_number = "+48 664 478 788" 
     return (
       <nav
         className="navbar is-transparent"
@@ -74,6 +78,10 @@ const Navbar = class extends React.Component {
                 Kontakt
               </Link>
             </div>
+            <div className="navbar-end has-text-centered">
+              <Link className="navbar-item btn-border" to="/kontakt#gmap">Znajdź nas</Link>
+              <a className="navbar-item btn-border">{phone_number}</a>
+            </div>
               <LanguageSelect />
            
           </div>
@@ -84,3 +92,21 @@ const Navbar = class extends React.Component {
 }
 
 export default Navbar
+
+
+
+export const getNumberQuery = graphql`
+  query {
+    allMarkdownRemark(filter: { frontmatter: { path: { eq: "/kontakt" } } }) {
+      edges {
+        node {
+          frontmatter {
+            contact{
+                telefon1
+            }
+          }
+        }
+      }
+    }
+  }
+  `

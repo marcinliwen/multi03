@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
+import Img from "gatsby-image"
+
 
 import Layout from '../components/Layout'
 import Features from '../components/Features'
@@ -8,6 +10,7 @@ import BlogRoll from '../components/BlogRoll'
 
 export const IndexPageTemplate = ({
   image,
+  imghome,
   title,
   heading,
   subheading,
@@ -39,8 +42,6 @@ export const IndexPageTemplate = ({
         <h1
           className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
           style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
             backgroundColor: 'rgb(255, 68, 0)',
             color: 'white',
             lineHeight: '1',
@@ -52,8 +53,6 @@ export const IndexPageTemplate = ({
         <h3
           className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
           style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
             backgroundColor: 'rgb(255, 68, 0)',
             color: 'white',
             lineHeight: '1',
@@ -63,6 +62,7 @@ export const IndexPageTemplate = ({
           {subheading}
         </h3>
       </div>
+      <div><Img fluid={imghome}/></div>
     </div>
     <section className="section section--gradient">
       <div className="container">
@@ -127,12 +127,15 @@ IndexPageTemplate.propTypes = {
 }
 
 const IndexPage = ({ data }) => {
+  console.log(data.file.childImageSharp.fluid)
+
   const { frontmatter } = data.markdownRemark
 
   return (
     <Layout>
       <IndexPageTemplate
         image={frontmatter.image}
+        imghome={data.file.childImageSharp.fluid}
         title={frontmatter.title}
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
@@ -186,6 +189,13 @@ export const pageQuery = graphql`
           }
           heading
           description
+        }
+      }
+    }
+    file(relativePath: {eq: "curtains-6.png"}) {
+      childImageSharp {
+        fluid{
+          ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }

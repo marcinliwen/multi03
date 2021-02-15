@@ -6,6 +6,7 @@ const TARGET = "Obr. Pokoju 21, Gubin,Polska"
 
 const Gmap = ({ target }) => (
   <iframe
+    id="gmap"
     className="gmap"
     title="mapa dojazdu"
     style={{
