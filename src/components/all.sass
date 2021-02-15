@@ -7,8 +7,9 @@ $kaldi-red-invert: #fff
 
 $primary: $kaldi-red
 $primary-invert: $kaldi-red-invert
-$body-color: #23232A
-$black: #23232A
+$body-color: #2D2D2F
+$black: #2D2D2F
+$has-text-grey-dark: #2D2D2F
 
 .navbar .navbar-menu
   box-shadow:none !important
@@ -44,7 +45,7 @@ $black: #23232A
 
 .full-width-image
     width: 100vw
-    height: 400px
+    height: 100vh
     background-size: cover
     background-position: bottom
     display: flex
@@ -68,8 +69,7 @@ $black: #23232A
     -webkit-transition: all .15s ease
     transition: all .15s ease
 
-.btn-border
-  border: 1px solid #23232A
+
 .margin-top-0
   margin-top: 0 !important
 
@@ -124,13 +124,34 @@ $menu-label-color: $white-ter
   flex-basis: 35%;
   margin: 0 1.5em 0 0;
 
+.home-img
+    flex: 1;
+    position: absolute!important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
 
 @import "~bulma"
-
+.navbar-item
+  color: #2D2D2F
+a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-item.is-active
+  color: #D8C593
+  background: #2D2D2F!important
 .navbar-item img
   max-height: 3rem
-
+.navbar 
+  background-color: transparent;
+  position: absolute;
+  z-index: 30;
+  width: 100%;
+.navbar .container
+  background-color: #d9c693ad;
 // responsiveness
++desktop
+  .navbar
+    margin-top: 80px
 +tablet-only
   .blog-list-item .featured-thumbnail
     flex-basis: 50%;

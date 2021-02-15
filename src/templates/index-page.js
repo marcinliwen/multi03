@@ -21,48 +21,45 @@ export const IndexPageTemplate = ({
   <div>
     <div
       className="full-width-image margin-top-0"
-      style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-        backgroundPosition: `top left`,
-        backgroundAttachment: `fixed`,
-      }}
     >
-      <div
-        style={{
-          display: 'flex',
-          height: '150px',
-          lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'left',
-          flexDirection: 'column',
-        }}
-      >
-        <h1
-          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
+      <div className="container">
+        <div
           style={{
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'white',
+            display: 'flex',
+            height: '200px',
             lineHeight: '1',
-            padding: '0.25em',
+            justifyContent: 'space-around',
+            alignItems: 'left',
+            flexDirection: 'column',
+            position: 'relative',
+            zIndex: '1'
           }}
         >
-          {title}
-        </h1>
-        <h3
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
-          style={{
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >
-          {subheading}
-        </h3>
+          <h1
+            className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
+            style={{
+              backgroundColor: '#d9c693ad',
+              color: '#2D2D2F',
+              lineHeight: '1',
+              padding: '0.25em',
+            }}
+          >
+            {title}
+          </h1>
+          <h3
+            className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
+            style={{
+              backgroundColor: '#d9c693ad',
+              color: '#2D2D2F',
+              lineHeight: '1',
+              padding: '0.25em',
+            }}
+          >
+            {subheading}
+          </h3>
+        </div>
       </div>
-      <div><Img fluid={imghome}/></div>
+      <Img className="home-img" fluid={imghome}/>
     </div>
     <section className="section section--gradient">
       <div className="container">
@@ -192,9 +189,9 @@ export const pageQuery = graphql`
         }
       }
     }
-    file(relativePath: {eq: "curtains-6.png"}) {
+    file(relativePath: {eq: "curtains-8.jpg"}) {
       childImageSharp {
-        fluid{
+        fluid(maxWidth: 1920, quality: 100){
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }

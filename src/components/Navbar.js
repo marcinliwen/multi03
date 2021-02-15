@@ -42,7 +42,7 @@ const Navbar = class extends React.Component {
   const phone_number = "+48 664 478 788" 
     return (
       <nav
-        className="navbar is-transparent"
+        className="navbar"
         role="navigation"
         aria-label="main-navigation"
       >
@@ -79,8 +79,8 @@ const Navbar = class extends React.Component {
               </Link>
             </div>
             <div className="navbar-end has-text-centered">
-              <Link className="navbar-item btn-border" to="/kontakt#gmap">Znajdź nas</Link>
-              <a className="navbar-item btn-border">{phone_number}</a>
+              <Link className="navbar-item" to="/kontakt#gmap">Znajdź nas</Link>
+              <a className="navbar-item">{phone_number}</a>
             </div>
               <LanguageSelect />
            
