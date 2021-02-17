@@ -26,7 +26,7 @@ export const IndexPageTemplate = ({
         <div
           style={{
             display: 'flex',
-            height: '200px',
+            width: 'mac-content',
             lineHeight: '1',
             justifyContent: 'space-around',
             alignItems: 'left',
@@ -57,6 +57,11 @@ export const IndexPageTemplate = ({
           >
             {subheading}
           </h3>
+       
+        </div>
+        <div className="content home" style={{position:'relative', zIndex:'1'}}>
+          <Link to='/kontakt' className="btn" style={{flex:'1', width: 'max-content', backgroundColor:'transparent', margin:'15px 25px 0 0'}}>Zamów wycenę</Link>
+          <Link to='/products' className="btn" style={{flex:'1', width: 'max-content',  backgroundColor:'transparent', margin:'15px 25px 0 0'}}>Poznaj produkty</Link>
         </div>
       </div>
       <Img className="home-img" fluid={imghome}/>
@@ -74,6 +79,7 @@ export const IndexPageTemplate = ({
                   <div className="tile">
                     <h3 className="subtitle">{mainpitch.description}</h3>
                   </div>
+               
                 </div>
                 <div className="columns">
                   <div className="column is-12">

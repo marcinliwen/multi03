@@ -69,6 +69,10 @@ $has-text-grey-dark: #2D2D2F
     -webkit-transition: all .15s ease
     transition: all .15s ease
 
+.content.home .btn:hover 
+    background-color: #D8C593!important;
+    color: #2d2d2f;
+    border-color: #2D2D2F!important;
 
 .margin-top-0
   margin-top: 0 !important
@@ -146,12 +150,10 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   position: absolute;
   z-index: 30;
   width: 100%;
-.navbar .container
+.navbar
   background-color: #d9c693ad;
 // responsiveness
-+desktop
-  .navbar
-    margin-top: 80px
+
 +tablet-only
   .blog-list-item .featured-thumbnail
     flex-basis: 50%;

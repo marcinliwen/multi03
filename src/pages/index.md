@@ -1,10 +1,10 @@
 ---
 templateKey: index-page
 path: /
-title: Studio Dekoracji Okien
+title: KAJA deco
 image: /img/home-jumbotron.jpg
 heading: Great coffee with a conscience
-subheading: Support sustainable farming while enjoying a cup
+subheading: Studio Dekoracji Okien
 mainpitch:
   title: Why Kaldi
   description: >
