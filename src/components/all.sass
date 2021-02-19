@@ -47,16 +47,17 @@ $color-white: #fff
   justify-content: center
   align-items: center
 .full-width-image.margin-top-0:after 
-    content: "";
-    background: #ffffff61;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
-
+  content: ""
+  background: #ffffff61
+  position: absolute
+  top: 10px
+  left: 10px
+  right: 10px
+  bottom: 10px
+.header-section.home h1, .header-section.home h3
+  font-weight: 100
 .full-width-image
-    width: 100vw
+    width: 100%
     height: 100vh     
     background-size: cover
     background-position: bottom
@@ -93,6 +94,14 @@ $color-white: #fff
 .navbar-item .icon
   color: $primary
 // Override for use of svg's from https://simpleicons.org/
+.navbar .container 
+  border-bottom: 2px solid #2d2d2f
+.lang-select a:hover 
+  background-color: #2D2D2F!important
+  color: #D9C693!important
+.lang-select a:hover:active 
+  background: #2d2d2fde !important
+
 .icon svg
   width: 1.5rem
   height: 1.5rem
@@ -153,13 +162,16 @@ $menu-label-color: $white-ter
     padding: 8px;
     min-height: 120px;
     color: #D9C693!important;
+
 @import "~bulma"
+
 .navbar-item
   color: #2D2D2F
+  font-weight: 500
 a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-item.is-active
   color: $primary
   background: #2D2D2F!important
-.navbar-item img
+.navbar-brand img
   max-height: 3rem
 .navbar 
   background-color: transparent;
@@ -174,6 +186,13 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   .is-size-10-widescreen 
     font-size: 10rem !important;
   
++tablet
+  .navbar > .container .navbar-brand, .container > .navbar .navbar-brand
+    margin-left: 0
+  .navbar > .container .navbar-menu, .container > .navbar .navbar-menu
+    margin-right: 0
+  .navbar-brand
+    flex: 2
 
 +tablet-only
   .blog-list-item .featured-thumbnail

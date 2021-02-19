@@ -9,7 +9,7 @@ const languageName = {
 const Language = () => {
     
   return (
-    <div style={{marginRight: "8px"}} className="navbar-end has-text-centered">
+    <div style={{}} className="navbar-end has-text-centered lang-select">
       <IntlContextConsumer >
         {({ languages, language: currentLocale }) =>
           languages.map((language, index) => (
@@ -17,9 +17,14 @@ const Language = () => {
               key={language}
               onClick={() => changeLocale(language)}
               style={{
-                color: currentLocale === language ? `#F24C3D` : `black`,
-                textDecoration: `underline`,
+                color: currentLocale === language ? `#D9C693` : `#2D2D2F`,
+                backgroundColor: currentLocale === language ? `#2D2D2F` : ``,
+                textDecoration: `none`,
                 cursor: `pointer`,
+                width:`48px`,
+                textAlign: `center`,
+                display: `flex`,
+                justifyContent: `center`
               }}
               className="navbar-item"
             >

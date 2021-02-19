@@ -22,7 +22,7 @@ export const IndexPageTemplate = ({
     <div
       className="full-width-image margin-top-0"
     >
-      <div className="container">
+      <div className="container header-section home">
         <div className="is-flex-direction-column is-flex">
         <div
           style={{
@@ -38,7 +38,7 @@ export const IndexPageTemplate = ({
           
         >
           <h1
-            className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-10-widescreen"
+            className="is-size-3-mobile is-size-2-tablet is-size-10-widescreen"
             style={{
               color: '#2D2D2F',
               lineHeight: '1',
@@ -48,11 +48,11 @@ export const IndexPageTemplate = ({
             {title}
           </h1>
           <h3
-            className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-1-widescreen"
+            className="is-size-5-mobile is-size-5-tablet is-size-1-widescreen"
             style={{
               color: '#2D2D2F',
               lineHeight: '1',
-              padding: '0.25em 0 0 0',
+              padding: '0.75em 0 0 0',
             }}
           >
             {subheading}
