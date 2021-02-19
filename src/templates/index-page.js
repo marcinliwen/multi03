@@ -23,10 +23,11 @@ export const IndexPageTemplate = ({
       className="full-width-image margin-top-0"
     >
       <div className="container">
+        <div className="is-flex-direction-column is-flex">
         <div
           style={{
             display: 'flex',
-            width: 'mac-content',
+            width: 'max-content',
             lineHeight: '1',
             justifyContent: 'space-around',
             alignItems: 'left',
@@ -34,25 +35,24 @@ export const IndexPageTemplate = ({
             position: 'relative',
             zIndex: '1'
           }}
+          
         >
           <h1
-            className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
+            className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-10-widescreen"
             style={{
-              backgroundColor: '#d9c693ad',
               color: '#2D2D2F',
               lineHeight: '1',
-              padding: '0.25em',
+              padding: '0.25em 0 0',
             }}
           >
             {title}
           </h1>
           <h3
-            className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
+            className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-1-widescreen"
             style={{
-              backgroundColor: '#d9c693ad',
               color: '#2D2D2F',
               lineHeight: '1',
-              padding: '0.25em',
+              padding: '0.25em 0 0 0',
             }}
           >
             {subheading}
@@ -60,27 +60,65 @@ export const IndexPageTemplate = ({
        
         </div>
         <div className="content home" style={{position:'relative', zIndex:'1'}}>
-          <Link to='/kontakt' className="btn" style={{flex:'1', width: 'max-content', backgroundColor:'transparent', margin:'15px 25px 0 0'}}>Zamów wycenę</Link>
-          <Link to='/products' className="btn" style={{flex:'1', width: 'max-content',  backgroundColor:'transparent', margin:'15px 25px 0 0'}}>Poznaj produkty</Link>
+          <Link to='/kontakt' className="btn" style={{flex:'1', width: 'max-content', margin:'0px 25px 0 0'}}>Zamów darmową wycenę</Link>
+          <Link to='/products' className="btn" style={{flex:'1', width: 'max-content', margin:'0px 25px 0 0'}}>Poznaj nasze usługi</Link>
         </div>
+        </div>
+        
       </div>
       <Img className="home-img" fluid={imghome}/>
     </div>
+    <section className="section bg-invert">
+              {/*<div className="container">               
+                <div className="content">
+                  <div className="tile">
+                    <h2 className="title">{mainpitch.title}</h2>
+                  </div>
+                  <div className="tile">
+                    <h3 className="subtitle">{mainpitch.description}</h3>
+                  </div>
+               </div>
+          </div>*/}
+                <div className="container">
+                <div class="columns features"> 
+                  <div class="column has-text-centered">
+                    <div>
+                    <p class="title">Materiał</p>
+
+                      <p class="heading">koystamy z materiałów najlepszej jakości</p>
+                    </div>
+                  </div>
+                  <div class="column has-text-centered">
+                    <div>
+                    <p class="title">Ręczna robota</p>
+
+                      <p class="heading">Wszystkie usługi wykonujemy ręcznie w naszej pracowni</p>
+                    </div>
+                  </div>
+                  <div class="column has-text-centered">
+                    <div>
+                    <p class="title">Wymiar</p>
+
+                      <p class="heading">Dopasowujemy firany do okien</p>
+                    </div>
+                  </div>
+                  <div class="column has-text-centered">
+                    <div>
+                    <p class="title">Czas</p>
+
+                      <p class="heading">Dbamy aby Firany były gotowe w umówionym terminie</p>
+                    </div>
+                  </div>
+                </div>
+                </div>
+               
+    </section>
     <section className="section section--gradient">
       <div className="container">
         <div className="section">
           <div className="columns">
             <div className="column is-10 is-offset-1">
               <div className="content">
-                <div className="content">
-                  <div className="tile">
-                    <h1 className="title">{mainpitch.title}</h1>
-                  </div>
-                  <div className="tile">
-                    <h3 className="subtitle">{mainpitch.description}</h3>
-                  </div>
-               
-                </div>
                 <div className="columns">
                   <div className="column is-12">
                     <h3 className="has-text-weight-semibold is-size-2">

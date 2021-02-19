@@ -2,18 +2,22 @@
 
 // Config vars
 // Kaldi logo brand color: #FD461E
-$kaldi-red: #D8C593
-$kaldi-red-invert: #fff
+$kaldi-red: #D9C693
+$kaldi-red-invert: #004633
 
 $primary: $kaldi-red
 $primary-invert: $kaldi-red-invert
 $body-color: #2D2D2F
 $black: #2D2D2F
 $has-text-grey-dark: #2D2D2F
-
+$color-white: #fff
+.bg-invert
+  background-color: $primary-invert
+  color: $color-white
 .navbar .navbar-menu
   box-shadow:none !important
-
+.bg-invert h1, .bg-invert h3
+   color: $color-white
 .content .taglist
   list-style: none
   margin-bottom: 0
@@ -42,33 +46,42 @@ $has-text-grey-dark: #2D2D2F
   display: flex
   justify-content: center
   align-items: center
+.full-width-image.margin-top-0:after 
+    content: "";
+    background: #ffffff61;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
 
 .full-width-image
     width: 100vw
-    height: 100vh
+    height: 100vh     
     background-size: cover
     background-position: bottom
     display: flex
     justify-content: center
     align-items: center
+    position: relative
 
 .btn
-    display: inline-block
-    padding: 12px 16px 10px
-    font-size: 18px
-    font-size: 1rem
-    line-height: 1.25
-    background-color: #fff
-    border-radius: .25rem
-    text-decoration: none
-    font-weight: 700
-    color: #D8C593
-    text-align: center
-    -webkit-box-shadow: inset 0 0 0 2px #D8C593
-    box-shadow: inset 0 0 0 2px #D8C593
-    -webkit-transition: all .15s ease
-    transition: all .15s ease
-
+    display: inline-block;
+    padding: 12px 16px 10px;
+    font-size: 18px;
+    font-size: 1rem;
+    line-height: 1.25;
+    background-color: #fff;
+    border-radius: .25rem;
+    text-decoration: none;
+    font-weight: 700;
+    color: #D8C593;
+    text-align: center;
+    transition: all .15s ease;
+    background: #2D2D2F;
+    border-radius: 0;
+.content.home
+  margin-top: 50px
 .content.home .btn:hover 
     background-color: #D8C593!important;
     color: #2d2d2f;
@@ -136,12 +149,15 @@ $menu-label-color: $white-ter
     width: 100%;
     height: 100%;
     z-index: 0;
-
+.features .column > div
+    padding: 8px;
+    min-height: 120px;
+    color: #D9C693!important;
 @import "~bulma"
 .navbar-item
   color: #2D2D2F
 a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-item.is-active
-  color: #D8C593
+  color: $primary
   background: #2D2D2F!important
 .navbar-item img
   max-height: 3rem
@@ -150,9 +166,14 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   position: absolute;
   z-index: 30;
   width: 100%;
-.navbar
-  background-color: #d9c693ad;
+  top: 50px
+.bg-invert h2, .bg-invert h3, .bg-invert .title
+   color: $color-white
 // responsiveness
++widescreen
+  .is-size-10-widescreen 
+    font-size: 10rem !important;
+  
 
 +tablet-only
   .blog-list-item .featured-thumbnail

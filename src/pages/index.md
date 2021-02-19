@@ -1,12 +1,12 @@
 ---
 templateKey: index-page
 path: /
-title: KAJA deco
+title: Kaja dekor
 image: /img/home-jumbotron.jpg
 heading: Great coffee with a conscience
 subheading: Studio Dekoracji Okien
 mainpitch:
-  title: Why Kaldi
+  title: Dla czego my?
   description: >
     Kaldi is the coffee store for everyone who believes that great coffee
     shouldn't just taste good, it should do good too. We source all of our beans
