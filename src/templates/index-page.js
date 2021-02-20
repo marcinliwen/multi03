@@ -42,7 +42,7 @@ export const IndexPageTemplate = ({
           
         >
           <h1
-            className="is-size-3-mobile is-size-2-tablet is-size-10-widescreen"
+            className="is-size-2-tablet is-size-10-widescreen"
             style={{
               color: '#2D2D2F',
               lineHeight: '1',
@@ -52,7 +52,7 @@ export const IndexPageTemplate = ({
             {title}
           </h1>
           <h3
-            className="is-size-5-mobile is-size-5-tablet is-size-1-widescreen"
+            className="is-size-3-mobile is-size-5-tablet is-size-1-widescreen"
             style={{
               color: '#2D2D2F',
               lineHeight: '1',

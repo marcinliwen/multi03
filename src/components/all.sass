@@ -70,6 +70,12 @@ $color-white: #fff
     justify-content: center
     align-items: center
     position: relative
+    padding: 25px
+.logo 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
 
 .btn
     display: inline-block;
@@ -99,8 +105,7 @@ $color-white: #fff
 .navbar-item .icon
   color: $primary
 // Override for use of svg's from https://simpleicons.org/
-.navbar .container 
-  border-bottom: 2px solid #2d2d2f
+
 .lang-select a:hover 
   background-color: #2D2D2F!important
   color: #D9C693!important
@@ -184,7 +189,8 @@ $menu-label-color: $white-ter
 .features .column 
   max-width: 350px;
   padding: 10px 35px;
-
+.header-section.home h1
+  font-size: 4rem !important
 @import "~bulma"
 
 .navbar-item
@@ -199,8 +205,10 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   background-color: transparent;
   position: absolute;
   z-index: 30;
-  width: 100%;
-  top: 50px
+  margin: 0 10px;
+  width: calc(100% - 20px);
+  top: 10px;
+ 
 .bg-invert h2, .bg-invert h3, .bg-invert .title
    color: $color-white
 // responsiveness
@@ -215,6 +223,12 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
     margin-right: 0
   .navbar-brand
     flex: 2
+  .header-section.home h1 
+    font-size: 8rem !important;
+  .header-section.home h3
+    font-size: 4rem !important;
+
+
 
 +tablet-only
   .blog-list-item .featured-thumbnail
@@ -227,3 +241,11 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
     text-align: center;
     max-width: 70%;
     margin: 0 0 1em;
++desktop
+  .navbar
+    width: 100%;
+    top: 50px
+  .full-width-image
+    padding: 0
+  .navbar .container 
+    border-bottom: 2px solid #2d2d2f
