@@ -7,6 +7,10 @@ import Img from "gatsby-image"
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
+import Material_Icon from '../assets/material.svg'
+import Chat_Icon from '../assets/chat.svg'
+import Needle_Icon from '../assets/needle.svg'
+
 
 export const IndexPageTemplate = ({
   image,
@@ -68,7 +72,7 @@ export const IndexPageTemplate = ({
       </div>
       <Img className="home-img" fluid={imghome}/>
     </div>
-    <section className="section bg-invert">
+    <section className="section bg-primary">
               {/*<div className="container">               
                 <div className="content">
                   <div className="tile">
@@ -83,30 +87,20 @@ export const IndexPageTemplate = ({
                 <div class="columns features"> 
                   <div class="column has-text-centered">
                     <div>
-                    <p class="title">Materiał</p>
-
+                    <div class="title"><Material_Icon height="42px" width="42px" fill="#D9C693"/></div>
                       <p class="heading">koystamy z materiałów najlepszej jakości</p>
                     </div>
                   </div>
                   <div class="column has-text-centered">
                     <div>
-                    <p class="title">Ręczna robota</p>
-
+                    <div class="title"><Needle_Icon height="42px" width="42px" fill="#D9C693"/></div>
                       <p class="heading">Wszystkie usługi wykonujemy ręcznie w naszej pracowni</p>
                     </div>
                   </div>
                   <div class="column has-text-centered">
                     <div>
-                    <p class="title">Wymiar</p>
-
-                      <p class="heading">Dopasowujemy firany do okien</p>
-                    </div>
-                  </div>
-                  <div class="column has-text-centered">
-                    <div>
-                    <p class="title">Czas</p>
-
-                      <p class="heading">Dbamy aby Firany były gotowe w umówionym terminie</p>
+                    <div class="title"><Chat_Icon height="42px" width="42px" fill="#D9C693"/></div>
+                      <p class="heading">Dbamy o zadowolenie naszych klientów</p>
                     </div>
                   </div>
                 </div>

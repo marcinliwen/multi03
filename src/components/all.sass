@@ -11,6 +11,11 @@ $body-color: #2D2D2F
 $black: #2D2D2F
 $has-text-grey-dark: #2D2D2F
 $color-white: #fff
+.bg-primary
+  background-color: $primary
+.bg-primary h1, .bg-primary h3, .bg-primary p
+  color: $black
+
 .bg-invert
   background-color: $primary-invert
   color: $color-white
@@ -158,10 +163,27 @@ $menu-label-color: $white-ter
     width: 100%;
     height: 100%;
     z-index: 0;
+.features 
+  justify-content: center
+  
 .features .column > div
     padding: 8px;
     min-height: 120px;
     color: #D9C693!important;
+.features .title 
+  width: 80px;
+  margin: auto;
+  height: 80px;
+  border-radius: 100%;
+  background: #2D2D2F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+.features .heading
+  font-size: 14px;
+.features .column 
+  max-width: 350px;
+  padding: 10px 35px;
 
 @import "~bulma"
 
