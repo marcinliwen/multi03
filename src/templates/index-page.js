@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Img from "gatsby-image"
 
+import logo from '../img/logo.svg'
+
 
 import Layout from '../components/Layout'
 import Features from '../components/Features'
@@ -39,10 +41,11 @@ export const IndexPageTemplate = ({
             position: 'relative',
             zIndex: '1'
           }}
-          
+          className="home-header-content"
         >
+           <img src={logo} alt="KAJA decor" className="logo-h1"/>
           <h1
-            className="is-size-2-tablet is-size-10-widescreen"
+            className="is-size-2-tablet is-size-10-widescreen home-title"
             style={{
               color: '#2D2D2F',
               lineHeight: '1',
