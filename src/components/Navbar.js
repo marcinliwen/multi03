@@ -1,4 +1,4 @@
-import React from 'react'
+import React,  {useState, useEffect} from 'react'
 //import { Link } from 'gatsby'
 import github from '../img/github-icon.svg'
 import logo from '../img/logo.svg'
@@ -6,43 +6,27 @@ import logo from '../img/logo.svg'
 import LanguageSelect from './LanguageSelect'
 import { useIntl, Link, FormattedMessage } from "gatsby-plugin-intl"
 
-const Navbar = class extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      active: false,
-      navBarActiveClass: '',
-    }
-  }
-
-  toggleHamburger = () => {
-    // toggle the active boolean in the state
-    this.setState(
-      {
-        active: !this.state.active,
-      },
-      // after state has been updated,
-      () => {
-        // set the class in state for the navbar accordingly
-        this.state.active
-          ? this.setState({
-              navBarActiveClass: 'is-active',
-            })
-          : this.setState({
-              navBarActiveClass: '',
-            })
+const Navbar =()=> {
+    
+    const [menu, setMenu] = useState(false);
+    const toggleHamburger =()=>{setMenu(!menu)}
+    
+    useEffect(() => {
+      // Zaktualizuj tytuł dokumentu korzystając z interfejsu API przeglądarki
+      if(menu){
+        document.querySelector("html").classList.add('menu-open')
+        //console.log(document.querySelector("html"))
       }
-    )
-  }
-  
-  
-  
-  render() {
-  
-  const phone_number = "+48 664 478 788" 
+      else{ 
+        //console.log(document.querySelector("html"))
+        document.querySelector("html").classList.remove('menu-open')
+      }
+    });
+    const phone_number = "+48 664 478 788" 
+
     return (
       <nav
-        className="navbar"
+        className="navbar is-fixed-top"
         role="navigation"
         aria-label="main-navigation"
       >
@@ -53,9 +37,9 @@ const Navbar = class extends React.Component {
             </Link>
             {/* Hamburger menu */}
             <div
-              className={`navbar-burger burger ${this.state.navBarActiveClass}`}
+              className={`navbar-burger burger ${menu?"is-active":""}`}
               data-target="navMenu"
-              onClick={() => this.toggleHamburger()}
+              onClick={toggleHamburger}
             >
               <span />
               <span />
@@ -64,7 +48,7 @@ const Navbar = class extends React.Component {
           </div>
           <div
             id="navMenu"
-            className={`navbar-menu ${this.state.navBarActiveClass}`}
+            className={`navbar-menu ${menu?"is-active":""}`}
           >
             <div className="navbar-start has-text-centered">
               <Link className="navbar-item" to="/o-nas">
@@ -89,7 +73,7 @@ const Navbar = class extends React.Component {
       </nav>
     )
   }
-}
+
 
 export default Navbar
 

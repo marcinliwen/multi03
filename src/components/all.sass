@@ -204,10 +204,18 @@ $menu-label-color: $white-ter
   top: calc(50% + 4px);
 .navbar-burger span:nth-child(1) 
   top: calc(50% - 4px);
-  left: calc(35% - 8px);
+  left: calc(35% - 4px);
   width: 24px;
 .navbar-burger span
   height: 2px
+  color: #2D2D2F
+  left: calc(50% - 4px);
+.navbar.is-fixed-top
+  top: 10px;
+  margin: 0;
+  width: 100%;
+.navbar-burger
+  margin-right: 10px
 .navbar-burger span:nth-child(3) 
   top: calc(50% + 6px);
 .navbar-burger.is-active span:nth-child(1) 
@@ -216,8 +224,10 @@ $menu-label-color: $white-ter
 .navbar-burger.is-active span:nth-child(3) 
   transform: translateY(-5px) rotate(-45deg);
   width: 24px;
-  left: calc(35% - 3px);
+  left: calc(35% - 4px);
   top: calc(50% + 6px);
+.navbar-burger, .navbar-burger:hover
+  background-color: #00000024;
 
 .navbar-item
   color: #2D2D2F
@@ -241,7 +251,34 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 +widescreen
   .is-size-10-widescreen 
     font-size: 10rem !important;
-  
++touch
+  .navbar.is-fixed-top .navbar-menu
+    overflow: auto;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    max-height: 100%;
+    z-index: -1;
+    padding-top: 70px;
+    background-color: #004633
+    flex-direction: column;
+    justify-content: space-around;
+  .navbar-menu.is-active
+    display: flex
+  .navbar-item
+    color: #fff
+  .navbar-burger.is-active span
+    color: #D9C693;
+  .navbar-burger.burger.is-active
+    background-color: #2D2D2F;
+  .navbar-end.has-text-centered.lang-select 
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  .menu-open
+    overflow: hidden;
+    
 +tablet
   .navbar > .container .navbar-brand, .container > .navbar .navbar-brand
     margin-left: 0
@@ -253,6 +290,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
     font-size: 8rem !important;
   .header-section.home h3
     font-size: 4rem !important;
+  
 
 
 
@@ -289,6 +327,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
     margin-bottom: 15px!important;
   .content.home 
     margin-top: auto;
+    margin-bottom: 25px;
 
 
 +desktop

@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import { Helmet } from 'react-helmet'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
@@ -8,11 +8,7 @@ import { withPrefix } from 'gatsby'
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
-  
-  useEffect(() => {
-    //scrollInto.current.scrollIntoView()
-    window.scrollTo(0,1);
-  })
+
   return (
     <div>
       <Helmet>
