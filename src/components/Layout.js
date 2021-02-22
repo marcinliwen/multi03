@@ -47,6 +47,7 @@ const TemplateWrapper = ({ children }) => {
           property="og:image"
           content={`${withPrefix('/')}img/og-image.jpg`}
         />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
       </Helmet>
       <Navbar />
       <div>{children}</div>

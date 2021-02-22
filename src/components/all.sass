@@ -198,13 +198,26 @@ $menu-label-color: $white-ter
 
 @import "~bulma"
 .navbar-burger span:nth-child(2) 
-    top: calc(50% + 2px);
+  top: calc(50% + 2px);
+  display: none;
+.navbar-burger span:nth-child(3) 
+  top: calc(50% + 4px);
 .navbar-burger span:nth-child(1) 
-    top: calc(50% - 4px);
-    left: calc(35% - 8px);
-    width: 24px;
+  top: calc(50% - 4px);
+  left: calc(35% - 8px);
+  width: 24px;
 .navbar-burger span
   height: 2px
+.navbar-burger span:nth-child(3) 
+  top: calc(50% + 6px);
+.navbar-burger.is-active span:nth-child(1) 
+  transform: translateY(5px) rotate(45deg);
+  left: calc(35% - 4px);
+.navbar-burger.is-active span:nth-child(3) 
+  transform: translateY(-5px) rotate(-45deg);
+  width: 24px;
+  left: calc(35% - 3px);
+  top: calc(50% + 6px);
 
 .navbar-item
   color: #2D2D2F
