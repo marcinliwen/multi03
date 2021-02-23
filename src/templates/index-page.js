@@ -91,7 +91,13 @@ export const IndexPageTemplate = ({
                   <div class="column has-text-centered">
                     <div>
                     <div class="title"><Material_Icon height="42px" width="42px" fill="#D9C693"/></div>
-                      <p class="heading">koystamy z materiałów najlepszej jakości</p>
+                      <p class="heading">Działamy kompleksowo, od A do Z, od projektu po montaż</p>
+                    </div>
+                  </div>
+                  <div class="column has-text-centered">
+                    <div>
+                    <div class="title"><Material_Icon height="42px" width="42px" fill="#D9C693"/></div>
+                      <p class="heading">Kożystamy z materiałów najlepszej jakości</p>
                     </div>
                   </div>
                   <div class="column has-text-centered">
@@ -103,7 +109,7 @@ export const IndexPageTemplate = ({
                   <div class="column has-text-centered">
                     <div>
                     <div class="title"><Chat_Icon height="42px" width="42px" fill="#D9C693"/></div>
-                      <p class="heading">Dbamy o zadowolenie naszych klientów</p>
+                      <p class="heading">Fachowo doradzamy, dzielimy się wiedzą i doświadczeniem</p>
                     </div>
                   </div>
                 </div>
@@ -111,14 +117,11 @@ export const IndexPageTemplate = ({
                
     </section>
     <section className="section section--gradient">
-      <div className="container">
-        <div className="section">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
+      <div className="container">    
               <div className="content">
                 <div className="columns">
                   <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
+                    <h3 className="">
                       {heading}
                     </h3>
                     <p>{description}</p>
@@ -128,25 +131,22 @@ export const IndexPageTemplate = ({
                 <div className="columns">
                   <div className="column is-12 has-text-centered">
                     <Link className="btn" to="/products">
-                      See all products
+                      Poznaj nasze usługi
                     </Link>
                   </div>
                 </div>
                 <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">
-                    Latest stories
+                  <h3 className="">
+                    Ostatnie realizacje
                   </h3>
                   <BlogRoll />
                   <div className="column is-12 has-text-centered">
                     <Link className="btn" to="/blog">
-                      Read more
+                      Zobacz więcej
                     </Link>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
+              </div>        
       </div>
     </section>
   </div>
@@ -218,11 +218,12 @@ export const pageQuery = graphql`
           blurbs {
             image {
               childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
+                fluid(maxWidth: 684 quality: 64) {
+                  ...GatsbyImageSharpFluid_withWebp_noBase64
                 }
               }
             }
+            title
             text
           }
           heading

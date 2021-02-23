@@ -3,7 +3,7 @@ templateKey: index-page
 path: /
 title: Kaja dekor
 image: /img/home-jumbotron.jpg
-heading: Great coffee with a conscience
+heading: Poznaj nasze usługi
 subheading: Studio Dekoracji Okien
 mainpitch:
   title: Dla czego my?
@@ -13,39 +13,28 @@ mainpitch:
     directly from small scale sustainable farmers and make sure part of the
     profits are reinvested in their communities.
 description: >-
-  Kaldi is the ultimate spot for coffee lovers who want to learn about their
-  java’s origin and support the farmers that grew it. We take coffee production,
-  roasting and brewing seriously and we’re glad to pass that knowledge to
-  anyone.
+  W Kaja - Studio Dekoracji Okien kazdy projekt to inna historia. Kazdy dom zasługuje na wyjątkową dekorację okien, dającą satysfakcję mieszkańcom i spełniającą ich oczekiwania. 
+  Dla tego przykładamy jak najwięcej uwagi i wysiłku aby osiągnąć zamierzony cel.
 intro:
   blurbs:
-    - image: /img/coffee.png
+    - image: /img/firany.png
+      title: Firany
       text: >
-        We sell green and roasted coffee beans that are sourced directly from
-        independent farmers and farm cooperatives. We’re proud to offer a
-        variety of coffee beans grown with great care for the environment and
-        local communities. Check our post or contact us directly for current
-        availability.
-    - image: /img/coffee-gear.png
+       Firany nigdy nie wychodzą z mody. Są najczęściej wybieranym produktem do 
+       dekoracji okien w naszym salonie. Dobieramy najlepsze rodzaje firanek 
+       pasujące do Twojego wnętrza.
+    - image: /img/zaslony.png
+      title: Zasłony
       text: >
-        We offer a small, but carefully curated selection of brewing gear and
-        tools for every taste and experience level. No matter if you roast your
-        own beans or just bought your first french press, you’ll find a gadget
-        to fall in love with in our shop.
-    - image: /img/tutorials.png
+       Piękne tkaniny dopasowane do wystroju pomieszczenia będą tworzyć spójną i stylową aranżację wnętrz. Bardzo często wykorzystujemy zasłony do dekoracji okien. Nadają one pomieszczeniu wyjątkowego charakteru. 
+    - image: /img/rzymskie.png
+      title: Rolety rzymskie
       text: >
-        Love a great cup of coffee, but never knew how to make one? Bought a
-        fancy new Chemex but have no clue how to use it? Don't worry, we’re here
-        to help. You can schedule a custom 1-on-1 consultation with our baristas
-        to learn anything you want to know about coffee roasting and brewing.
-        Email us or call the store for details.
-    - image: /img/meeting-space.png
+        Są połączeniem funkcjonalności z dekoracyjnym wyglądem. Uwielbiamy wykorzystywać rolety rzymskie do projektowania wystroju okien, ponieważ osłaniają przed słońcem (niczym tradycyjne rolety) oraz wyglądają niezwykle efektownie.
+    - image: /img/rolety.png
+      title: Rolety
       text: >
-        We believe that good coffee has the power to bring people together.
-        That’s why we decided to turn a corner of our shop into a cozy meeting
-        space where you can hang out with fellow coffee lovers and learn about
-        coffee making techniques. All of the artwork on display there is for
-        sale. The full price you pay goes to the artist.
+        Wciąż bardzo chętnie wybierane do dekoracji okien. Pasują zarówno do nowoczesnych jak i klasycznych wnętrz. Rolety są niezwykle funkcjonalne, a ich odpowiedni dobór będzie subtelnym uzupełnieniem aranżacji wnętrza.
   heading: What we offer
   description: >
     Kaldi is the ultimate spot for coffee lovers who want to learn about their
