@@ -196,24 +196,28 @@ $menu-label-color: $white-ter
 
 
 .services 
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-    margin-top: 70px
-    margin-bottom: 70px
+  display: flex;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  margin-left: -10px;
+  margin-right: -10px;
+  flex: 1;
+  flex-wrap: wrap;
 
 .services-item 
-    width: 400px;
+    width: calc(100% / 4 - 20px);
     position: relative;
     height: 400px;
+    margin: 0 10px
 
 .services-container 
     display: flex;
     justify-content: center;
 
 .services-img 
-    width: 400px;
-    position: absolute;
+    width: 100%;
+    height: 100%
+    
 
 .services-img:after 
     content: "";
@@ -233,11 +237,13 @@ $menu-label-color: $white-ter
 .content .services-item h3
     position: absolute;
     padding: 20px;
-    font-size: 64px;
+    font-size: 38px;
     font-weight: 100;
     top: 0;
     margin-top: 0!important;
     color: #2D2D2F;
+.services-img .gatsby-image-wrapper
+    height: 100%;
 
 @import "~bulma"
 .navbar-burger span:nth-child(2) 
@@ -293,6 +299,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 
 .bg-invert h2, .bg-invert h3, .bg-invert .title
    color: $color-white
+
 // responsiveness
 +widescreen
   .is-size-10-widescreen 
@@ -324,6 +331,19 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
     margin-top: 50px;
   .menu-open
     overflow: hidden;
+  .services-item 
+    width: 100%
+    height: auto;
+    margin: 0 0 20px;
+  .services-img 
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+  .content .services-item h3
+    font-size: 46px;
+    position: static;
+  .services-item > p 
+    position: static;
     
 +tablet
   .navbar > .container .navbar-brand, .container > .navbar .navbar-brand
@@ -343,6 +363,12 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 +tablet-only
   .blog-list-item .featured-thumbnail
     flex-basis: 50%;
+  .services-item
+    width: calc(100% / 2 - 20px);
+    position: relative;
+    margin: 0 10px 20px;
+
+  
 
 +mobile
   .blog-list-item header
@@ -377,15 +403,10 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   .services 
     width: 100%;
     display: block;
-  .services-item 
-    width: 100%
-    height: auto;
-    margin-bottom: 20px;
-  .services-img 
-    width: 100%;
-    position: static;
-  .content .services-item h3
-    font-size: 46px;
+    margin-left: 0;
+    margin-right: 0;
+  
+
 
 
 

@@ -4,20 +4,18 @@ import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 const FeatureGrid = ({ gridItems }) => (
   <div className="services-container">
-  <div className="services">  
-    {gridItems.map((item) => (
-      <div key={item.text} className="services-item">
-            <div className="services-img">
-              <PreviewCompatibleImage imageInfo={item} />
-            </div>
+    <div className="services">
+      {gridItems.map((item) => (
+        <div key={item.text} className="services-item">
+          <div className="services-img">
+            <PreviewCompatibleImage imageInfo={item} />
+          </div>
           <h3>{item.title}</h3>
           <p>{item.text}</p>
-       
-      </div>
-    ))}
+        </div>
+      ))}
+    </div>
   </div>
-  </div>
-  
 )
 
 FeatureGrid.propTypes = {

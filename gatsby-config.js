@@ -1,8 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Kaja - Studio Dekoracji Okien',
-    description:
-      'Szyjemy firany i zasłony na zamówienie',
+    description: 'Szyjemy firany i zasłony na zamówienie',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -79,12 +78,12 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-react-svg",
+      resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
-          include: /assets/ // See below to configure properly
-        }
-      }
+          include: /assets/, // See below to configure properly
+        },
+      },
     },
     {
       resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules

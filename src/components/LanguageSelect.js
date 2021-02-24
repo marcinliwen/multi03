@@ -1,16 +1,15 @@
-import React from "react"
-import { IntlContextConsumer, changeLocale } from "gatsby-plugin-intl"
+import React from 'react'
+import { IntlContextConsumer, changeLocale } from 'gatsby-plugin-intl'
 
 const languageName = {
-  pl: "Pl",
-  de: "De",
+  pl: 'Pl',
+  de: 'De',
 }
 
 const Language = () => {
-    
   return (
     <div style={{}} className="navbar-end has-text-centered lang-select">
-      <IntlContextConsumer >
+      <IntlContextConsumer>
         {({ languages, language: currentLocale }) =>
           languages.map((language, index) => (
             <a
@@ -21,10 +20,10 @@ const Language = () => {
                 backgroundColor: currentLocale === language ? `#2D2D2F` : ``,
                 textDecoration: `none`,
                 cursor: `pointer`,
-                width:`48px`,
+                width: `48px`,
                 textAlign: `center`,
                 display: `flex`,
-                justifyContent: `center`
+                justifyContent: `center`,
               }}
               className="navbar-item"
             >
