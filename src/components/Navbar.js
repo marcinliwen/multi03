@@ -5,7 +5,7 @@ import logo from '../img/logo.svg'
 
 import LanguageSelect from './LanguageSelect'
 import { useIntl, Link, FormattedMessage } from 'gatsby-plugin-intl'
-import { useWindowDimensions } from '../hooks/useWindowDimensions'
+
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false)
@@ -26,7 +26,7 @@ const Navbar = () => {
   const phone_number = '+48 664 478 788'
 
   //dodawanie klasy do menu gdy scroll ponizej wysokości ekranu
-  const { height, width } = useWindowDimensions();
+ 
   const [scroll, setScroll] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", () => {
