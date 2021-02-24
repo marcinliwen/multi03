@@ -12,6 +12,7 @@ import BlogRoll from '../components/BlogRoll'
 import Material_Icon from '../assets/material.svg'
 import Chat_Icon from '../assets/chat.svg'
 import Needle_Icon from '../assets/needle.svg'
+import Design from '../assets/design.svg'
 
 
 export const IndexPageTemplate = ({
@@ -68,7 +69,7 @@ export const IndexPageTemplate = ({
         </div>
         <div className="content home" style={{position:'relative', zIndex:'1'}}>
           <Link to='/kontakt' className="btn" style={{flex:'1', width: 'max-content', margin:'0px 25px 0 0'}}>Zamów darmową wycenę</Link>
-          <Link to='/products' className="btn" style={{flex:'1', width: 'max-content', margin:'0px 25px 0 0'}}>Poznaj nasze usługi</Link>
+          {/*<Link to='/products' className="btn" style={{flex:'1', width: 'max-content', margin:'0px 25px 0 0'}}>Poznaj nasze usługi</Link>*/}
         </div>
         </div>
         
@@ -90,8 +91,8 @@ export const IndexPageTemplate = ({
                 <div class="columns features"> 
                   <div class="column has-text-centered">
                     <div>
-                    <div class="title"><Material_Icon height="42px" width="42px" fill="#D9C693"/></div>
-                      <p class="heading">Działamy kompleksowo, od A do Z, od projektu po montaż</p>
+                    <div class="title"><Design height="42px" width="42px" fill="#D9C693"/></div>
+                      <p class="heading">Działamy kompleksowo, od projektu po montaż</p>
                     </div>
                   </div>
                   <div class="column has-text-centered">
@@ -130,25 +131,35 @@ export const IndexPageTemplate = ({
                 <Features gridItems={intro.blurbs} />
                 <div className="columns">
                   <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/products">
+                    <Link className="btn first" to="/products">
                       Poznaj nasze usługi
                     </Link>
                   </div>
                 </div>
-                <div className="column is-12">
-                  <h3 className="">
-                    Ostatnie realizacje
-                  </h3>
-                  <BlogRoll />
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/blog">
-                      Zobacz więcej
-                    </Link>
-                  </div>
                 </div>
-              </div>        
+                </div>
+      </section>
+    <section className="section" style={{background: '#D9C693'}}>   
+      <div className="container">    
+          <div className="content">
+            <div className="columns">         
+            <div className="column is-12">
+              <h3 className="">
+                Ostatnie realizacje
+              </h3>
+              <BlogRoll />
+              <div className="column is-12 has-text-centered">
+                <Link className="btn first" to="/blog">
+                  Zobacz więcej
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </section>
+    </section>            
+      
+    
   </div>
 )
 

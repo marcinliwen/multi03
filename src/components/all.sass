@@ -79,9 +79,9 @@ $color-white: #fff
 
 .btn
   display: inline-block;
-  padding: 14px 25px 14px;
-  font-size: 16px;
-  line-height: 18px;
+  padding: 14px 32px 14px;
+  font-size: 18px;
+  line-height: 22px;
   background-color: #fff;
   border-radius: .25rem;
   text-decoration: none;
@@ -246,6 +246,14 @@ $menu-label-color: $white-ter
     height: 100%;
 
 @import "~bulma"
+.btn.first:hover
+  color: #2D2D2F;
+  background-color: #D8C593;
+  box-shadow: 1px 1px 5px 0px #8c7843;
+.btn.second
+    background: #DAC596;
+    color: #2D2D2F;
+    box-shadow: 1px 1px 1px #8a7c5c;
 .navbar-burger span:nth-child(2) 
   top: calc(50% + 2px);
   display: none;
@@ -263,6 +271,7 @@ $menu-label-color: $white-ter
   top: 10px;
   margin: 0;
   width: 100%;
+  transition: top .3s ease-out;
 .navbar-burger
   margin-right: 10px
 .navbar-burger span:nth-child(3) 
@@ -277,6 +286,7 @@ $menu-label-color: $white-ter
   top: calc(50% + 6px);
 .navbar-burger, .navbar-burger:hover
   background-color: #00000024;
+
 
 .navbar-item
   color: #2D2D2F
@@ -399,7 +409,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
     margin-bottom: 15px!important;
   .content.home 
     margin-top: auto;
-    margin-bottom: 25px;
+    margin-bottom: 50px;
   .services 
     width: 100%;
     display: block;
@@ -420,4 +430,9 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
     border-bottom: 2px solid #2d2d2f
   .logo-h1
     display: none
-  
+  nav.navbar.is-fixed-top.bg-gold 
+    background-color: #D9C693;
+    top: 0;
+    border-bottom: 2px solid #2d2d2f
+  .navbar.bg-gold .container  
+    border: none;
