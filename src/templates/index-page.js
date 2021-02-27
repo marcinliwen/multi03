@@ -139,7 +139,7 @@ export const IndexPageTemplate = ({
                 </div>
                 </div>
       </section>
-    <section className="section" style={{background: '#D9C693'}}>   
+    <section className="section portfolio" style={{background: '#2D2D2F'}}>   
       <div className="container">    
           <div className="content">
             <div className="columns">         

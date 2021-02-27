@@ -154,10 +154,11 @@ $menu-label-color: $white-ter
   background-color: #d6400033;
 .blog-list-item header
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 1em;
 .blog-list-item .featured-thumbnail
-  flex-basis: 35%;
-  margin: 0 1.5em 0 0;
+  flex-basis: 100%;
+  margin: 0;
 
 .home-img
     flex: 1;
@@ -309,6 +310,47 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 
 .bg-invert h2, .bg-invert h3, .bg-invert .title
    color: $color-white
+.portfolio, .portfolio h3 
+    color: #E2E3E4;
+
+.portfolio-text 
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  opacity: 0;
+  flex-direction: column;
+  justify-content: flex-end;
+
+.portfolio-item:hover .portfolio-text
+  opacity: 1;
+  padding: 1.25rem;
+  background-color: #004633eb;
+  height: 100%;
+
+
+.portfolio-item 
+    position: relative;
+.portfolio-cover .portfolio-text 
+    opacity: 1;
+    background-color: #004633eb;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+.portfolio-cover 
+    order: 4;
+.portfolio-order:nth-child(1) 
+    order: 1;
+
+.portfolio-order:nth-child(2) 
+    order: 2;
+
+.portfolio-order:nth-child(3) 
+    order: 3;
+
+.portfolio-order:nth-child(4) 
+    order: 5;
 
 // responsiveness
 +widescreen
@@ -372,7 +414,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 
 +tablet-only
   .blog-list-item .featured-thumbnail
-    flex-basis: 50%;
+    flex-basis: 100%;
   .services-item
     width: calc(100% / 2 - 20px);
     position: relative;
@@ -385,7 +427,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
     display: block
   .blog-list-item .featured-thumbnail
     text-align: center;
-    max-width: 70%;
+    max-width: 100%;
     margin: 0 0 1em;
   .logo
     display: none

@@ -7,20 +7,20 @@ class BlogRoll extends React.Component {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
-
+    const cover = data.file
     return (
-      <div className="columns" style={{overflow: 'scroll'}}>
+      <div className="columns is-multiline" style={{}}>
         {posts &&
           posts.map(({ node: post }) => (
-            <div className="is-parent column is-6" key={post.id}>
+            <div className="is-parent column is-4 portfolio-order" key={post.id}>
               <article
-                className={`blog-list-item tile is-child box notification ${
+                className={`blog-list-item tile is-child portfolio-item ${
                   post.frontmatter.featuredpost ? 'is-featured' : ''
                 }`}
               >
-                <header>
+               
                   {post.frontmatter.featuredimage ? (
-                    <div className="featured-thumbnail">
+                    <div className="featured-thumbnail portfolio-img">
                       <PreviewCompatibleImage
                         imageInfo={{
                           image: post.frontmatter.featuredimage,
@@ -29,30 +29,61 @@ class BlogRoll extends React.Component {
                       />
                     </div>
                   ) : null}
-                  <p className="post-meta">
-                    <Link
-                      className="title has-text-primary is-size-4"
-                      to={post.fields.slug}
-                    >
-                      {post.frontmatter.title}
-                    </Link>
-                    <span> &bull; </span>
-                    <span className="subtitle is-size-5 is-block">
-                      {post.frontmatter.date}
-                    </span>
-                  </p>
-                </header>
-                <p>
-                  {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="btn second" to={post.fields.slug}>
-                    Zobacz więcej
-                  </Link>
-                </p>
+                  <div className="content portfolio-text">
+                      <p className="post-meta">
+                        <Link
+                          className="title has-text-primary is-size-4 is-block"
+                          to={post.fields.slug}
+                        >
+                          {post.frontmatter.title}
+                        </Link>
+                        <span className="subtitle is-size-5 is-block">
+                          {post.frontmatter.date}
+                        </span>
+                      </p>
+                    
+                    <p>
+                      {post.excerpt}
+                      <br />
+                      <br />
+                      <Link className="btn second" to={post.fields.slug}>
+                        Zobacz więcej
+                      </Link>
+                    </p>
+                  </div>
+                  
               </article>
             </div>
           ))}
+
+        <div className="is-parent column is-8 portfolio-cover" key={cover.id}>
+              <article
+                className={`blog-list-item tile is-child portfolio-item `}
+                >
+                  <div className="featured-thumbnail portfolio-img">
+                      <PreviewCompatibleImage
+                        imageInfo={{
+                          image: cover,
+                         
+                        }}
+                      />
+                    </div>
+                    <div className="content portfolio-text">
+                      <p className="post-meta">
+                        
+                          
+                        <h3>Portfolio</h3>
+                      </p>
+                    
+                    <p>
+                      <Link className="btn second" >
+                        Zobacz więcej
+                      </Link>
+                    </p>
+                  </div>
+                  
+              </article>
+            </div>
       </div>
     )
   }
@@ -76,7 +107,7 @@ export default () => (
         ) {
           edges {
             node {
-              excerpt(pruneLength: 400)
+              excerpt(pruneLength: 100)
               id
               fields {
                 slug
@@ -88,12 +119,19 @@ export default () => (
                 featuredpost
                 featuredimage {
                   childImageSharp {
-                    fluid(maxWidth: 120, quality: 100) {
+                    fluid(maxWidth: 464, quality: 100) {
                       ...GatsbyImageSharpFluid
                     }
                   }
                 }
               }
+            }
+          }
+        },
+        file(relativePath: {eq: "portfolio-cover.png"}){
+          childImageSharp {
+            fluid (maxWidth: 928, quality: 100){
+              ...GatsbyImageSharpFluid_withWebp_noBase64
             }
           }
         }
