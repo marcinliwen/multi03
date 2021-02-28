@@ -14,6 +14,11 @@ import Chat_Icon from '../assets/chat.svg'
 import Needle_Icon from '../assets/needle.svg'
 import Design from '../assets/design.svg'
 
+import Brand1 from '../assets/brand-1.svg'
+import Brand2 from '../assets/brand-2.svg'
+import Brand3 from '../assets/brand-3.svg'
+import Brand4 from '../assets/brand-4.svg'
+
 
 export const IndexPageTemplate = ({
   image,
@@ -24,6 +29,7 @@ export const IndexPageTemplate = ({
   mainpitch,
   description,
   intro,
+  brands_img
 }) => (
   <div>
     <div
@@ -139,7 +145,7 @@ export const IndexPageTemplate = ({
                 </div>
                 </div>
       </section>
-    <section className="section portfolio" style={{background: '#2D2D2F'}}>   
+    <section className="section is-medium portfolio" style={{background: '#2D2D2F'}}>   
       <div className="container">    
           <div className="content">
             <div className="columns">         
@@ -158,7 +164,21 @@ export const IndexPageTemplate = ({
         </div>
       </div>
     </section>            
-      
+    <section className="section is-medium brands bg-primary">
+      <div className="container">
+        <div className="content">
+          <h3>Nasi partnerzy</h3>
+        </div>
+        <div className="content">
+        <div className="columns is-multiline brands-items">
+          {brands_img.map((node)=>
+             <div className="column brands-item"><Img fluid={node.childImageSharp.fluid} /></div>
+          )}
+          
+        </div>
+        </div>
+      </div>
+    </section>
     
   </div>
 )
@@ -176,10 +196,8 @@ IndexPageTemplate.propTypes = {
 }
 
 const IndexPage = ({ data }) => {
-  console.log(data.file.childImageSharp.fluid)
-
   const { frontmatter } = data.markdownRemark
-
+  const { nodes } = data.allFile
   return (
     <Layout>
       <IndexPageTemplate
@@ -191,6 +209,7 @@ const IndexPage = ({ data }) => {
         mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
         intro={frontmatter.intro}
+        brands_img={nodes}
       />
     </Layout>
   )
@@ -246,6 +265,15 @@ export const pageQuery = graphql`
       childImageSharp {
         fluid(maxWidth: 1920, quality: 100){
           ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    },
+    allFile(filter: {extension: {regex: "/(png)/"}, relativeDirectory: {eq: "brands"}}) {
+      nodes {
+        childImageSharp {
+          fluid(maxWidth: 300, quality: 100){
+            ...GatsbyImageSharpFluid_noBase64
+          }
         }
       }
     }
