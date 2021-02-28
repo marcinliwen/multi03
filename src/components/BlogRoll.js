@@ -60,23 +60,27 @@ class BlogRoll extends React.Component {
               <article
                 className={`blog-list-item tile is-child portfolio-item `}
                 >
-                  <div className="featured-thumbnail portfolio-img">
+                  <div className="featured-thumbnail">
                       <PreviewCompatibleImage
                         imageInfo={{
                           image: cover,
-                         
+                          alt: 'portfolio',
+                          imgclass: 'portfolio-img'
                         }}
                       />
                     </div>
                     <div className="content portfolio-text">
-                      <p className="post-meta">
+                     
                         
                           
                         <h3>Portfolio</h3>
+
+                      <p className="post-meta">
+                        zobacz projekty, które juz wykonaliśmy i dowiedz się jak pracujemy
                       </p>
                     
                     <p>
-                      <Link className="btn second" >
+                      <Link className="btn second" to="/blog">
                         Zobacz więcej
                       </Link>
                     </p>
@@ -120,7 +124,7 @@ export default () => (
                 featuredimage {
                   childImageSharp {
                     fluid(maxWidth: 464, quality: 100) {
-                      ...GatsbyImageSharpFluid
+                      ...GatsbyImageSharpFluid_withWebp_noBase64
                     }
                   }
                 }

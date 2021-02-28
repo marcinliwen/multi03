@@ -310,7 +310,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 
 .bg-invert h2, .bg-invert h3, .bg-invert .title
    color: $color-white
-.portfolio, .portfolio h3 
+.portfolio, .portfolio h3, .portfolio .subtitle
     color: #E2E3E4;
 
 .portfolio-text 
@@ -330,6 +330,8 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 
 .portfolio-item 
     position: relative;
+    overflow: hidden;
+    height: 100%;
 .portfolio-cover .portfolio-text 
     opacity: 1;
     background-color: #004633eb;
@@ -351,7 +353,8 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 
 .portfolio-order:nth-child(4) 
     order: 5;
-
+.portfolio-order, .portfolio-cover 
+  max-height: 380px
 // responsiveness
 +widescreen
   .is-size-10-widescreen 
@@ -419,8 +422,15 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
     width: calc(100% / 2 - 20px);
     position: relative;
     margin: 0 10px 20px;
+  .portfolio-order, .portfolio-cover 
+    max-height: 280px;
 
-  
++desktop-only
+  .portfolio-order, .portfolio-cover 
+    max-height: 324px;
++widescreen-only
+  .portfolio-order, .portfolio-cover 
+    max-height: 352px;
 
 +mobile
   .blog-list-item header
@@ -428,7 +438,6 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   .blog-list-item .featured-thumbnail
     text-align: center;
     max-width: 100%;
-    margin: 0 0 1em;
   .logo
     display: none
   .home-title
@@ -457,7 +466,9 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
     display: block;
     margin-left: 0;
     margin-right: 0;
-  
+  .portfolio-img 
+    width: 200%!important;
+
 
 
 
@@ -478,3 +489,10 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
     border-bottom: 2px solid #2d2d2f
   .navbar.bg-gold .container  
     border: none;
+
++widescreen
+  .container:not(.is-max-desktop)
+    max-width: 1052px
++fullhd
+  .container:not(.is-max-desktop):not(.is-max-widescreen)
+    max-width: 1200px
