@@ -65,7 +65,7 @@ const Navbar = () => {
             <Link className="navbar-item" to="/oferta">
               Usługi
             </Link>
-            <Link className="navbar-item" to="/">
+            <Link className="navbar-item" to="/blog">
               Realizacje
             </Link>
             <Link className="navbar-item" to="/kontakt">

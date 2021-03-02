@@ -53,21 +53,21 @@ export const ContactPageTemplate = ({title, subtitle, ulica, miasto, kod_pocztow
   }
 
   const ContactPage = ({ data }) => {
-    console.log(data)
+    //console.log(data)
   const intl = useIntl()
   //const locale = intl.locale !== "pt" ? `/${intl.locale}` : ""
 
   // Raw query data
   const posts = data.allMarkdownRemark.edges
-  console.log(posts)
+  //console.log(posts)
   // Filtering posts by locale
   const filteredPosts = posts.filter(edge =>
     edge.node.frontmatter.lang.includes(intl.locale)
   )
-  console.log(filteredPosts)
+  //console.log(filteredPosts)
   const { node } = filteredPosts[0] // data.markdownRemark holds your post data
   const { frontmatter, html } = node;
-  console.log(frontmatter)
+  //console.log(frontmatter)
     return (
       <Layout>
         <ContactPageTemplate

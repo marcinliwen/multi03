@@ -261,9 +261,9 @@ export const pageQuery = graphql`
         }
       }
     }
-    file(relativePath: {eq: "curtains-8.jpg"}) {
+    file(relativePath: {eq: "curtains-8.png"}) {
       childImageSharp {
-        fluid(maxWidth: 1920, quality: 100){
+        fluid(maxWidth: 1920, quality: 60){
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
