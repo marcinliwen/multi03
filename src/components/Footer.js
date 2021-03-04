@@ -54,29 +54,36 @@ const Footer = ({data}) =>{
                         Realizacje
                       </Link>
                     </li>
+                    <li>
+                      <Link className="navbar-item footer-title" to="/kontakt">
+                        Kontakt
+                      </Link>
+                    </li>
                   </ul>
                 </section>
               </div>
               <div className="column is-4">
                 <section>
                   <ul className="menu-list">
-                    <li>
-                      <Link className="navbar-item" to="/kontakt">
-                        Kontakt
-                      </Link>
+                    <li className="fotter-title">
+                      Kontakt
                     </li>
-                    <li className="footer-contact">{data_info.contact.telefon1}</li>
-                    <li className="footer-contact">{data_info.address.ulica}</li>
-                    <li className="footer-contact">{data_info.address.kod_pocztowy} {data_info.address.miasto}</li>
+                    <li className="footer-contact">
+                      <div>{data_info.contact.telefon1}</div>
+                      <div>{data_info.address.ulica}</div>
+                      <div>{data_info.address.kod_pocztowy} {data_info.address.miasto}</div>
+                    </li>
                   </ul>
                 </section>
               </div>
               <div className="column is-4">
               <section>
                   <ul className="menu-list">
-                    <li className="footer-contact">{data_info.open_hours.title}:</li>
-                    <li className="footer-contact">{data_info.open_hours.day_start}  -  {data_info.open_hours.day_end}</li>
-                    <li className="footer-contact">{data_info.open_hours.hour_start} -  {data_info.open_hours.hour_end}</li>
+                    <li className="fotter-title">{data_info.open_hours.title}:</li>
+                    <li className="footer-contact">
+                      <div>{data_info.open_hours.day_start}  -  {data_info.open_hours.day_end}</div>
+                      <div>{data_info.open_hours.hour_start} -  {data_info.open_hours.hour_end}</div>
+                  </li>
                   </ul>
                 </section>
               </div>
