@@ -18,13 +18,18 @@ const Footer = ({data}) =>{
       edge.node.frontmatter.lang.includes(intl.locale)
     )
     const {frontmatter: data_info} = filteredInfo[0].node
-    console.log(data_info)
+
+    const getCurrentYear = () => {
+      return new Date().getFullYear();
+    };
+  
+
     return (
       <footer className="footer has-background-black has-text-white-ter">
         <div className="content has-text-centered">
           <img
             src={logo}
-            alt="Kaldi"
+            alt="Kaja Decor"
             style={{ width: '14em', height: '10em' }}
           />
         </div>
@@ -87,6 +92,9 @@ const Footer = ({data}) =>{
                   </ul>
                 </section>
               </div>
+            </div>
+            <div className="footer-bottom">
+              <p>© {getCurrentYear()} - Kaja Decor</p>
             </div>
           </div>
         </div>
