@@ -26,19 +26,45 @@ const Footer = ({data}) =>{
 
     return (
       <footer className="footer has-background-black has-text-white-ter">
-        <div className="content has-text-centered">
-          <img
-            src={logo}
-            alt="Kaja Decor"
-            style={{ width: '14em', height: '10em' }}
-          />
-        </div>
         <div className="content has-text-centered has-background-black has-text-white-ter">
           <div className="container has-background-black has-text-white-ter">
-            <div style={{ maxWidth: '100vw' }} className="columns">
-              <div className="column is-4">
+            <div className="columns">
+              <div className="column is-3 has-text-left" >
+            <img
+              src={logo}
+              alt="Kaja Decor"
+              style={{ width: '10em', marginTop: '1rem' }}
+            />
+          </div>
+              <div className="column is-3">
+                <section>
+                  <ul className="menu-list">
+                    <li className="fotter-title">
+                      Kontakt
+                    </li>
+                    <li className="footer-contact">
+                      <div>{data_info.contact.telefon1}</div>
+                      <div>{data_info.address.ulica}</div>
+                      <div>{data_info.address.kod_pocztowy} {data_info.address.miasto}</div>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+              <div className="column is-3">
+              <section>
+                  <ul className="menu-list">
+                    <li className="fotter-title">{data_info.open_hours.title}:</li>
+                    <li className="footer-contact">
+                      <div>{data_info.open_hours.day_start}  -  {data_info.open_hours.day_end}</div>
+                      <div>{data_info.open_hours.hour_start} -  {data_info.open_hours.hour_end}</div>
+                  </li>
+                  </ul>
+                </section>
+              </div>
+              <div className="column is-3">
                 <section className="menu">
                   <ul className="menu-list">
+                  <li className="fotter-title">Nawigacja</li>
                     <li>
                       <Link to="/" className="navbar-item">
                         Home
@@ -64,31 +90,6 @@ const Footer = ({data}) =>{
                         Kontakt
                       </Link>
                     </li>
-                  </ul>
-                </section>
-              </div>
-              <div className="column is-4">
-                <section>
-                  <ul className="menu-list">
-                    <li className="fotter-title">
-                      Kontakt
-                    </li>
-                    <li className="footer-contact">
-                      <div>{data_info.contact.telefon1}</div>
-                      <div>{data_info.address.ulica}</div>
-                      <div>{data_info.address.kod_pocztowy} {data_info.address.miasto}</div>
-                    </li>
-                  </ul>
-                </section>
-              </div>
-              <div className="column is-4">
-              <section>
-                  <ul className="menu-list">
-                    <li className="fotter-title">{data_info.open_hours.title}:</li>
-                    <li className="footer-contact">
-                      <div>{data_info.open_hours.day_start}  -  {data_info.open_hours.day_end}</div>
-                      <div>{data_info.open_hours.hour_start} -  {data_info.open_hours.hour_end}</div>
-                  </li>
                   </ul>
                 </section>
               </div>

@@ -120,7 +120,7 @@ $family-primary: 'Montserrat', sans-serif
 .navbar-brand .navbar-item.logo
   padding: 0 1rem
 footer.footer
-  padding: 3rem 0rem 0rem
+  padding: 3rem 1.5rem;
   background-color: transparent
 
 //Menu overrides
@@ -252,8 +252,7 @@ $menu-label-color: $white-ter
 .footer-bottom
   border-top: 1px solid #fff;
   font-size: 14px;
-  padding-bottom: 50px;
-  padding: 8px 0 50px;
+  padding: 8px 0 0p;
   margin: 0 0.75rem;
 
 @import "~bulma"
@@ -304,7 +303,7 @@ $menu-label-color: $white-ter
 .navbar-item
   color: #2D2D2F
   font-weight: 500
-a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-item.is-active
+a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-item.is-active, .menu-list a:hover
   color: $primary
   background: #2D2D2F!important
 .navbar-brand img
@@ -367,6 +366,10 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
     order: 5;
 .portfolio-order, .portfolio-cover 
   max-height: 380px
+.menu-list a
+  font-size: 12px
+.menu-list a:hover
+  color: $primary !important
 // responsiveness
 +widescreen
   .is-size-10-widescreen 
