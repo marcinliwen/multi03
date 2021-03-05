@@ -29,7 +29,8 @@ export const IndexPageTemplate = ({
   mainpitch,
   description,
   intro,
-  brands_img
+  brands_img,
+  counter
 }) => (
   <div>
     <div
@@ -164,6 +165,17 @@ export const IndexPageTemplate = ({
         </div>
       </div>
     </section>            
+    <section className="section is-medium counter">
+      <div className="container">
+        <div className="columns is-justify-content-center	">
+          {counter.map((item)=>
+            <div className="column item">
+              <div className="has-text-centered"><span>{item.number}</span><p>{item.title}</p></div>
+            </div>
+          )}
+        </div>
+      </div>
+    </section>
     <section className="section is-medium brands bg-primary">
       <div className="container">
         <div className="content">
@@ -210,6 +222,7 @@ const IndexPage = ({ data }) => {
         description={frontmatter.description}
         intro={frontmatter.intro}
         brands_img={nodes}
+        counter={frontmatter.counter}
       />
     </Layout>
   )
@@ -258,6 +271,10 @@ export const pageQuery = graphql`
           }
           heading
           description
+        }
+        counter{
+          title
+          number
         }
       }
     }
