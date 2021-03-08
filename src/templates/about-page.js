@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import Subheader from '../components/Subheader'
 
 import { useIntl } from "gatsby-plugin-intl"
 
@@ -16,9 +17,6 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                {title}
-              </h2>
               <PageContent className="content" content={content} />
             </div>
           </div>
@@ -53,6 +51,7 @@ const AboutPage = ({ data }) => {
   console.log(frontmatter)
   return (
     <Layout>
+      <Subheader title={frontmatter.title} />
       <AboutPageTemplate
         contentComponent={HTMLContent}
         title={frontmatter.title}

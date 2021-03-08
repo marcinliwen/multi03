@@ -11,7 +11,7 @@ const Gmap = ({ target }) => (
     title="mapa dojazdu"
     style={{
       width: '100%',
-      height: '400px',
+      height: '500px',
       border: 'none',
     }}
     src={`${BASE_URL}${GKEY}&q=${target},Polska`}

@@ -30,8 +30,10 @@
     "node-sass": "^4.14.0",
     "prop-types": "^15.6.0",
     "react": "^16.8.4",
+    "react-countup": "^4.3.3",
     "react-dom": "^16.8.4",
     "react-helmet": "^6.0.0",
+    "react-intersection-observer": "^8.31.0",
     "uuid": "^7.0.0"
   },
   "keywords": [

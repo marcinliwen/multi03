@@ -91,7 +91,7 @@ export default function ContactForm() {
         </div>
       </div>
       <div className="field">
-        <button className="button is-link" type="submit">
+        <button className="btn first is-link" type="submit">
           Wyślij
         </button>
       </div>

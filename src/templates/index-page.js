@@ -4,6 +4,8 @@ import { Link, graphql } from 'gatsby'
 import Img from "gatsby-image"
 
 import logo from '../img/logo.svg'
+import CountUp from 'react-countup';
+import { InView } from 'react-intersection-observer';
 
 
 import Layout from '../components/Layout'
@@ -84,16 +86,6 @@ export const IndexPageTemplate = ({
       <Img className="home-img" fluid={imghome}/>
     </div>
     <section className="section bg-primary">
-              {/*<div className="container">               
-                <div className="content">
-                  <div className="tile">
-                    <h2 className="title">{mainpitch.title}</h2>
-                  </div>
-                  <div className="tile">
-                    <h3 className="subtitle">{mainpitch.description}</h3>
-                  </div>
-               </div>
-          </div>*/}
                 <div className="container">
                 <div class="columns features"> 
                   <div class="column has-text-centered">
@@ -167,13 +159,21 @@ export const IndexPageTemplate = ({
     </section>            
     <section className="section is-medium counter">
       <div className="container">
-        <div className="columns is-justify-content-center	">
-          {counter.map((item)=>
+        
+        <InView triggerOnce delay={300}>
+            {({ inView, ref, entry }) => (
+            <div className="columns is-justify-content-center	" ref={ref}>
+                {counter.map((item)=>
             <div className="column item">
-              <div className="has-text-centered"><span>{item.number}</span><p>{item.title}</p></div>
+              <div className="has-text-centered">
+                <CountUp start={inView? 0 : item.number} end={item.number} duration={3}/>
+                <p>{item.title}</p></div>
             </div>
           )}
-        </div>
+            </div>
+            )}
+        </InView>
+          
       </div>
     </section>
     <section className="section is-medium brands bg-primary">

@@ -43,7 +43,7 @@ $family-primary: 'Montserrat', sans-serif
 // Helper Classes
 .full-width-image-container
   width: 100vw
-  height: 400px
+  height: 200px
   position: relative
   left: 50%
   right: 50%
@@ -53,7 +53,7 @@ $family-primary: 'Montserrat', sans-serif
   display: flex
   justify-content: center
   align-items: center
-.full-width-image.margin-top-0:after 
+.full-width-image.margin-top-0:after, .full-width-image-container:after
   content: ""
   background: #ffffff61
   position: absolute
@@ -93,6 +93,8 @@ $family-primary: 'Montserrat', sans-serif
   transition: all .15s ease;
   background: #2D2D2F;
   border-radius: 16px;
+  border: none
+  cursor: pointer
 .content.home
   margin-top: 50px
 .content.home .btn:hover 
@@ -122,7 +124,8 @@ $family-primary: 'Montserrat', sans-serif
 footer.footer
   padding: 3rem 1.5rem;
   background-color: transparent
-
+.margin-bottom-0
+  margin-bottom: 0px !important
 //Menu overrides
 $menu-item-color: $white-ter
 $menu-item-hover-color: $black !important
@@ -371,9 +374,18 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 .menu-list a:hover
   color: $primary !important
 .counter .item span
-    font-size: 44px;
-.counter .item
-    max-width: 200px;
+    font-size: 64px;
+    font-weight: 100;
+.subheader h1
+  font-size: 64px
+  font-weight: 100
+  position: relative
+  z-index: 1
+  padding: 0 25px
+.kontakt-block .box
+  background-color: #D9C693;
+  
+
 // responsiveness
 +widescreen
   .is-size-10-widescreen 
@@ -515,7 +527,13 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
     border: none;
   .footer-bottom
     margin: 0
-
+  .full-width-image-container
+    height: 400px
+  .subheader h1
+    font-size: 128px
+  .kontakt-block .box
+    margin-top: -220px;
+    padding: 25px 50px;
 +widescreen
   .container:not(.is-max-desktop)
     max-width: 1052px
