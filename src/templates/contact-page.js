@@ -20,16 +20,22 @@ export const ContactPageTemplate = ({title, subtitle, ulica, miasto, kod_pocztow
                 <div className="box">    
                     <div className="content">
                         <h2>Kontakt</h2>
-                        <p>{telefon1}</p>
-                        <p>{telefon2}</p>
+                        <p>
+                          <div>{telefon1}</div>
+                          <div>{telefon2}</div>
+                        </p>                       
                         <p>{mail}</p>
-                        <p>{ulica}</p>
-                        <p>{kod_pocztowy} {miasto}</p>
+                        <p>
+                          <div>{ulica}</div>
+                          <div>{kod_pocztowy} {miasto}</div>
+                        </p>
                     </div>
                     <div className="content">
                         <h2>{open_title}</h2>
-                        <p>{day_start} - {day_end}</p>
-                        <p>{hour_start} - {hour_end}</p>
+                        <p>
+                          <div>{day_start} - {day_end}</div>
+                          <div>{hour_start} - {hour_end}</div>
+                        </p>                        
                     </div>
                 </div>
                 
@@ -49,8 +55,7 @@ export const ContactPageTemplate = ({title, subtitle, ulica, miasto, kod_pocztow
     )
   }
 
-  const ContactPage = ({ data, location }) => {
-    console.log(location.pathname)
+  const ContactPage = ({ data }) => {
   const intl = useIntl()
   //const locale = intl.locale !== "pt" ? `/${intl.locale}` : ""
 
@@ -67,9 +72,9 @@ export const ContactPageTemplate = ({title, subtitle, ulica, miasto, kod_pocztow
   //console.log(frontmatter)
     return (
       <Layout>
-        <Subheader title={frontmatter.title} location={location.pathname} />
+        <Subheader title={frontmatter.title}/>
         <section>
-            <div className="gmap" style={{height: '500px'}}>
+            <div className="gmap">
                 <Gmap target={frontmatter.address.ulica+','+frontmatter.address.kod_pocztowy+' '+frontmatter.address.miasto}/>
             </div>
         </section>

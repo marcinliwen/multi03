@@ -4,12 +4,9 @@ import { graphql, StaticQuery } from 'gatsby'
 import Img from "gatsby-image"
 
 const Subheader = (props)=>{
-
-    console.log(props.location);
-
     return(
         <div
-            className={`full-width-image-container margin-top-0 subheader ${props.location === "/kontakt" ? "margin-bottom-0":""}`}
+            className="full-width-image-container margin-top-0 subheader margin-bottom-0"
         >
         <h1>
           {props.title}
@@ -31,6 +28,6 @@ export default (props) => (
             }
         }
       `}
-      render={(data) => <Subheader data={data} title={props.title} location={props.location}/>}
+      render={(data) => <Subheader data={data} title={props.title} />}
     />
   )

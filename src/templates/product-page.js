@@ -20,19 +20,19 @@ export const ProductPageTemplate = ({
   fullImage,
   pricing,
 }) => (
-  <div className="content">
-    <section className="section section--gradient">
+    <section className="section section--gradient offer">
       <div className="container">
-        <div className="section">
+        <div className="content">
           <div className="columns">
-            <div className="column is-7 is-offset-1">
-              <h3 className="has-text-weight-semibold is-size-2">{heading}</h3>
+            <div className="column">
+              <h3 className="">{heading}</h3>
               <p>{description}</p>
             </div>
           </div>
+          <Features gridItems={intro.blurbs} />
           <div className="columns">
             <div className="column is-10 is-offset-1">
-              <Features gridItems={intro.blurbs} />
+             
               <div className="columns">
                 <div className="column is-7">
                   <h3 className="has-text-weight-semibold is-size-3">
@@ -73,7 +73,7 @@ export const ProductPageTemplate = ({
                   })`,
                 }}
               />
-              <h2 className="has-text-weight-semibold is-size-2">
+              <h2 className="">
                 {pricing.heading}
               </h2>
               <p className="is-size-5">{pricing.description}</p>
@@ -83,7 +83,6 @@ export const ProductPageTemplate = ({
         </div>
       </div>
     </section>
-  </div>
 )
 
 ProductPageTemplate.propTypes = {
@@ -159,11 +158,12 @@ export const productPageQuery = graphql`
           blurbs {
             image {
               childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
+                fluid(maxWidth: 684 quality: 64) {
+                  ...GatsbyImageSharpFluid_withWebp_noBase64
                 }
               }
             }
+            title
             text
           }
           heading

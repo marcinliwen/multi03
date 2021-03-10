@@ -63,7 +63,7 @@ const Navbar = () => {
         <div id="navMenu" className={`navbar-menu ${menu ? 'is-active' : ''}`}>
           <div className="navbar-start has-text-centered">
             <Link className="navbar-item" to="/">
-              HOme
+              Home
             </Link>
             <Link className="navbar-item" to="/o-nas">
               O nas

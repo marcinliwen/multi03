@@ -97,7 +97,7 @@ export const IndexPageTemplate = ({
                   <div class="column has-text-centered">
                     <div>
                     <div class="title"><Material_Icon height="42px" width="42px" fill="#D9C693"/></div>
-                      <p class="heading">Kożystamy z materiałów najlepszej jakości</p>
+                      <p class="heading">Korzystamy z materiałów najlepszej jakości</p>
                     </div>
                   </div>
                   <div class="column has-text-centered">

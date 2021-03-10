@@ -384,7 +384,9 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   padding: 0 25px
 .kontakt-block .box
   background-color: #D9C693;
-  
+.gmap
+  height: 300px
+
 
 // responsiveness
 +widescreen
@@ -534,6 +536,45 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   .kontakt-block .box
     margin-top: -220px;
     padding: 25px 50px;
+  .gmap
+    height: 500px
+  .offer .services-item
+    width: 100%;
+    position: relative;
+    height: 450px;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+  .offer .services-img 
+    width: 50%;
+    height: 100%;
+    flex: 50%;
+  .offer .content .services-item h3 
+    position: absolute;
+    padding: 20px;
+    font-size: 64px;
+    font-weight: 100;
+    top: auto; 
+    margin-top: 0 !important;
+    color: #2D2D2F;
+    width: 50%;
+    display: block;
+    text-align: center;
+    margin: 0;
+  .offer .services-item > p 
+    position: static;
+    z-index: 1;
+    padding: 20px;
+    bottom: 0;
+    flex: 50%;
+  .offer .services-img:after
+    content: "";
+    width: calc(50% - 20px)
+  .offer .services-item:nth-child(even)
+    flex-direction: row-reverse;
+  .offer .services-item:nth-child(even) .services-img:after 
+    left: auto;
+
 +widescreen
   .container:not(.is-max-desktop)
     max-width: 1052px
