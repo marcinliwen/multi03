@@ -8,6 +8,11 @@ import Pricing from '../components/Pricing'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import Subheader from '../components/Subheader'
 
+import Material_Icon from '../assets/material.svg'
+import Chat_Icon from '../assets/chat.svg'
+import Needle_Icon from '../assets/needle.svg'
+import Design from '../assets/design.svg'
+import Curtains from '../assets/curtains.svg'
 
 export const ProductPageTemplate = ({
   image,
@@ -20,7 +25,8 @@ export const ProductPageTemplate = ({
   fullImage,
   pricing,
 }) => (
-    <section className="section section--gradient offer">
+    <>
+    <section className="section is-medium offer">
       <div className="container">
         <div className="content">
           <div className="columns">
@@ -30,7 +36,57 @@ export const ProductPageTemplate = ({
             </div>
           </div>
           <Features gridItems={intro.blurbs} />
-          <div className="columns">
+        </div>
+      </div>
+    </section>
+    <section className="section is-medium">
+      <div className="container">
+        <div className="steps-container">
+              <div className="content">
+                <h3>Jak pracujemy?</h3>
+              </div>
+              <div className="columns steps-item">
+                <div className="column is-2 has-text-centered-touch ">
+                  <Design width="96px"/>
+                </div>
+                <div className="column is-10">
+                  <h4>1. Planujemy i projektujemy</h4>
+                  <p>Na tym etapie poznajemy Twoje oczekiwania, upodobania i ewentualne pomysły na wystrój okna. Bierzemy te informacje pod uwagę tworząc koncepcję na aranżację okienną. Na tym etapie dokonujemy również pomiarów pomieszczenia.</p>
+                  <a href="">Jak prawidłowo zmierzyć okno?</a>
+                </div>
+              </div>
+              <div className="columns steps-item">
+              <div className="column is-2 has-text-centered-touch">
+                  <Material_Icon width="96px"/>
+                </div>
+                <div className="column is-10">
+                  <h4>2. Wybieramy materiały</h4>
+                  <p>Dobieramy materiały, które najlepiej oddadzą charakter Twoich wnętrz. Posiadamy firany, zasłony, rolety rzymskie, żaluzje oraz wiele innych możliwości na udekorowanie okna. Wybieramy również kolory i wzory. Kalkulujemy koszty projektu oraz przystępujemy do jego realizacji po zaakceptowaniu koncepcji.</p>
+                </div>
+              </div>
+              <div className="columns steps-item">
+                <div className="column is-2 has-text-centered-touch">
+                  <Needle_Icon width="96px" height="auto"/>
+                </div>
+                <div className="column is-10">
+                  <h4>3. Kroimy i szyjemy</h4>
+                  <p>Na tym etapie szyjemy, modelujemy wybrane materiały, które będą składać się na wystrój Twoich okien. Tworzymy oraz docinamy materiały idealnie na wymiar. Realizacja usługi trwa 2-6 tygodni.</p>                
+                </div>
+              </div>
+              <div className="columns steps-item">
+                <div className="column is-2 has-text-centered-touch">
+                  <Curtains width="96px" height="auto"/>
+                </div>
+                <div className="column is-10">
+                  <h4>4. Montujemy</h4>
+                  <p>Kiedy wszystko jest gotowe, przystępujemy do montażu dekoracji okna. Zakładamy materiały, modelujemy, a Ty cieszysz się wyjątkowym wystrojem swoich wnętrz.</p>                
+                </div>
+              </div>
+          </div>
+        </div>
+    </section>
+           
+          {/*<div className="columns">
             <div className="column is-10 is-offset-1">
              
               <div className="columns">
@@ -79,10 +135,9 @@ export const ProductPageTemplate = ({
               <p className="is-size-5">{pricing.description}</p>
               <Pricing data={pricing.plans} />
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
+              </div>*/}
+        
+    </>
 )
 
 ProductPageTemplate.propTypes = {
