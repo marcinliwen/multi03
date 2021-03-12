@@ -395,6 +395,45 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 .steps-container h4 
     font-weight: 700;
     font-size: 18px;
+.img_cover
+  height: 100%;
+  width: 100%
+  position: absolute !important
+  top: 0
+  left: 0
+section.tocontactform 
+  position: relative;
+  padding: 64px 0;
+
+.img_cover:after 
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #004633eb;
+.tocontactform-content
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+/* react-modal transitions */
+.ReactModal__Overlay 
+  overflow: auto;
+  opacity: 0;
+  transform: translateY(-10%);
+  transition: opacity 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95), transform 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+.ReactModal__Overlay--after-open 
+  opacity: 1;
+  transform: translateY(0);
+
+
+.ReactModal__Overlay--before-close 
+  opacity: 0;
+  transform: translateY(-10%);
 
 // responsiveness
 +widescreen

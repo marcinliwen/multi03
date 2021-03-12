@@ -41,7 +41,7 @@ export const ContactPageTemplate = ({title, subtitle, ulica, miasto, kod_pocztow
                 
               </div>
               <div className="column">
-                <div className="box">
+                <div className="box" id="contact_form">
                   <div className="content">
                     <h2>{subtitle}</h2>
                     <ContactForm />

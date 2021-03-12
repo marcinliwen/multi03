@@ -4,7 +4,7 @@ path: '/kontakt'
 lang: pl
 
 title: Kontakt
-subtitle: Umów darmową wycenę lub dowiedz się więcej
+subtitle: Umów darmową konsultację lub dowiedz się więcej
 address: 
     ulica: Obrońców Pokoju 21
     miasto: Gubin

@@ -1,12 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
+import { Link } from 'gatsby-plugin-intl'
+
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import Testimonials from '../components/Testimonials'
 import Pricing from '../components/Pricing'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import Subheader from '../components/Subheader'
+import Tocontactform from '../components/Tocontactform'
 
 import Material_Icon from '../assets/material.svg'
 import Chat_Icon from '../assets/chat.svg'
@@ -166,7 +170,7 @@ ProductPageTemplate.propTypes = {
 
 const ProductPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
-
+  const img_cover  = data.file
   return (
     <Layout>
       <Subheader title={frontmatter.title}/>
@@ -181,6 +185,7 @@ const ProductPage = ({ data }) => {
         fullImage={frontmatter.full_image}
         pricing={frontmatter.pricing}
       />
+      <Tocontactform />
     </Layout>
   )
 }
@@ -278,6 +283,13 @@ export const productPageQuery = graphql`
             plan
             price
           }
+        }
+      }
+    },
+    file(relativePath: {eq: "portfolio-cover.png"}){
+      childImageSharp {
+        fluid (maxWidth: 1920, quality: 100){
+          ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
