@@ -13,13 +13,17 @@ import { useIntl } from "gatsby-plugin-intl"
 export const ContactPageTemplate = ({title, subtitle, ulica, miasto, kod_pocztowy, telefon1, telefon2, mail, open_title, day_start, day_end, hour_start, hour_end}) =>  { 
 
     return (
-        <section className="section kontakt-block is-medium" style={{background: '#2D2D2F'}}>
+        <section className="section is-medium kontakt-block" style={{background: '#2D2D2F'}}>
           <div className="container"> 
           <div className="columns">
             <div className="column">
-                <div className="box">    
+                <div className="box kontakt-info">    
                     <div className="content">
-                        <h2>Kontakt</h2>
+                        <div className="content title">
+                          <h3>Kaja Decor </h3>
+                          <p >Studio Dekoracji Okien</p >
+                        </div>
+                        
                         <p>
                           <div>{telefon1}</div>
                           <div>{telefon2}</div>
@@ -31,7 +35,7 @@ export const ContactPageTemplate = ({title, subtitle, ulica, miasto, kod_pocztow
                         </p>
                     </div>
                     <div className="content">
-                        <h2>{open_title}</h2>
+                        <h4>{open_title}</h4>
                         <p>
                           <div>{day_start} - {day_end}</div>
                           <div>{hour_start} - {hour_end}</div>
@@ -41,9 +45,9 @@ export const ContactPageTemplate = ({title, subtitle, ulica, miasto, kod_pocztow
                 
               </div>
               <div className="column">
-                <div className="box" id="contact_form">
+                <div className="box kontakt-form" id="contact_form">
                   <div className="content">
-                    <h2>{subtitle}</h2>
+                    <h4>{subtitle}</h4>
                     <ContactForm />
                   </div>
                    

@@ -77,6 +77,21 @@ export default function ContactForm() {
         </div>
       </div>
       <div className="field">
+        <label className="label" htmlFor={'phone'}>
+          Telefon
+        </label>
+        <div className="control">
+          <input
+            className="input"
+            type={'tel'}
+            name={'phone'}
+            onChange={handleChange}
+            id={'phone'}
+            required={true}
+          />
+        </div>
+      </div>
+      <div className="field">
         <label className="label" htmlFor={'message'}>
           Wiadomość
         </label>
@@ -91,7 +106,7 @@ export default function ContactForm() {
         </div>
       </div>
       <div className="field">
-        <button className="btn first is-link" type="submit">
+        <button className="btn second is-link" type="submit">
           Wyślij
         </button>
       </div>

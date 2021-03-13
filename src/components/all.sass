@@ -382,7 +382,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   position: relative
   z-index: 1
   padding: 0 25px
-.kontakt-block .box
+.kontakt-info.box
   background-color: #D9C693;
 .gmap
   height: 300px
@@ -435,6 +435,39 @@ section.tocontactform
   opacity: 0;
   transform: translateY(-10%);
 
+.kontakt-form.box 
+    background-color: transparent;
+      
+.kontakt-form.box h4
+  color: #D9C68B;
+  margin-bottom: 45px;
+  font-weight: 400;
+  font-size: 32px;
+.kontakt-form.box .label
+  color: #D9C68B;
+  font-weight: 400
+.kontakt-block .title h3
+  margin-bottom: 0;
+  font-size: 44px
+.kontakt-block .title p 
+  font-size: 18px;
+.kontakt-block .title  
+  margin-bottom: 44px;
+  padding-bottom: 23px;
+  border-bottom: 1px solid rgb(45, 45, 47);
+.icon-bg 
+    width: 146px;
+    height: 146px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2D2D2F;
+    margin: auto;
+.columns.steps-item .is-10 
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
 // responsiveness
 +widescreen
   .is-size-10-widescreen 
@@ -554,6 +587,8 @@ section.tocontactform
     flex: 1 1 auto;
   .columns.is-multiline.brands-items
     display: flex;
+  .kontakt-form.box 
+    padding: 0;
 
 
 
@@ -581,8 +616,8 @@ section.tocontactform
     height: 400px
   .subheader h1
     font-size: 128px
-  .kontakt-block .box
-    margin-top: -220px;
+  .kontakt-info.box
+    height: 100%;
     padding: 25px 50px;
   .gmap
     height: 500px
