@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import Subheader from '../components/Subheader'
+import Tocontactform from '../components/Tocontactform'
 
 import { useIntl } from "gatsby-plugin-intl"
 
@@ -57,6 +58,7 @@ const AboutPage = ({ data }) => {
         title={frontmatter.title}
         content={html}
       />
+      <Tocontactform/>
     </Layout>
   )
 }

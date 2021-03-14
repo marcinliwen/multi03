@@ -5,9 +5,11 @@ import PreviewCompatibleImage from './PreviewCompatibleImage'
 
 class BlogRoll extends React.Component {
   render() {
+    const isServicesPage = this.props.isServicesPage
     const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
+    var { edges: posts } = data.allMarkdownRemark
     const cover = data.file
+    posts = isServicesPage ? posts : posts.slice(0, 4)
     return (
       <div className="columns is-multiline" style={{}}>
         {posts &&
@@ -33,7 +35,7 @@ class BlogRoll extends React.Component {
                       <p className="post-meta">
                         <Link
                           className="title has-text-primary is-size-4 is-block"
-                          to={post.fields.slug}
+                          to={post.frontmatter.path}
                         >
                           {post.frontmatter.title}
                         </Link>
@@ -43,10 +45,10 @@ class BlogRoll extends React.Component {
                       </p>
                     
                     <p>
-                      {post.excerpt}
+                      {/*post.excerpt*/}
                       <br />
                       <br />
-                      <Link className="btn second" to={post.fields.slug}>
+                      <Link className="btn second" to={post.frontmatter.path}>
                         Zobacz więcej
                       </Link>
                     </p>
@@ -54,9 +56,9 @@ class BlogRoll extends React.Component {
                   
               </article>
             </div>
-          ))}
-
-        <div className="is-parent column is-8 portfolio-cover" key={cover.id}>
+        ))}
+          {!isServicesPage &&
+            <div className="is-parent column is-8 portfolio-cover" key={cover.id}>
               <article
                 className={`blog-list-item tile is-child portfolio-item `}
                 >
@@ -88,6 +90,7 @@ class BlogRoll extends React.Component {
                   
               </article>
             </div>
+            }
       </div>
     )
   }
@@ -101,7 +104,7 @@ BlogRoll.propTypes = {
   }),
 }
 
-export default () => (
+export default (props) => (
   <StaticQuery
     query={graphql`
       query BlogRollQuery {
@@ -118,6 +121,7 @@ export default () => (
               }
               frontmatter {
                 title
+                path
                 templateKey
                 date(formatString: "MMMM DD, YYYY")
                 featuredpost
@@ -141,6 +145,6 @@ export default () => (
         }
       }
     `}
-    render={(data, count) => <BlogRoll data={data} count={count} />}
+    render={(data, count) => <BlogRoll data={data} count={count} isServicesPage={props.isServicesPage} />}
   />
 )

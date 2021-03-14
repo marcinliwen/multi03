@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import Tocontactform from '../components/Tocontactform'
 
 export const BlogPostTemplate = ({
   content,
@@ -75,6 +76,7 @@ const BlogPost = ({ data }) => {
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
       />
+      <Tocontactform />
     </Layout>
   )
 }
