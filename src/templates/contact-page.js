@@ -77,11 +77,7 @@ export const ContactPageTemplate = ({title, subtitle, ulica, miasto, kod_pocztow
     return (
       <Layout>
         <Subheader title={frontmatter.title}/>
-        <section>
-            <div className="gmap">
-                <Gmap target={frontmatter.address.ulica+','+frontmatter.address.kod_pocztowy+' '+frontmatter.address.miasto}/>
-            </div>
-        </section>
+        
         <ContactPageTemplate
           title={frontmatter.title}
           subtitle={frontmatter.subtitle}
@@ -97,7 +93,12 @@ export const ContactPageTemplate = ({title, subtitle, ulica, miasto, kod_pocztow
           hour_start={frontmatter.open_hours.hour_start}
           hour_end={frontmatter.open_hours.hour_end}
         />
-        <FeaturesMark />
+        <section>
+            <div className="gmap">
+                <Gmap target={frontmatter.address.ulica+','+frontmatter.address.kod_pocztowy+' '+frontmatter.address.miasto}/>
+            </div>
+        </section>
+       {/*<FeaturesMark />*/}
       </Layout>
     )
     

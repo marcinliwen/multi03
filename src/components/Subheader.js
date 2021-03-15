@@ -6,11 +6,12 @@ import Img from "gatsby-image"
 const Subheader = (props)=>{
     return(
         <div
-            className="full-width-image-container margin-top-0 subheader margin-bottom-0"
+            className={`full-width-image-container margin-top-0 subheader margin-bottom-0 ${props.className && props.className}`}
         >
         <h1>
           {props.title}
         </h1>
+        {props.subtitle && <p>{props.subtitle}</p>}
         <Img className="home-img" fluid={props.data.file.childImageSharp.fluid}/>
       </div>
     )
@@ -28,6 +29,6 @@ export default (props) => (
             }
         }
       `}
-      render={(data) => <Subheader data={data} title={props.title} />}
+      render={(data) => <Subheader data={data} title={props.title} subtitle={props.subtitle} className={props.className}/>}
     />
   )

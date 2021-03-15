@@ -334,6 +334,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   opacity: 0;
   flex-direction: column;
   justify-content: flex-end;
+  width: 100%
 
 .portfolio-item:hover .portfolio-text
   opacity: 1;
@@ -470,6 +471,29 @@ section.tocontactform
     justify-content: center;
     display: flex;
     flex-direction: column;
+.portfolio-title 
+    flex-direction: column;
+    height: auto;
+    padding: 80px;
+.portfolio-title p
+    color: #2D2D2F;
+    position: relative;
+    z-index: 1;
+    font-weight: 800;
+    font-size: 18px;
+.subheader.portfolio-title h1
+    font-size: 64px;
+
+.galery-img
+    position: relative;
+.galery-img-text 
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 15px;
+    background: #ffffff96;
+    width: 100%;
+    text-align: right;
 // responsiveness
 +widescreen
   .is-size-10-widescreen 

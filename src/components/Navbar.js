@@ -79,9 +79,6 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="navbar-end has-text-centered">
-            <Link className="navbar-item" to="/kontakt#gmap">
-              Znajdź nas
-            </Link>
             <a className="navbar-item">{phone_number}</a>
           </div>
           <LanguageSelect />

@@ -1,11 +1,19 @@
 ---
 templateKey: blog-post
-title: Making sense of the SCAA’s new Flavor Wheel
-path: /blog/post1
+title: Załony
+path: /realizacje/post1
 date: 2016-12-17T15:04:10.000Z
 featuredpost: false
 featuredimage: /img/portfolio-1.png
-description: The Coffee Taster’s Flavor Wheel, the official resource used by coffee tasters, has been revised for the first time this year.
+imagegalery :
+  - image: /img/portfolio-1.png
+    text: Uszyliśmy i zawiesiliśmy firany
+  - image: /img/portfolio-2.png
+    text: Pwiesiliśmy zasłony
+  - image: /img/portfolio-3.png
+    text: Całość prezentuje się znakomicie
+subtitle: Przygotowaliśmy materiał i kolory
+description: Przygotowaliśmy materiał i kolory
 tags:
   - flavor
   - tasting
