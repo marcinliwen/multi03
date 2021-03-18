@@ -164,6 +164,8 @@ $menu-label-color: $white-ter
 .blog-list-item .featured-thumbnail
   flex-basis: 100%;
   margin: 0;
+  height: 100%
+  overflow: hidden
 
 .home-img
     flex: 1;
@@ -328,25 +330,20 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
     color: #E2E3E4;
 
 .portfolio-text 
-  position: absolute;
   bottom: 0;
   display: flex;
-  opacity: 0;
   flex-direction: column;
   justify-content: flex-end;
-  width: 100%
+  width: 100%;
+  background: #004633eb;
 
-.portfolio-item:hover .portfolio-text
-  opacity: 1;
-  padding: 1.25rem;
-  background-color: #004633eb;
-  height: 100%;
+
 
 
 .portfolio-item 
-    position: relative;
-    overflow: hidden;
-    height: 100%;
+  position: relative;
+  height: 100%
+    
 .portfolio-cover .portfolio-text 
     opacity: 1;
     background-color: #004633eb;
@@ -355,6 +352,8 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
     text-align: center;
     display: flex;
     justify-content: center;
+    padding: 1.25rem;
+    position: absolute
 .portfolio-cover 
     order: 4;
 .portfolio-order:nth-child(1) 
@@ -368,8 +367,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 
 .portfolio-order:nth-child(4) 
     order: 5;
-.portfolio-order, .portfolio-cover 
-  max-height: 380px
+
 .post-meta 
     margin-bottom: auto!important;
 .menu-list a
@@ -494,6 +492,8 @@ section.tocontactform
     background: #ffffff96;
     width: 100%;
     text-align: right;
+.portfolio-item .btn.second:hover svg
+    transform: scale(1.3);
 // responsiveness
 +widescreen
   .is-size-10-widescreen 
@@ -562,15 +562,9 @@ section.tocontactform
     width: calc(100% / 2 - 20px);
     position: relative;
     margin: 0 10px 20px;
-  .portfolio-order, .portfolio-cover 
-    max-height: 280px;
+ 
 
-+desktop-only
-  .portfolio-order, .portfolio-cover 
-    max-height: 324px;
-+widescreen-only
-  .portfolio-order, .portfolio-cover 
-    max-height: 352px;
+
 
 +mobile
   .blog-list-item header
@@ -683,6 +677,19 @@ section.tocontactform
     flex-direction: row-reverse;
   .offer .services-item:nth-child(even) .services-img:after 
     left: auto;
+  .portfolio-text 
+    position: absolute;
+    top: 0
+    bottom: 0;
+    opacity: 0;
+    visivility: hidden;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1)
+  .portfolio-item-hover:hover .portfolio-text
+    opacity: 1;
+    visibility: visible;
+    background-color: #004633eb;
+  .MuiButton-label
+   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1)
 
 +widescreen
   .container:not(.is-max-desktop)

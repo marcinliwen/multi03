@@ -20,7 +20,7 @@ export const BlogPostTemplate = ({
   imagegalery
 }) => {
   const PostContent = contentComponent || Content
-
+  console.log(imagegalery)
   return (
     <section className="">
       {helmet || ''}
@@ -30,7 +30,7 @@ export const BlogPostTemplate = ({
             imagegalery.map((item)=>(
             <div className="column is-6 galery-img">
               <Img fluid={item.image.childImageSharp.fluid}/>
-              <div className="galery-img-text"><p>{item.text}</p></div>
+              <Img fixed={item.image.childImageSharp.fixed}/>
             </div>))
           : null
           }
@@ -116,12 +116,14 @@ export const pageQuery = graphql`
         imagegalery {
           image{
             childImageSharp {
-              fluid(maxWidth: 960 quality: 90) {
+              fluid(maxWidth: 960 quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp_noBase64
+              }
+              fixed(width: 200){
+                ...GatsbyImageSharpFixed
               }
             }
           }
-          text
         }
       }
     }

@@ -11,6 +11,7 @@ import Pricing from '../components/Pricing'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import Subheader from '../components/Subheader'
 import Tocontactform from '../components/Tocontactform'
+import Howtomeasure from '../components/Howtomeasure'
 
 import Material_Icon from '../assets/material.svg'
 import Chat_Icon from '../assets/chat.svg'
@@ -19,9 +20,6 @@ import Design from '../assets/design.svg'
 import Curtains from '../assets/curtains.svg'
 import Cancel from '../assets/close.svg'
 
-import Modal from 'react-modal';
-
-Modal.setAppElement(`#___gatsby`);
 const customStyles = {
     overlay: {
         backgroundColor: '#2d2d2fdb',
@@ -53,15 +51,7 @@ export const ProductPageTemplate = ({
   fullImage,
   pricing,
 }) => {
-  const [modalIsOpen,setIsOpen] = React.useState(false);
-    function openModal() {
-      setIsOpen(true);
-    }
-  
-  
-    function closeModal(){
-      setIsOpen(false);
-    }
+
   return(
     <>
     <section className="section is-medium offer">
@@ -90,35 +80,8 @@ export const ProductPageTemplate = ({
                 <div className="column is-10">
                   <h4>1. Planujemy i projektujemy</h4>
                   <p>Na tym etapie poznajemy Twoje oczekiwania, upodobania i ewentualne pomysły na wystrój okna. Bierzemy te informacje pod uwagę tworząc koncepcję na aranżację okienną. Na tym etapie dokonujemy również pomiarów pomieszczenia.</p>
-                  <button  
-                    style={{ 
-                      border: 'none', 
-                      background:'none', 
-                      textAlign: 'left', 
-                      padding: '8px 16px', 
-                      cursor: 'pointer',
-                      background: '#2D2D2F',
-                      width: 'max-content',
-                      color: '#fff'
-                      }} 
-                      onClick={openModal} 
-                  >Jak prawidłowo zmierzyć okno?</button>
+                  <Howtomeasure />
                 </div>
-                <Modal
-                  isOpen={modalIsOpen}
-                  onRequestClose={closeModal}
-                  style={customStyles}
-                  contentLabel="Example Modal"
-                >  
-                      <div className="box" style={{background: '#d9c693'}}>
-                          <div className="content">
-                            <button onClick={closeModal} className="btn" style={{ padding: '15px', display: 'flex', justifyContent: 'center', alignItems: 'center', marginLeft: 'auto'}}><Cancel width="16px" fill="#d9c693" style={{dusplay: 'block'}}/></button>
-                            <h3 style={{fontSize: '44px'}}>Jak prawidłowo zmierzyć wysokość okien?</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                          </div>
-                          
-                        </div>
-                </Modal>
               </div>
               <div className="columns steps-item">
               <div className="column is-2 has-text-centered-touch">

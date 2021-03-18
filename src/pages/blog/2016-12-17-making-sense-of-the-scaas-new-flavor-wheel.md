@@ -7,13 +7,10 @@ featuredpost: false
 featuredimage: /img/portfolio-1.png
 imagegalery :
   - image: /img/portfolio-1.png
-    text: Uszyliśmy i zawiesiliśmy firany
   - image: /img/portfolio-2.png
-    text: Pwiesiliśmy zasłony
   - image: /img/portfolio-3.png
-    text: Całość prezentuje się znakomicie
 subtitle: Przygotowaliśmy materiał i kolory
-description: Przygotowaliśmy materiał i kolory
+description: Przygotowaliśmy materiał i kolory. Uszyliśmy i zawiesiliśmy firany. Pwiesiliśmy zasłony. Całość prezentuje się znakomicie.
 tags:
   - flavor
   - tasting
