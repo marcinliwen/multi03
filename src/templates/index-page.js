@@ -53,7 +53,7 @@ export const IndexPageTemplate = ({
           }}
           className="home-header-content"
         >
-           <img src={logo} alt="KAJA decor" className="logo-h1"/>
+           <img src={logo} alt="KAJA decor" className="logo-h1" width="224px" height="85px"/>
           <h1
             className="is-size-2-tablet is-size-10-widescreen home-title"
             style={{

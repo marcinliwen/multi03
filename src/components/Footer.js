@@ -34,6 +34,8 @@ const Footer = ({data}) =>{
               src={logo}
               alt="Kaja Decor"
               style={{ width: '10em', marginTop: '1rem' }}
+              width="160px"
+              height="61px"
             />
           </div>
               <div className="column is-3">
