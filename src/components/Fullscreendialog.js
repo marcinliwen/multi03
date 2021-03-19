@@ -16,6 +16,9 @@ import Less from '../assets/less.svg'
 import Img from "gatsby-image"
 import Opengalery from '../assets/gallery.svg'
 
+import './gallery.css'
+import ImageGallery from 'react-image-gallery';
+
 const GaleryButton = withStyles((theme) => ({
   root: {
     padding: '16px',
@@ -28,6 +31,8 @@ const GaleryButton = withStyles((theme) => ({
 
   },
 }))(Button);
+
+
 const useStyles = makeStyles((theme) => ({
   appBar: {
     position: 'relative',
@@ -36,7 +41,32 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: theme.spacing(2),
     flex: 1,
   },
+  allGallery:{
+    "& .MuiPaper-root": {
+      background: 'transparent'
+    }
+  }
 }));
+
+const CloseButton = withStyles((theme)=>({
+  root:{
+    position: 'absolute',
+    top: '0px',
+    right: '0px',
+    zIndex: '10',
+    border: 'none',
+    padding: '16px',
+    filter: 'drop-shadow(0 2px 2px #1a1a1a)',
+    transition: 'all .2s ease-out',
+    "&:hover":{
+      backgroundColor: 'transparent'
+    },
+    "&:hover svg"  :{
+      fill: '#D9C693',
+      transform: 'scale(1.1)',
+    }
+  }
+}))(Button);
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="down" ref={ref} {...props} />;
@@ -54,25 +84,28 @@ export default function FullScreenDialog(props) {
     setOpen(false);
   };
 
-  console.log(props.imagegalery )
+  var newGalery = props.imagegalery && props.imagegalery.map((item)=>{
+    return(
+    {original: item.image.childImageSharp.fluid.src, thumbnail : item.image.childImageSharp.fixed.src}
+  )})
+  console.log(newGalery)
   return (
     <div>
       <GaleryButton   onClick={handleClickOpen}>
         <Opengalery fill="#DAC596"  width="44px" height="44px" style={{verticalAlign:'bottom'}} />
       </GaleryButton>
-      <Dialog fullScreen open={open} onClose={handleClose} TransitionComponent={Transition}>
+      <Dialog fullScreen open={open} onClose={handleClose} TransitionComponent={Transition} style={{background: 'rgb(45, 45, 47)'}} className={classes.allGallery}>
         
-         <div className="content">
-            <Button edge="start" variant="outlined" onClick={handleClose} aria-label="close">
-              <Less fill="#DAC596"  width="24px" style={{verticalAlign:'bottom'}}/>
-            </Button>
-         </div>
+         
+            <CloseButton edge="start" variant="outlined" onClick={handleClose} aria-label="close">
+              <Less fill="#fff"  width="24px" style={{verticalAlign:'bottom'}}/>
+            </CloseButton>
+        
            
-          {props.imagegalery && props.imagegalery.map((item)=>(
+          {/*props.imagegalery && props.imagegalery.map((item)=>(
             <Img fixed={item.image.childImageSharp.fixed} />
-          ))}
-        
-        slider ze zdjeciami
+          ))*/}
+        <ImageGallery items={newGalery} showPlayButton={false}/>
       </Dialog>
     </div>
   );

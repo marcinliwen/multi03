@@ -54,7 +54,9 @@ class BlogRoll extends React.Component {
                      {/* <Link className="btn second" to={post.frontmatter.path} style={{background: 'none', boxShadow: 'none', padding: '15px', transitionDuration: '0.3s'}}>
                         <More fill="#DAC596"  width="24px" style={{verticalAlign:'bottom'}} />
                       </Link>*/}
+                      {post.frontmatter.imagegalery && post.frontmatter.imagegalery.length ? 
                       <FullScreenDialog imagegalery={post.frontmatter.imagegalery}/>
+                      : null}
                     </p>
                   </div>
                   
@@ -141,8 +143,9 @@ export default (props) => (
                 imagegalery {
                   image{
                     childImageSharp {
-                      fluid(maxWidth: 960 quality: 100) {
-                        ...GatsbyImageSharpFluid_withWebp_noBase64
+                      fluid(maxWidth: 1920 quality: 100) {
+                        src,
+                        srcSet
                       }
                       fixed(width: 200){
                         ...GatsbyImageSharpFixed

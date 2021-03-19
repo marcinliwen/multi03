@@ -6,9 +6,11 @@ date: 2016-12-17T15:04:10.000Z
 featuredpost: false
 featuredimage: /img/portfolio-1.png
 imagegalery :
-  - image: /img/portfolio-1.png
-  - image: /img/portfolio-2.png
-  - image: /img/portfolio-3.png
+  - image: /img/curtains-01.jpg
+  - image: /img/curtains-02.jpg
+  - image: /img/curtains-03.jpg
+  - image: /img/curtains-04.jpg
+  - image: /img/curtains-05.jpg
 subtitle: Przygotowaliśmy materiał i kolory
 description: Przygotowaliśmy materiał i kolory. Uszyliśmy i zawiesiliśmy firany. Pwiesiliśmy zasłony. Całość prezentuje się znakomicie.
 tags:
