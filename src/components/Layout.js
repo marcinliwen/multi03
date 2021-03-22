@@ -6,6 +6,7 @@ import './all.sass'
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
 
+
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
 
@@ -50,7 +51,7 @@ const TemplateWrapper = ({ children }) => {
         />
         <meta name="apple-mobile-web-app-capable" content="yes" />
       </Helmet>
-      <Navbar />
+      <Navbar />   
       <div>{children}</div>
       <Footer />
     </div>

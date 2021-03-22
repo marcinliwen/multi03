@@ -6,7 +6,7 @@ import Img from "gatsby-image"
 import logo from '../img/logo.svg'
 import CountUp from 'react-countup';
 import { InView } from 'react-intersection-observer';
-
+import { Fade } from "react-awesome-reveal";
 
 import Layout from '../components/Layout'
 import Features from '../components/Features'
@@ -54,30 +54,38 @@ export const IndexPageTemplate = ({
           className="home-header-content"
         >
            <img src={logo} alt="KAJA decor" className="logo-h1" width="224px" height="85px"/>
-          <h1
-            className="is-size-2-tablet is-size-10-widescreen home-title"
-            style={{
-              color: '#2D2D2F',
-              lineHeight: '1',
-              padding: '0.25em 0 0',
-            }}
-          >
-            {title}
-          </h1>
-          <h3
-            className="is-size-3-mobile is-size-5-tablet is-size-1-widescreen"
-            style={{
-              color: '#2D2D2F',
-              lineHeight: '1',
-              padding: '0.75em 0 0 0',
-            }}
-          >
-            {subheading}
-          </h3>
+          <Fade triggerOnce direction="up" >
+            <h1
+              className="is-size-2-tablet is-size-10-widescreen home-title"
+              style={{
+                color: '#2D2D2F',
+                lineHeight: '1',
+                padding: '0.25em 0 0',
+              }}
+            >
+              {title}
+            </h1>
+          </Fade>
+          <Fade triggerOnce direction="up" delay={400}>
+            <h3
+              className="is-size-3-mobile is-size-5-tablet is-size-1-widescreen"
+              style={{
+                color: '#2D2D2F',
+                lineHeight: '1',
+                padding: '0.75em 0 0 0',
+              }}
+            >
+              {subheading}
+            </h3>
+          </Fade>
+          
        
         </div>
         <div className="content home" style={{position:'relative', zIndex:'1'}}>
-          <Link to='/kontakt' className="btn" style={{flex:'1', width: 'max-content', margin:'0px 25px 0 0'}}>Zamów darmową wycenę</Link>
+          <Fade triggerOnce direction="up" delay={800}>
+            <Link to='/kontakt' className="btn" style={{flex:'1', width: 'max-content', margin:'0px 25px 0 0'}}>Zamów darmową wycenę</Link>
+          </Fade>
+         
           {/*<Link to='/products' className="btn" style={{flex:'1', width: 'max-content', margin:'0px 25px 0 0'}}>Poznaj nasze usługi</Link>*/}
         </div>
         </div>
@@ -85,9 +93,10 @@ export const IndexPageTemplate = ({
       </div>
       <Img className="home-img" fluid={imghome}/>
     </div>
-    <section className="section bg-primary">
+    <section className="section bg-primary" style={{overflow: 'hidden'}}>
                 <div className="container">
                 <div class="columns features"> 
+                 <Fade triggerOnce direction="up" cascade childClassName="column has-text-centered">              
                   <div class="column has-text-centered">
                     <div>
                     <div class="title"><Design height="42px" width="42px" fill="#D9C693"/></div>
@@ -112,6 +121,7 @@ export const IndexPageTemplate = ({
                       <p class="heading">Fachowo doradzamy, dzielimy się wiedzą i doświadczeniem</p>
                     </div>
                   </div>
+                  </Fade>
                 </div>
                 </div>
                
@@ -121,18 +131,24 @@ export const IndexPageTemplate = ({
               <div className="content">
                 <div className="columns">
                   <div className="column is-12">
+                  <Fade triggerOnce direction="up" >
                     <h3 className="">
                       {heading}
                     </h3>
+                    </Fade>
+                    <Fade triggerOnce direction="up" >
                     <p>{description}</p>
+                    </Fade>
                   </div>
                 </div>
                 <Features gridItems={intro.blurbs} />
                 <div className="columns">
                   <div className="column is-12 has-text-centered">
+                  <Fade triggerOnce direction="up" >
                     <Link className="btn first" to="/products">
                       Poznaj nasze usługi
                     </Link>
+                  </Fade>
                   </div>
                 </div>
                 </div>
@@ -143,9 +159,11 @@ export const IndexPageTemplate = ({
           <div className="content">
             <div className="columns">         
             <div className="column is-12">
+            <Fade triggerOnce direction="up" >
               <h3 className="">
                 Ostatnie realizacje
               </h3>
+              </Fade>
               <BlogRoll />
               {/*<div className="column is-12 has-text-centered">
                 <Link className="btn second" to="/blog">

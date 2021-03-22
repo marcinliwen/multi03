@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import { Fade } from "react-awesome-reveal";
 
 const FeatureGrid = ({ gridItems }) => (
   <div className="services-container">
@@ -10,8 +11,14 @@ const FeatureGrid = ({ gridItems }) => (
           <div className="services-img">
             <PreviewCompatibleImage imageInfo={item} />
           </div>
-          <h3>{item.title}</h3>
+          <Fade triggerOnce direction="up" >
+            <h3>{item.title}</h3>
+          </Fade>
+          
+          <Fade triggerOnce direction="up" >
           <p>{item.text}</p>
+          </Fade>
+          
         </div>
       ))}
     </div>

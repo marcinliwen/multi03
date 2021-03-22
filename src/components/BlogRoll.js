@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 import FullScreenDialog from './Fullscreendialog'
-
+import { Fade } from "react-awesome-reveal";
 class BlogRoll extends React.Component {
   render() {
     const isServicesPage = this.props.isServicesPage
@@ -17,6 +17,7 @@ class BlogRoll extends React.Component {
           posts.map(({ node: post }) => (
             <div className="is-parent column is-4 portfolio-order portfolio-item-hover" key={post.id}>
               <article
+                
                 className={`blog-list-item tile is-child portfolio-item ${
                   post.frontmatter.featuredpost ? 'is-featured' : ''
                 }`}
@@ -32,6 +33,7 @@ class BlogRoll extends React.Component {
                       />
                     </div>
                   ) : null}
+                 
                   <div className="content portfolio-text">
                       <p className="post-meta" style={{padding: '1.25rem'}}>
                         {/*<Link
@@ -59,7 +61,7 @@ class BlogRoll extends React.Component {
                       : null}
                     </p>
                   </div>
-                  
+                 
               </article>
             </div>
         ))}
@@ -77,9 +79,10 @@ class BlogRoll extends React.Component {
                         }}
                       />
                     </div>
+                  
                     <div className="content portfolio-text">
                      
-                        
+                    <Fade direction="up" >
                           
                         <h3>Portfolio</h3>
 
@@ -92,8 +95,9 @@ class BlogRoll extends React.Component {
                         Zobacz więcej
                       </Link>
                     </p>
+                    </Fade>
                   </div>
-                  
+                 
               </article>
             </div>
             }

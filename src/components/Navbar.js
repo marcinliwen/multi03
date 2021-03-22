@@ -5,6 +5,7 @@ import logo from '../img/logo.svg'
 
 import LanguageSelect from './LanguageSelect'
 import { useIntl, Link, FormattedMessage } from 'gatsby-plugin-intl'
+import { Fade } from "react-awesome-reveal";
 
 
 const Navbar = () => {
@@ -44,6 +45,7 @@ const Navbar = () => {
       role="navigation"
       aria-label="main-navigation"
     >
+      <Fade direction="down" style={{width: '100%', animationFillMode: 'backwards'}}>
       <div className="container">
         <div className="navbar-brand">
           <Link to="/" className="logo" title="Logo">
@@ -84,6 +86,7 @@ const Navbar = () => {
           <LanguageSelect />
         </div>
       </div>
+      </Fade>
     </nav>
   )
 }
