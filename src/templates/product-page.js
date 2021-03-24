@@ -54,7 +54,7 @@ export const ProductPageTemplate = ({
 
   return(
     <>
-    <section className="section is-medium offer">
+    <section className="section">
       <div className="container">
         <div className="content">
           <div className="columns">

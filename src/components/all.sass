@@ -221,7 +221,12 @@ $menu-label-color: $white-ter
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
-
+.services-wrap 
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 .services-container 
     display: flex;
     justify-content: center;
@@ -258,6 +263,7 @@ $menu-label-color: $white-ter
     margin-top: 0!important;
     margin-bottom: 0px
     color: #2D2D2F;
+    z-index: 1
 
 .services-img .gatsby-image-wrapper
     height: 100%;
@@ -270,6 +276,7 @@ $menu-label-color: $white-ter
   margin: 0 0.75rem;
 
 @import "~bulma"
+@import "./animation"
 .btn.first:hover
   color: #2D2D2F;
   background-color: #D8C593;

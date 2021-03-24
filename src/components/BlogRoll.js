@@ -4,6 +4,8 @@ import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 import FullScreenDialog from './Fullscreendialog'
 import { Fade } from "react-awesome-reveal";
+import { InView } from 'react-intersection-observer';
+
 class BlogRoll extends React.Component {
   render() {
     const isServicesPage = this.props.isServicesPage
@@ -11,6 +13,8 @@ class BlogRoll extends React.Component {
     var { edges: posts } = data.allMarkdownRemark
     const cover = data.file
     posts = isServicesPage ? posts : posts.slice(0, 4)
+
+    
     return (
       <div className="columns is-multiline" style={{}}>
         {posts &&

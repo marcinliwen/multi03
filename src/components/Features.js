@@ -2,28 +2,30 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import { Fade } from "react-awesome-reveal";
+import { InView } from 'react-intersection-observer';
 
-const FeatureGrid = ({ gridItems }) => (
+
+
+const FeatureGrid = ({ gridItems }) =>{ 
+  const [inView, setInView] = React.useState(false)
+  
+  return (
   <div className="services-container">
     <div className="services">
-      {gridItems.map((item) => (
-        <div key={item.text} className="services-item">
-          <div className="services-img">
-            <PreviewCompatibleImage imageInfo={item} />
-          </div>
-          <Fade triggerOnce direction="up" >
+      <Fade  className="services-item" cascade childClassName="services-wrap"  damping={0.3}>
+      {gridItems.map((item, index) => (
+        <div>
+            <div className="services-img">
+              <PreviewCompatibleImage imageInfo={item} />
+            </div>
             <h3>{item.title}</h3>
-          </Fade>
-          
-          <Fade triggerOnce direction="up" >
-          <p>{item.text}</p>
-          </Fade>
-          
+            <p>{item.text}</p> 
         </div>
       ))}
+      </Fade>
     </div>
   </div>
-)
+)}
 
 FeatureGrid.propTypes = {
   gridItems: PropTypes.arrayOf(

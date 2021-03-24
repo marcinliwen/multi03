@@ -96,31 +96,25 @@ export const IndexPageTemplate = ({
     <section className="section bg-primary" style={{overflow: 'hidden'}}>
                 <div className="container">
                 <div class="columns features"> 
-                 <Fade triggerOnce direction="up" cascade childClassName="column has-text-centered">              
-                  <div class="column has-text-centered">
-                    <div>
-                    <div class="title"><Design height="42px" width="42px" fill="#D9C693"/></div>
+                <Fade cascade damping={0.3} className="column has-text-centered">
+                    <div>                 
+                      <div class="title">                   
+                          <Design height="42px" width="42px" fill="#D9C693"/>
+                      </div>
                       <p class="heading">Działamy kompleksowo, od projektu po montaż</p>
                     </div>
-                  </div>
-                  <div class="column has-text-centered">
                     <div>
                     <div class="title"><Material_Icon height="42px" width="42px" fill="#D9C693"/></div>
                       <p class="heading">Korzystamy z materiałów najlepszej jakości</p>
                     </div>
-                  </div>
-                  <div class="column has-text-centered">
                     <div>
                     <div class="title"><Needle_Icon height="42px" width="42px" fill="#D9C693"/></div>
                       <p class="heading">Wszystkie usługi wykonujemy ręcznie w naszej pracowni</p>
                     </div>
-                  </div>
-                  <div class="column has-text-centered">
                     <div>
                     <div class="title"><Chat_Icon height="42px" width="42px" fill="#D9C693"/></div>
                       <p class="heading">Fachowo doradzamy, dzielimy się wiedzą i doświadczeniem</p>
                     </div>
-                  </div>
                   </Fade>
                 </div>
                 </div>
@@ -197,14 +191,17 @@ export const IndexPageTemplate = ({
     <section className="section is-medium brands bg-primary">
       <div className="container">
         <div className="content">
+        <Fade triggerOnce direction="up" >
           <h3>Nasi partnerzy</h3>
+        </Fade>
         </div>
         <div className="content">
         <div className="columns is-multiline brands-items">
+        <Fade  cascade className="column brands-item" damping={0.3}>
           {brands_img.map((node)=>
-             <div className="column brands-item"><Img fluid={node.childImageSharp.fluid} /></div>
+             <Img fluid={node.childImageSharp.fluid} />
           )}
-          
+          </Fade> 
         </div>
         </div>
       </div>
