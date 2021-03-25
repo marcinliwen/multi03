@@ -105,7 +105,7 @@ export default function FullScreenDialog(props) {
           {/*props.imagegalery && props.imagegalery.map((item)=>(
             <Img fixed={item.image.childImageSharp.fixed} />
           ))*/}
-        <ImageGallery items={newGalery} showPlayButton={false}/>
+        <ImageGallery items={newGalery} showPlayButton={false} lazyLoad={true}/>
       </Dialog>
     </div>
   );

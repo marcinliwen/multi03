@@ -8,6 +8,7 @@ import { useIntl, Link, FormattedMessage } from 'gatsby-plugin-intl'
 import { Fade } from "react-awesome-reveal";
 
 
+
 const Navbar = () => {
   const [menu, setMenu] = useState(false)
   const toggleHamburger = () => {
@@ -39,13 +40,15 @@ const Navbar = () => {
   }, []);
 
 
+  const intl = useIntl()
+
   return (
     <nav
       className={`navbar is-fixed-top ${scroll ? 'bg-gold':''}`}
       role="navigation"
       aria-label="main-navigation"
     >
-      <Fade direction="down" style={{width: '100%', animationFillMode: 'backwards'}}>
+      <Fade  triggerOnce direction="down" style={{width: '100%', animationFillMode: 'backwards'}}>
       <div className="container">
         <div className="navbar-brand">
           <Link to="/" className="logo" title="Logo">
@@ -68,16 +71,16 @@ const Navbar = () => {
               Home
             </Link>
             <Link className="navbar-item" to="/o-nas">
-              O nas
+              {intl.formatMessage({ id: "about" })}            
             </Link>
             <Link className="navbar-item" to="/oferta">
-              Usługi
+            {intl.formatMessage({ id: "services" })} 
             </Link>
             <Link className="navbar-item" to="/blog">
-              Realizacje
+            {intl.formatMessage({ id: "realisations" })} 
             </Link>
             <Link className="navbar-item" to="/kontakt">
-              Kontakt
+            {intl.formatMessage({ id: "contact" })} 
             </Link>
           </div>
           <div className="navbar-end has-text-centered">

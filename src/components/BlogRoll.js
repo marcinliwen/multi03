@@ -86,7 +86,7 @@ class BlogRoll extends React.Component {
                   
                     <div className="content portfolio-text">
                      
-                    <Fade direction="up" >
+                    <Fade  triggerOnce direction="up" >
                           
                         <h3>Portfolio</h3>
 

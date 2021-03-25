@@ -12,7 +12,7 @@ const FeatureGrid = ({ gridItems }) =>{
   return (
   <div className="services-container">
     <div className="services">
-      <Fade  className="services-item" cascade childClassName="services-wrap"  damping={0.3}>
+      <Fade  triggerOnce  className="services-item" cascade childClassName="services-wrap"  damping={0.3}>
       {gridItems.map((item, index) => (
         <div>
             <div className="services-img">

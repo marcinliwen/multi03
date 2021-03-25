@@ -66,7 +66,9 @@ const Footer = ({data}) =>{
               <div className="column is-3">
                 <section className="menu">
                   <ul className="menu-list">
-                  <li className="fotter-title">Nawigacja</li>
+                  <li className="fotter-title">
+                  {intl.formatMessage({ id: "nav" })}
+                  </li>
                     <li>
                       <Link to="/" className="navbar-item">
                         Home
@@ -74,22 +76,22 @@ const Footer = ({data}) =>{
                     </li>
                     <li>
                       <Link className="navbar-item" to="/o-nas">
-                        O nas
+                      {intl.formatMessage({ id: "about" })}  
                       </Link>
                     </li>
                     <li>
                       <Link className="navbar-item" to="/oferta">
-                        Usługi
+                      {intl.formatMessage({ id: "services" })}
                       </Link>
                     </li>
                     <li>
                       <Link className="navbar-item" to="/blog">
-                        Realizacje
+                      {intl.formatMessage({ id: "realisations" })}
                       </Link>
                     </li>
                     <li>
                       <Link className="navbar-item footer-title" to="/kontakt">
-                        Kontakt
+                      {intl.formatMessage({ id: "contact" })}
                       </Link>
                     </li>
                   </ul>

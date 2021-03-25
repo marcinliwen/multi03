@@ -1,3 +1,7 @@
 {
-    "about" : "uber uns"
+    "about" : "Uber uns",
+    "services" : "Dienste",
+    "realisations" : "Realisierungen",
+    "contact": "Kontakt",
+    "nav" : "Navigation"
 }

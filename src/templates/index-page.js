@@ -54,7 +54,7 @@ export const IndexPageTemplate = ({
           className="home-header-content"
         >
            <img src={logo} alt="KAJA decor" className="logo-h1" width="224px" height="85px"/>
-          <Fade triggerOnce direction="up" >
+          <Fade  triggerOnce  direction="up" >
             <h1
               className="is-size-2-tablet is-size-10-widescreen home-title"
               style={{
@@ -66,7 +66,7 @@ export const IndexPageTemplate = ({
               {title}
             </h1>
           </Fade>
-          <Fade triggerOnce direction="up" delay={400}>
+          <Fade  triggerOnce  direction="up" delay={400}>
             <h3
               className="is-size-3-mobile is-size-5-tablet is-size-1-widescreen"
               style={{
@@ -82,7 +82,7 @@ export const IndexPageTemplate = ({
        
         </div>
         <div className="content home" style={{position:'relative', zIndex:'1'}}>
-          <Fade triggerOnce direction="up" delay={800}>
+          <Fade  triggerOnce  direction="up" delay={800}>
             <Link to='/kontakt' className="btn" style={{flex:'1', width: 'max-content', margin:'0px 25px 0 0'}}>Zamów darmową wycenę</Link>
           </Fade>
          
@@ -96,7 +96,7 @@ export const IndexPageTemplate = ({
     <section className="section bg-primary" style={{overflow: 'hidden'}}>
                 <div className="container">
                 <div class="columns features"> 
-                <Fade cascade damping={0.3} className="column has-text-centered">
+                <Fade  triggerOnce cascade damping={0.3} className="column has-text-centered">
                     <div>                 
                       <div class="title">                   
                           <Design height="42px" width="42px" fill="#D9C693"/>
@@ -125,12 +125,12 @@ export const IndexPageTemplate = ({
               <div className="content">
                 <div className="columns">
                   <div className="column is-12">
-                  <Fade triggerOnce direction="up" >
+                  <Fade  triggerOnce  direction="up" >
                     <h3 className="">
                       {heading}
                     </h3>
                     </Fade>
-                    <Fade triggerOnce direction="up" >
+                    <Fade  triggerOnce  direction="up" >
                     <p>{description}</p>
                     </Fade>
                   </div>
@@ -138,7 +138,7 @@ export const IndexPageTemplate = ({
                 <Features gridItems={intro.blurbs} />
                 <div className="columns">
                   <div className="column is-12 has-text-centered">
-                  <Fade triggerOnce direction="up" >
+                  <Fade  triggerOnce  direction="up" >
                     <Link className="btn first" to="/products">
                       Poznaj nasze usługi
                     </Link>
@@ -153,7 +153,7 @@ export const IndexPageTemplate = ({
           <div className="content">
             <div className="columns">         
             <div className="column is-12">
-            <Fade triggerOnce direction="up" >
+            <Fade  triggerOnce  direction="up" >
               <h3 className="">
                 Ostatnie realizacje
               </h3>
@@ -172,7 +172,7 @@ export const IndexPageTemplate = ({
     <section className="section is-medium counter">
       <div className="container">
         
-        <InView triggerOnce delay={300}>
+        <InView  delay={300} triggerOnce	>
             {({ inView, ref, entry }) => (
             <div className="columns is-justify-content-center	" ref={ref}>
                 {counter.map((item)=>
@@ -191,13 +191,13 @@ export const IndexPageTemplate = ({
     <section className="section is-medium brands bg-primary">
       <div className="container">
         <div className="content">
-        <Fade triggerOnce direction="up" >
+        <Fade  triggerOnce  direction="up" >
           <h3>Nasi partnerzy</h3>
         </Fade>
         </div>
         <div className="content">
         <div className="columns is-multiline brands-items">
-        <Fade  cascade className="column brands-item" damping={0.3}>
+        <Fade  triggerOnce  cascade className="column brands-item" damping={0.3}>
           {brands_img.map((node)=>
              <Img fluid={node.childImageSharp.fluid} />
           )}
