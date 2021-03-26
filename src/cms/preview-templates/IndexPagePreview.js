@@ -4,6 +4,7 @@ import { IndexPageTemplate } from '../../templates/index-page'
 
 const IndexPagePreview = ({ entry, getAsset }) => {
   const data = entry.getIn(['data']).toJS()
+  console.log(data)
 
   if (data) {
     return (
@@ -15,6 +16,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
         description={data.description}
         intro={data.intro || { blurbs: [] }}
         mainpitch={data.mainpitch || {}}
+        brands_img={data.brands_img}
       />
     )
   } else {

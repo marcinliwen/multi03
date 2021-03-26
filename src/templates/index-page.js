@@ -198,8 +198,8 @@ export const IndexPageTemplate = ({
         <div className="content">
         <div className="columns is-multiline brands-items">
         <Fade  triggerOnce  cascade className="column brands-item" damping={0.3}>
-          {brands_img.map((node)=>
-             <Img fluid={node.childImageSharp.fluid} />
+          {brands_img && brands_img.map((node)=>
+             <Img fluid={node.image.childImageSharp.fluid} />
           )}
           </Fade> 
         </div>
@@ -220,11 +220,11 @@ IndexPageTemplate.propTypes = {
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
   }),
+  brands_img: PropTypes.node
 }
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
-  const { nodes } = data.allFile
   return (
     <Layout>
       <IndexPageTemplate
@@ -236,7 +236,7 @@ const IndexPage = ({ data }) => {
         mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
         intro={frontmatter.intro}
-        brands_img={nodes}
+        brands_img={frontmatter.brands_img}
         counter={frontmatter.counter}
       />
     </Layout>
@@ -291,21 +291,21 @@ export const pageQuery = graphql`
           title
           number
         }
+        brands_img{
+          image{
+            childImageSharp {
+              fluid(maxWidth: 300, quality: 100){
+                ...GatsbyImageSharpFluid_noBase64
+              }
+            }
+          }
+        }
       }
     }
     file(relativePath: {eq: "curtains-8.png"}) {
       childImageSharp {
         fluid(maxWidth: 1920, quality: 60){
           ...GatsbyImageSharpFluid_withWebp_noBase64
-        }
-      }
-    },
-    allFile(filter: {extension: {regex: "/(png)/"}, relativeDirectory: {eq: "brands"}}) {
-      nodes {
-        childImageSharp {
-          fluid(maxWidth: 300, quality: 100){
-            ...GatsbyImageSharpFluid_noBase64
-          }
         }
       }
     }

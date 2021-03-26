@@ -64,4 +64,9 @@ counter:
     number: 320
   - title: Uszytych metrów firan
     number: 1300
+brands_img:
+  - image: /img/brand-1.png
+  - image: /img/brand-2.png
+  - image: /img/brand-3.png
+  - image: /img/brand-4.png
 ---
