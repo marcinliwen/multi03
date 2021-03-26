@@ -8,6 +8,7 @@ import CountUp from 'react-countup';
 import { InView } from 'react-intersection-observer';
 import { Fade } from "react-awesome-reveal";
 
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
@@ -175,7 +176,7 @@ export const IndexPageTemplate = ({
         <InView  delay={300} triggerOnce	>
             {({ inView, ref, entry }) => (
             <div className="columns is-justify-content-center	" ref={ref}>
-                {counter.map((item)=>
+                {counter && counter.map((item)=>
             <div className="column item">
               <div className="has-text-centered">
                 <CountUp start={inView? 0 : item.number} end={item.number} duration={3}/>
@@ -198,8 +199,9 @@ export const IndexPageTemplate = ({
         <div className="content">
         <div className="columns is-multiline brands-items">
         <Fade  triggerOnce  cascade className="column brands-item" damping={0.3}>
-          {brands_img && brands_img.map((node)=>
-             <Img fluid={node.image.childImageSharp.fluid} />
+          {brands_img && brands_img.map((item)=>
+            <PreviewCompatibleImage imageInfo={item}/>
+             //<Img fluid={node.image.childImageSharp.fluid} />
           )}
           </Fade> 
         </div>

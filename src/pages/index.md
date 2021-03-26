@@ -58,8 +58,8 @@ main:
     alt: Coffee beans
     image: /img/products-grid1.jpg
 counter:
-  - title: Działamy od
-    number: 1990
+  - title: Lat doświadczenia
+    number: 20
   - title: Zadowolonych klientów
     number: 320
   - title: Uszytych metrów firan
