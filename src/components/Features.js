@@ -14,7 +14,7 @@ const FeatureGrid = ({ gridItems }) =>{
     <div className="services">
       <Fade  triggerOnce  className="services-item" cascade childClassName="services-wrap"  damping={0.3}>
       {gridItems.map((item, index) => (
-        <div>
+        <div key={"features"+index}>
             <div className="services-img">
               <PreviewCompatibleImage imageInfo={item} />
             </div>

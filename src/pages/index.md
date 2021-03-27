@@ -4,6 +4,15 @@ path: /
 title: Kaja dekor
 image: /img/home-jumbotron.jpg
 heading: Poznaj nasze usługi
+features: 
+  - image: /img/design.svg
+    text: Działamy kompleksowo, od projektu po montaż
+  - image: /img/material.svg
+    text: Korzystamy z materiałów najlepszej jakości
+  - image: /img/needle.svg
+    text: Wszystkie usługi wykonujemy ręcznie w naszej pracowni
+  - image: /img/chat.svg
+    text: Fachowo doradzamy, dzielimy się wiedzą i doświadczeniem
 subheading: Studio Dekoracji Okien
 mainpitch:
   title: Dla czego my?

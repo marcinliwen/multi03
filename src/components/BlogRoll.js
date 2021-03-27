@@ -54,7 +54,7 @@ class BlogRoll extends React.Component {
                         </span>
                       </p>
                     
-                    <p style={{textAlign: 'right'}}>
+                    <span style={{textAlign: 'right'}}>
                       {/*post.excerpt*/}
                       
                      {/* <Link className="btn second" to={post.frontmatter.path} style={{background: 'none', boxShadow: 'none', padding: '15px', transitionDuration: '0.3s'}}>
@@ -63,7 +63,7 @@ class BlogRoll extends React.Component {
                       {post.frontmatter.imagegalery && post.frontmatter.imagegalery.length ? 
                       <FullScreenDialog imagegalery={post.frontmatter.imagegalery}/>
                       : null}
-                    </p>
+                    </span>
                   </div>
                  
               </article>

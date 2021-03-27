@@ -12,10 +12,6 @@ import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
-import Material_Icon from '../assets/material.svg'
-import Chat_Icon from '../assets/chat.svg'
-import Needle_Icon from '../assets/needle.svg'
-import Design from '../assets/design.svg'
 
 import Brand1 from '../assets/brand-1.svg'
 import Brand2 from '../assets/brand-2.svg'
@@ -29,6 +25,7 @@ export const IndexPageTemplate = ({
   title,
   heading,
   subheading,
+  features,
   mainpitch,
   description,
   intro,
@@ -96,26 +93,19 @@ export const IndexPageTemplate = ({
     </div>
     <section className="section bg-primary" style={{overflow: 'hidden'}}>
                 <div className="container">
-                <div class="columns features"> 
+                <div className="columns features"> 
                 <Fade  triggerOnce cascade damping={0.3} className="column has-text-centered">
-                    <div>                 
-                      <div class="title">                   
-                          <Design height="42px" width="42px" fill="#D9C693"/>
+                  { features && features.map((item, index)=>(
+                    <div key={index}>
+                       <div className="title">        
+                        {!item.image.childImageSharp && item.image.extension === 'svg' 
+                          ? <img height="42px" width="42px" style={{fill: "#D9C693"}} src={item.image.publicURL} />
+                          : null }
                       </div>
-                      <p class="heading">Działamy kompleksowo, od projektu po montaż</p>
+                      <p className="heading">{item.text}</p>
                     </div>
-                    <div>
-                    <div class="title"><Material_Icon height="42px" width="42px" fill="#D9C693"/></div>
-                      <p class="heading">Korzystamy z materiałów najlepszej jakości</p>
-                    </div>
-                    <div>
-                    <div class="title"><Needle_Icon height="42px" width="42px" fill="#D9C693"/></div>
-                      <p class="heading">Wszystkie usługi wykonujemy ręcznie w naszej pracowni</p>
-                    </div>
-                    <div>
-                    <div class="title"><Chat_Icon height="42px" width="42px" fill="#D9C693"/></div>
-                      <p class="heading">Fachowo doradzamy, dzielimy się wiedzą i doświadczeniem</p>
-                    </div>
+                  ))}
+                    
                   </Fade>
                 </div>
                 </div>
@@ -176,8 +166,8 @@ export const IndexPageTemplate = ({
         <InView  delay={300} triggerOnce	>
             {({ inView, ref, entry }) => (
             <div className="columns is-justify-content-center	" ref={ref}>
-                {counter && counter.map((item)=>
-            <div className="column item">
+                {counter && counter.map((item, index)=>
+            <div className="column item" key={'count'+index}>
               <div className="has-text-centered">
                 <CountUp start={inView? 0 : item.number} end={item.number} duration={3}/>
                 <p>{item.title}</p></div>
@@ -199,8 +189,8 @@ export const IndexPageTemplate = ({
         <div className="content">
         <div className="columns is-multiline brands-items">
         <Fade  triggerOnce  cascade className="column brands-item" damping={0.3}>
-          {brands_img && brands_img.map((item)=>
-            <PreviewCompatibleImage imageInfo={item}/>
+          {brands_img && brands_img.map((item, index)=>
+            <PreviewCompatibleImage imageInfo={item} key={"brand"+index}/>
              //<Img fluid={node.image.childImageSharp.fluid} />
           )}
           </Fade> 
@@ -217,12 +207,13 @@ IndexPageTemplate.propTypes = {
   title: PropTypes.string,
   heading: PropTypes.string,
   subheading: PropTypes.string,
+  features: PropTypes.array,
   mainpitch: PropTypes.object,
   description: PropTypes.string,
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
   }),
-  brands_img: PropTypes.node
+  brands_img: PropTypes.array
 }
 
 const IndexPage = ({ data }) => {
@@ -235,6 +226,7 @@ const IndexPage = ({ data }) => {
         title={frontmatter.title}
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
+        features={frontmatter.features}
         mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
         intro={frontmatter.intro}
@@ -269,6 +261,18 @@ export const pageQuery = graphql`
         }
         heading
         subheading
+        features {
+          image{
+            childImageSharp {
+              fluid(maxWidth: 32, quality: 92) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+            extension
+            publicURL
+          }
+          text
+        }
         mainpitch {
           title
           description
