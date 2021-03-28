@@ -75,6 +75,7 @@ collections:
           - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
           - {label: Full_image, name: full_image, widget: image}
           - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}
+          - {label: Services steps, name: services_steps, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Steps, name: steps, widget: list, fields: [{label: Title, name: title, widget: string}, {labet: Description, name: description, widget: string}, {label: Ikon, name: image, widget: image}]}]}
       - file: "src/pages/contact/pl.md"
         label: "Kontakt PL"
         name: "contactpl"
