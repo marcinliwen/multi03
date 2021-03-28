@@ -9,6 +9,7 @@ import Features from '../components/Features'
 import Testimonials from '../components/Testimonials'
 import Pricing from '../components/Pricing'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import PreviewCompatibleSVG from '../components/PreviewCompatibleSVG'
 import Subheader from '../components/Subheader'
 import Tocontactform from '../components/Tocontactform'
 import Howtomeasure from '../components/Howtomeasure'
@@ -48,7 +49,7 @@ export const ProductPageTemplate = ({
   intro,
   main,
   testimonials,
-  fullImage,
+  //fullImage,
   pricing,
   services_steps
 }) => {
@@ -78,9 +79,7 @@ export const ProductPageTemplate = ({
                 <div className="columns steps-item" key={index}>
                 <div className="column is-2 has-text-centered-touch ">
                  <div className="icon-bg"> 
-                  {!item.image.childImageSharp && item.image.extension === 'svg' 
-                          ? <img height="96px" width="96px" src={item.image.publicURL} />
-                          : null }
+                  <PreviewCompatibleSVG imageInfo={item} size={96}/>
                  </div>
                 </div>
                 <div className="column is-10">
@@ -163,7 +162,7 @@ ProductPageTemplate.propTypes = {
     image3: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   }),
   testimonials: PropTypes.array,
-  fullImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  //fullImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   pricing: PropTypes.shape({
     heading: PropTypes.string,
     description: PropTypes.string,
@@ -185,7 +184,7 @@ const ProductPage = ({ data }) => {
         intro={frontmatter.intro}
         main={frontmatter.main}
         testimonials={frontmatter.testimonials}
-        fullImage={frontmatter.full_image}
+        //fullImage={frontmatter.full_image}
         pricing={frontmatter.pricing}
         services_steps={frontmatter.services_steps}
       />
@@ -271,13 +270,7 @@ export const productPageQuery = graphql`
           author
           quote
         }
-        full_image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
+        
         pricing {
           heading
           description

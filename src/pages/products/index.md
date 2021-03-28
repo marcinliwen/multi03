@@ -101,5 +101,5 @@ services_steps:
       image: /img/needle.svg
     - title: Montujemy
       description: Kiedy wszystko jest gotowe, przystępujemy do montażu dekoracji okna. Zakładamy materiały, modelujemy, a Ty cieszysz się wyjątkowym wystrojem swoich wnętrz.
-      image: /imag/curtains.svg
+      image: /img/curtains.svg
 ---

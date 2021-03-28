@@ -9,6 +9,8 @@ import { InView } from 'react-intersection-observer';
 import { Fade } from "react-awesome-reveal";
 
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import PreviewCompatibleSVG from '../components/PreviewCompatibleSVG'
+
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
@@ -98,9 +100,7 @@ export const IndexPageTemplate = ({
                   { features && features.map((item, index)=>(
                     <div key={index}>
                        <div className="title">        
-                        {!item.image.childImageSharp && item.image.extension === 'svg' 
-                          ? <img height="42px" width="42px" style={{fill: "#D9C693"}} src={item.image.publicURL} />
-                          : null }
+                       <PreviewCompatibleSVG imageInfo={item} size={42}/>
                       </div>
                       <p className="heading">{item.text}</p>
                     </div>
