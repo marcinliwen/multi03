@@ -50,6 +50,7 @@ export const ProductPageTemplate = ({
   testimonials,
   fullImage,
   pricing,
+  services_steps
 }) => {
 
   return(
@@ -71,45 +72,23 @@ export const ProductPageTemplate = ({
       <div className="container">
         <div className="steps-container">
               <div className="content">
-                <h3>Jak pracujemy?</h3>
+                <h3>{services_steps.title}</h3>
               </div>
-              <div className="columns steps-item">
+              {services_steps.steps && services_steps.steps.map((item, index)=>(
+                <div className="columns steps-item" key={index}>
                 <div className="column is-2 has-text-centered-touch ">
-                 <div className="icon-bg"> <Design width="96px"  fill="#D9C693"/></div>
+                 <div className="icon-bg"> 
+                  {!item.image.childImageSharp && item.image.extension === 'svg' 
+                          ? <img height="96px" width="96px" src={item.image.publicURL} />
+                          : null }
+                 </div>
                 </div>
                 <div className="column is-10">
-                  <h4>1. Planujemy i projektujemy</h4>
-                  <p>Na tym etapie poznajemy Twoje oczekiwania, upodobania i ewentualne pomysły na wystrój okna. Bierzemy te informacje pod uwagę tworząc koncepcję na aranżację okienną. Na tym etapie dokonujemy również pomiarów pomieszczenia.</p>
-                  <Howtomeasure />
+                  <h4>{index + 1}. {item.title}</h4>
+                  <p>{item.description}</p>                 
                 </div>
               </div>
-              <div className="columns steps-item">
-              <div className="column is-2 has-text-centered-touch">
-              <div className="icon-bg"><Material_Icon width="96px" fill="#D9C693"/></div>
-                </div>
-                <div className="column is-10">
-                  <h4>2. Wybieramy materiały</h4>
-                  <p>Dobieramy materiały, które najlepiej oddadzą charakter Twoich wnętrz. Posiadamy firany, zasłony, rolety rzymskie, żaluzje oraz wiele innych możliwości na udekorowanie okna. Wybieramy również kolory i wzory. Kalkulujemy koszty projektu oraz przystępujemy do jego realizacji po zaakceptowaniu koncepcji.</p>
-                </div>
-              </div>
-              <div className="columns steps-item">
-                <div className="column is-2 has-text-centered-touch">
-                <div className="icon-bg"><Needle_Icon width="96px" height="auto" fill="#D9C693"/></div>
-                </div>
-                <div className="column is-10">
-                  <h4>3. Kroimy i szyjemy</h4>
-                  <p>Na tym etapie szyjemy, modelujemy wybrane materiały, które będą składać się na wystrój Twoich okien. Tworzymy oraz docinamy materiały idealnie na wymiar. Realizacja usługi trwa 2-6 tygodni.</p>                
-                </div>
-              </div>
-              <div className="columns steps-item">
-                <div className="column is-2 has-text-centered-touch">
-                <div className="icon-bg"><Curtains width="96px" height="auto" fill="#D9C693"/></div>
-                </div>
-                <div className="column is-10">
-                  <h4>4. Montujemy</h4>
-                  <p>Kiedy wszystko jest gotowe, przystępujemy do montażu dekoracji okna. Zakładamy materiały, modelujemy, a Ty cieszysz się wyjątkowym wystrojem swoich wnętrz.</p>                
-                </div>
-              </div>
+              ))}
           </div>
         </div>
     </section>
@@ -208,6 +187,7 @@ const ProductPage = ({ data }) => {
         testimonials={frontmatter.testimonials}
         fullImage={frontmatter.full_image}
         pricing={frontmatter.pricing}
+        services_steps={frontmatter.services_steps}
       />
       <Tocontactform />
     </Layout>
@@ -306,6 +286,22 @@ export const productPageQuery = graphql`
             items
             plan
             price
+          }
+        }
+        services_steps{
+          title
+          steps{
+            title
+            description
+            image{
+              childImageSharp {
+                fluid(maxWidth: 96, quality: 92) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+              extension
+              publicURL
+            }
           }
         }
       }
