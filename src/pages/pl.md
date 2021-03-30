@@ -1,5 +1,6 @@
 ---
 templateKey: index-page
+lang: pl
 path: /
 title: Kaja dekor
 image: /img/home-jumbotron.jpg

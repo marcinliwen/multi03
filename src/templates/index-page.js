@@ -7,6 +7,7 @@ import logo from '../img/logo.svg'
 import CountUp from 'react-countup';
 import { InView } from 'react-intersection-observer';
 import { Fade } from "react-awesome-reveal";
+import { useIntl } from "gatsby-plugin-intl"
 
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import PreviewCompatibleSVG from '../components/PreviewCompatibleSVG'
@@ -217,7 +218,20 @@ IndexPageTemplate.propTypes = {
 }
 
 const IndexPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
+  const intl = useIntl()
+  //const locale = intl.locale !== "pt" ? `/${intl.locale}` : ""
+
+  // Raw query data
+  const posts = data.allMarkdownRemark.edges
+  // console.log(posts)
+  // Filtering posts by locale
+  const filteredPosts = posts.filter(edge =>
+    edge.node.frontmatter.lang.includes(intl.locale)
+  )
+  //console.log(filteredPosts)
+  const { node } = filteredPosts[0] // data.markdownRemark holds your post data
+  const { frontmatter, html } = node;
+  //const { frontmatter } = data.markdownRemark
   return (
     <Layout>
       <IndexPageTemplate
@@ -249,9 +263,12 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query IndexPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+    allMarkdownRemark(filter: { frontmatter: { path: { eq: "/" } } }) {
+      edges {
+        node {
       frontmatter {
         title
+        lang
         image {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
@@ -308,6 +325,8 @@ export const pageQuery = graphql`
         }
       }
     }
+  }
+}
     file(relativePath: {eq: "curtains-8.png"}) {
       childImageSharp {
         fluid(maxWidth: 1920, quality: 60){
@@ -316,4 +335,5 @@ export const pageQuery = graphql`
       }
     }
   }
+
 `
