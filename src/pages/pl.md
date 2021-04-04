@@ -1,11 +1,11 @@
 ---
-templateKey: index-page
-lang: pl
-path: /
-title: Kaja dekor
-image: /img/home-jumbotron.jpg
 heading: Poznaj nasze usługi
-features: 
+subheading: Studio Dekoracji Okien
+path: /
+templateKey: index-page
+title: Kaja dekor
+image: /img/curtains-8.jpg
+features:
   - image: /img/design.svg
     text: Działamy kompleksowo, od projektu po montaż
   - image: /img/material.svg
@@ -14,7 +14,6 @@ features:
     text: Wszystkie usługi wykonujemy ręcznie w naszej pracowni
   - image: /img/chat.svg
     text: Fachowo doradzamy, dzielimy się wiedzą i doświadczeniem
-subheading: Studio Dekoracji Okien
 mainpitch:
   title: Dla czego my?
   description: >
@@ -22,29 +21,37 @@ mainpitch:
     shouldn't just taste good, it should do good too. We source all of our beans
     directly from small scale sustainable farmers and make sure part of the
     profits are reinvested in their communities.
-description: >-
-  W Kaja - Studio Dekoracji Okien kazdy projekt to inna historia. Kazdy dom zasługuje na wyjątkową dekorację okien, dającą satysfakcję mieszkańcom i spełniającą ich oczekiwania. 
-  Dla tego przykładamy jak najwięcej uwagi i wysiłku aby osiągnąć zamierzony cel.
+description: W Kaja - Studio Dekoracji Okien kazdy projekt to inna historia.
+  Kazdy dom zasługuje na wyjątkową dekorację okien, dającą satysfakcję
+  mieszkańcom i spełniającą ich oczekiwania.  Dla tego przykładamy jak najwięcej
+  uwagi i wysiłku aby osiągnąć zamierzony cel.
 intro:
   blurbs:
     - image: /img/firany.png
       title: Firany
       text: >
-       Firany nigdy nie wychodzą z mody. Są najczęściej wybieranym produktem do 
-       dekoracji okien w naszym salonie. Dobieramy najlepsze rodzaje firanek 
-       pasujące do Twojego wnętrza.
+        Firany nigdy nie wychodzą z mody. Są najczęściej wybieranym produktem
+        do  dekoracji okien w naszym salonie. Dobieramy najlepsze rodzaje
+        firanek  pasujące do Twojego wnętrza.
     - image: /img/zaslony.png
       title: Zasłony
       text: >
-       Piękne tkaniny dopasowane do wystroju pomieszczenia będą tworzyć spójną i stylową aranżację wnętrz. Bardzo często wykorzystujemy zasłony do dekoracji okien. Nadają one pomieszczeniu wyjątkowego charakteru. 
+        Piękne tkaniny dopasowane do wystroju pomieszczenia będą tworzyć spójną
+        i stylową aranżację wnętrz. Bardzo często wykorzystujemy zasłony do
+        dekoracji okien. Nadają one pomieszczeniu wyjątkowego charakteru. 
     - image: /img/rzymskie.png
       title: Rolety rzymskie
       text: >
-        Są połączeniem funkcjonalności z dekoracyjnym wyglądem. Uwielbiamy wykorzystywać rolety rzymskie do projektowania wystroju okien, ponieważ osłaniają przed słońcem (niczym tradycyjne rolety) oraz wyglądają niezwykle efektownie.
+        Są połączeniem funkcjonalności z dekoracyjnym wyglądem. Uwielbiamy
+        wykorzystywać rolety rzymskie do projektowania wystroju okien, ponieważ
+        osłaniają przed słońcem (niczym tradycyjne rolety) oraz wyglądają
+        niezwykle efektownie.
     - image: /img/rolety.png
       title: Rolety
       text: >
-        Wciąż bardzo chętnie wybierane do dekoracji okien. Pasują zarówno do nowoczesnych jak i klasycznych wnętrz. Rolety są niezwykle funkcjonalne, a ich odpowiedni dobór będzie subtelnym uzupełnieniem aranżacji wnętrza.
+        Wciąż bardzo chętnie wybierane do dekoracji okien. Pasują zarówno do
+        nowoczesnych jak i klasycznych wnętrz. Rolety są niezwykle funkcjonalne,
+        a ich odpowiedni dobór będzie subtelnym uzupełnieniem aranżacji wnętrza.
   heading: What we offer
   description: >
     Kaldi is the ultimate spot for coffee lovers who want to learn about their
@@ -67,13 +74,6 @@ main:
   image3:
     alt: Coffee beans
     image: /img/products-grid1.jpg
-counter:
-  - title: Lat doświadczenia
-    number: 20
-  - title: Zadowolonych klientów
-    number: 320
-  - title: Uszytych metrów firan
-    number: 1300
 brands:
   title: Nasi partnerzy
   brands_img:
@@ -81,4 +81,12 @@ brands:
     - image: /img/brand-2.png
     - image: /img/brand-3.png
     - image: /img/brand-4.png
+lang: pl
+counter:
+  - title: Lat doświadczenia
+    number: 20
+  - title: Zadowolonych klientów
+    number: 320
+  - title: Uszytych metrów firan
+    number: 1300
 ---
