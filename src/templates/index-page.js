@@ -32,7 +32,7 @@ export const IndexPageTemplate = ({
   mainpitch,
   description,
   intro,
-  brands_img,
+  brands,
   counter
 }) => (
   <div>
@@ -184,13 +184,13 @@ export const IndexPageTemplate = ({
       <div className="container">
         <div className="content">
         <Fade  triggerOnce  direction="up" >
-          <h3>Nasi partnerzy</h3>
+          <h3>{brands.title}</h3>
         </Fade>
         </div>
         <div className="content">
         <div className="columns is-multiline brands-items">
         <Fade  triggerOnce  cascade className="column brands-item" damping={0.3}>
-          {brands_img && brands_img.map((item, index)=>
+          {brands.brands_img && brands.brands_img.map((item, index)=>
             <PreviewCompatibleImage imageInfo={item} key={"brand"+index}/>
              //<Img fluid={node.image.childImageSharp.fluid} />
           )}
@@ -214,7 +214,7 @@ IndexPageTemplate.propTypes = {
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
   }),
-  brands_img: PropTypes.array
+  brands: PropTypes.object
 }
 
 const IndexPage = ({ data }) => {
@@ -244,7 +244,7 @@ const IndexPage = ({ data }) => {
         mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
         intro={frontmatter.intro}
-        brands_img={frontmatter.brands_img}
+        brands={frontmatter.brands}
         counter={frontmatter.counter}
       />
     </Layout>
@@ -314,11 +314,14 @@ export const pageQuery = graphql`
           title
           number
         }
-        brands_img{
-          image{
-            childImageSharp {
-              fluid(maxWidth: 300, quality: 100){
-                ...GatsbyImageSharpFluid_noBase64
+        brands{
+          title
+          brands_img{
+            image{
+              childImageSharp {
+                fluid(maxWidth: 300, quality: 100){
+                  ...GatsbyImageSharpFluid_noBase64
+                }
               }
             }
           }
