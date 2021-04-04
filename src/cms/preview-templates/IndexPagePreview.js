@@ -11,7 +11,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
   if (data) {
     return (
       <IndexPageTemplate
-        image={getAsset(data.image)}
+        bg_image={data.bg_image}
         title={data.title}
         heading={data.heading}
         subheading={data.subheading}

@@ -23,7 +23,7 @@ import Brand4 from '../assets/brand-4.svg'
 
 
 export const IndexPageTemplate = ({
-  image,
+  bg_image,
   imghome,
   title,
   heading,
@@ -92,7 +92,10 @@ export const IndexPageTemplate = ({
         </div>
         
       </div>
-      <Img className="home-img" fluid={image.childImageSharp.fluid}/>
+      {/*<Img className="home-img" fluid=${
+          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+        }/>*/}
+      <PreviewCompatibleImage imageInfo={bg_image}  title="home" className="home-img"/>
     </div>
     <section className="section bg-primary" style={{overflow: 'hidden'}}>
                 <div className="container">
@@ -204,7 +207,7 @@ export const IndexPageTemplate = ({
 )
 
 IndexPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  //image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   heading: PropTypes.string,
   subheading: PropTypes.string,
@@ -236,7 +239,7 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <IndexPageTemplate
-        image={frontmatter.image}
+        bg_image={frontmatter.bg_image}
         imghome={data.file.childImageSharp.fluid}
         title={frontmatter.title}
         heading={frontmatter.heading}
@@ -270,10 +273,12 @@ export const pageQuery = graphql`
       frontmatter {
         title
         lang
-        image {
-          childImageSharp {
-            fluid(maxWidth: 1920, quality: 60){
-              ...GatsbyImageSharpFluid_withWebp_noBase64
+        bg_image{
+          image {
+            childImageSharp {
+              fluid(maxWidth: 1920, quality: 60){
+                ...GatsbyImageSharpFluid_withWebp_noBase64
+              }
             }
           }
         }
