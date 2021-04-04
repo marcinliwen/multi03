@@ -3,7 +3,7 @@ templateKey: index-page
 lang: de
 path: /
 title: Kaja dekor
-image: /img/home-jumbotron.jpg
+image: /img/curtains-8.png
 heading: Unsere Dienstleistungen
 features: 
   - image: /img/design.svg

@@ -4,7 +4,7 @@ subheading: Studio Dekoracji Okien
 path: /
 templateKey: index-page
 title: Kaja dekor
-image: /img/curtains-8.jpg
+image: /img/curtains-8.png
 features:
   - image: /img/design.svg
     text: Działamy kompleksowo, od projektu po montaż

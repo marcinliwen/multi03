@@ -8,9 +8,6 @@ const IndexPagePreview = ({ entry, getAsset }) => {
   const entryFeatures = entry.getIn(['data', 'features'])
   const features = entryFeatures ? entryFeatures.toJS() : []
 
-  const entryBrands = entry.getIn(['data', 'brands_img'])
-  const brands = entryBrands ? entryBrands.toJS() : []
-
   if (data) {
     return (
       <IndexPageTemplate
@@ -22,7 +19,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
         description={data.description}
         intro={data.intro || { blurbs: [] }}
         mainpitch={data.mainpitch || {}}
-        brands_img={brands}
+        brands={data.brands}
         counter={data.counter}
       />
     )

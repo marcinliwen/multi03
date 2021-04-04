@@ -92,7 +92,7 @@ export const IndexPageTemplate = ({
         </div>
         
       </div>
-      <Img className="home-img" fluid={imghome}/>
+      <Img className="home-img" fluid={image.childImageSharp.fluid}/>
     </div>
     <section className="section bg-primary" style={{overflow: 'hidden'}}>
                 <div className="container">
@@ -232,6 +232,7 @@ const IndexPage = ({ data }) => {
   const { node } = filteredPosts[0] // data.markdownRemark holds your post data
   const { frontmatter, html } = node;
   //const { frontmatter } = data.markdownRemark
+  console.log(frontmatter.image)
   return (
     <Layout>
       <IndexPageTemplate
@@ -271,8 +272,8 @@ export const pageQuery = graphql`
         lang
         image {
           childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
+            fluid(maxWidth: 1920, quality: 60){
+              ...GatsbyImageSharpFluid_withWebp_noBase64
             }
           }
         }
