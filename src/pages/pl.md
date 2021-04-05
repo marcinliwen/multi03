@@ -6,6 +6,7 @@ templateKey: index-page
 title: Kaja dekor
 bg_image:
   image: /img/curtains-8.png
+home_btn: Zamów darmową wycenę
 features:
   - image: /img/design.svg
     text: Działamy kompleksowo, od projektu po montaż

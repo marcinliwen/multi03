@@ -5,6 +5,7 @@ path: /
 title: Kaja dekor
 bg_image:
   image: /img/curtains-8.png
+home_btn: Bestellen kostenloses Angebot
 heading: Unsere Dienstleistungen
 features: 
   - image: /img/design.svg

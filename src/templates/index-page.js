@@ -1,13 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
+import {graphql } from 'gatsby'
 import Img from "gatsby-image"
 
 import logo from '../img/logo.svg'
 import CountUp from 'react-countup';
 import { InView } from 'react-intersection-observer';
 import { Fade } from "react-awesome-reveal";
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl, Link } from "gatsby-plugin-intl"
 import { use100vh } from 'react-div-100vh'
 
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
@@ -34,9 +34,12 @@ export const IndexPageTemplate = ({
   description,
   intro,
   brands,
-  counter
+  counter,
+  home_btn,
+  location
 }) => {
   const height = use100vh()
+  console.log(location)
   return(
   <div>
     <div
@@ -88,7 +91,10 @@ export const IndexPageTemplate = ({
         </div>
         <div className="content home" style={{position:'relative', zIndex:'1'}}>
           <Fade  triggerOnce  direction="up" delay={800}>
-            <Link to='/kontakt' className="btn" style={{flex:'1', width: 'max-content', margin:'0px 25px 0 0'}}>Zamów darmową wycenę</Link>
+            {location === 'admin' 
+              ? <a href="/kontakt" className="btn" style={{flex:'1', width: 'max-content', margin:'0px 25px 0 0'}}> {home_btn} </a>
+              :<Link to='/kontakt' className="btn" style={{flex:'1', width: 'max-content', margin:'0px 25px 0 0'}}> {home_btn}  </Link>
+            }
           </Fade>
          
           {/*<Link to='/products' className="btn" style={{flex:'1', width: 'max-content', margin:'0px 25px 0 0'}}>Poznaj nasze usługi</Link>*/}
@@ -138,9 +144,10 @@ export const IndexPageTemplate = ({
                 <div className="columns">
                   <div className="column is-12 has-text-centered">
                   <Fade  triggerOnce  direction="up" >
-                    <Link className="btn first" to="/products">
-                      Poznaj nasze usługi
-                    </Link>
+                    {location && location==='admin'
+                      ? <a href='/uslugi' className="btn first">Poznaj nasze usługi</a>  
+                      : <Link className="btn first" to="/uslugi">Poznaj nasze usługi</Link>
+                    } 
                   </Fade>
                   </div>
                 </div>
@@ -221,7 +228,8 @@ IndexPageTemplate.propTypes = {
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
   }),
-  brands: PropTypes.object
+  brands: PropTypes.object,
+  home_btn: PropTypes.string
 }
 
 const IndexPage = ({ data }) => {
@@ -254,6 +262,7 @@ const IndexPage = ({ data }) => {
         intro={frontmatter.intro}
         brands={frontmatter.brands}
         counter={frontmatter.counter}
+        home_btn={frontmatter.home_btn}
       />
     </Layout>
   )
@@ -288,6 +297,7 @@ export const pageQuery = graphql`
         }
         heading
         subheading
+        home_btn
         features {
           image{
             childImageSharp {

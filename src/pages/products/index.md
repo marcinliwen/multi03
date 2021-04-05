@@ -1,6 +1,6 @@
 ---
 templateKey: 'product-page'
-path: /oferta
+path: /uslugi
 title: Usługi
 image: /img/jumbotron.jpg
 heading: Szyjemy na miarę

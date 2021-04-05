@@ -21,6 +21,8 @@ const IndexPagePreview = ({ entry, getAsset }) => {
         mainpitch={data.mainpitch || {}}
         brands={data.brands}
         counter={data.counter}
+        home_btn={data.home_btn}
+        location="admin"
       />
     )
   } else {

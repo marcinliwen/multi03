@@ -80,12 +80,12 @@ const Footer = ({data}) =>{
                       </Link>
                     </li>
                     <li>
-                      <Link className="navbar-item" to="/oferta">
+                      <Link className="navbar-item" to="/uslugi">
                       {intl.formatMessage({ id: "services" })}
                       </Link>
                     </li>
                     <li>
-                      <Link className="navbar-item" to="/blog">
+                      <Link className="navbar-item" to="/realizacje">
                       {intl.formatMessage({ id: "realisations" })}
                       </Link>
                     </li>

@@ -13,9 +13,9 @@ public_folder: /img
 locale: pl
 
 collections:
-  - name: "blog"
+  - name: "realizacje"
     label: "Realizacje"
-    folder: "src/pages/blog"
+    folder: "src/pages/realizacje"
     create: true
     slug: "{{slug}}"
     fields:
@@ -40,6 +40,7 @@ collections:
           - {label: Title, name: title, widget: string}
           - {label: Image, name: bg_image, widget: object, fields: [{label: Image, name: image, widget: image}]}
           - {label: Heading, name: heading, widget: string}
+          - {label: Home Button, name: home_btn, widget: string}
           - {label: Subheading, name: subheading, widget: string}
           - {label: Features, name: features, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: string}]}
           - {label: Mainpitch, name: mainpitch, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}]}
@@ -57,6 +58,7 @@ collections:
           - {label: Title, name: title, widget: string}
           - {label: Image, name: bg_image, widget: object, fields: [{label: Image, name: image, widget: image}]}
           - {label: Heading, name: heading, widget: string}
+          - {label: Home Button, name: home_btn, widget: string}
           - {label: Subheading, name: subheading, widget: string}
           - {label: Features, name: features, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: string}]}
           - {label: Mainpitch, name: mainpitch, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}]}

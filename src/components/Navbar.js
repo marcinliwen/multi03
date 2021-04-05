@@ -73,10 +73,10 @@ const Navbar = () => {
             <Link className="navbar-item" to="/o-nas">
               {intl.formatMessage({ id: "about" })}            
             </Link>
-            <Link className="navbar-item" to="/oferta">
+            <Link className="navbar-item" to="/uslugi">
             {intl.formatMessage({ id: "services" })} 
             </Link>
-            <Link className="navbar-item" to="/blog">
+            <Link className="navbar-item" to="/realizacje">
             {intl.formatMessage({ id: "realisations" })} 
             </Link>
             <Link className="navbar-item" to="/kontakt">
