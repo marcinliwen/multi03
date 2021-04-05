@@ -1,12 +1,13 @@
 ---
+path: /
 templateKey: index-page
 lang: de
-path: /
 title: Kaja dekor
+heading: Unsere Dienstleistungen
+subheading: Fensterdekoration Studio
 bg_image:
   image: /img/curtains-8.png
 home_btn: Bestellen kostenloses Angebot
-heading: Unsere Dienstleistungen
 features: 
   - image: /img/design.svg
     text: Wir arbeiten umfassend, vom Entwurf bis zur Montage
@@ -16,17 +17,10 @@ features:
     text: Wir führen alle Dienstleistungen manuell in unserem Studio durch
   - image: /img/chat.svg
     text: Wir bieten professionelle Beratung, teilen Wissen und Erfahrung
-subheading: Fensterdekoration Studio
 mainpitch:
-  title: Dla czego my?
+  title: Unsere Dienstleistungen
   description: >
-    Kaldi is the coffee store for everyone who believes that great coffee
-    shouldn't just taste good, it should do good too. We source all of our beans
-    directly from small scale sustainable farmers and make sure part of the
-    profits are reinvested in their communities.
-description: >-
- Bei Kaja - Windows Decoration Studio ist jedes Projekt eine andere Geschichte. Jedes Haus verdient eine einzigartige Fensterdekoration, die die Bewohner zufriedenstellt und ihre Erwartungen erfüllt.
-   Dafür setzen wir so viel Aufmerksamkeit und Mühe wie möglich ein, um das angestrebte Ziel zu erreichen.
+    Bei Kaja - Windows Decoration Studio ist jedes Projekt eine andere Geschichte. Jedes Haus verdient eine einzigartige Fensterdekoration, die die Bewohner zufriedenstellt und ihre Erwartungen erfüllt. Dafür setzen wir so viel Aufmerksamkeit und Mühe wie möglich ein, um das angestrebte Ziel zu erreichen.
 intro:
   blurbs:
     - image: /img/firany.png
@@ -47,12 +41,10 @@ intro:
       title: Rolety
       text: >
         Wciąż bardzo chętnie wybierane do dekoracji okien. Pasują zarówno do nowoczesnych jak i klasycznych wnętrz. Rolety są niezwykle funkcjonalne, a ich odpowiedni dobór będzie subtelnym uzupełnieniem aranżacji wnętrza.
-  heading: What we offer
+  title: Unsere Dienstleistungen
   description: >
-    Kaldi is the ultimate spot for coffee lovers who want to learn about their
-    java’s origin and support the farmers that grew it. We take coffee
-    production, roasting and brewing seriously and we’re glad to pass that
-    knowledge to anyone. This is an edit via identity...
+    Bei Kaja - Windows Decoration Studio ist jedes Projekt eine andere Geschichte. Jedes Haus verdient eine einzigartige Fensterdekoration, die die Bewohner zufriedenstellt und ihre Erwartungen erfüllt.
+    Dafür setzen wir so viel Aufmerksamkeit und Mühe wie möglich ein, um das angestrebte Ziel zu erreichen.
 services_btn: Unsere Dienstleistungen
 main:
   heading: Great coffee with no compromises

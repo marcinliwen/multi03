@@ -8,7 +8,7 @@ backend:
     uploadMedia: '[skip ci] Upload “{{path}}”'
     deleteMedia: '[skip ci] Delete “{{path}}”'
   show_preview_links: false
-  
+
 media_folder: static/img
 public_folder: /img
 locale: pl
@@ -40,15 +40,12 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
           - {label: Title, name: title, widget: string}
           - {label: Image, name: bg_image, widget: object, fields: [{label: Image, name: image, widget: image}]}
-          - {label: Heading, name: heading, widget: string}
-          - {label: Home Button, name: home_btn, widget: string}
           - {label: Subheading, name: subheading, widget: string}
+          - {label: Home Button, name: home_btn, widget: string}
           - {label: Features, name: features, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: string}]}
           - {label: Mainpitch, name: mainpitch, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}]}
-          - {label: Description, name: description, widget: string}
-          - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
+          - {label: Intro, name: intro, widget: object, fields: [{label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
           - {label: Services Button, name: services_btn, widget: string}
-          - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
           - {label: Counter, name: counter, widget: list, fields: [{label: Title, name: title, widget: string}, {label: Number, name: number, widget: number,  default: 0, value_type: int}]}
           - {label: "Brands", name: brands, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Images, name: "brands_img", widget: list, fields: [{label: Image, name: image, widget: image}]}]}
 
@@ -59,15 +56,12 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
           - {label: Title, name: title, widget: string}
           - {label: Image, name: bg_image, widget: object, fields: [{label: Image, name: image, widget: image}]}
-          - {label: Heading, name: heading, widget: string}
-          - {label: Home Button, name: home_btn, widget: string}
           - {label: Subheading, name: subheading, widget: string}
+          - {label: Home Button, name: home_btn, widget: string}
           - {label: Features, name: features, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: string}]}
           - {label: Mainpitch, name: mainpitch, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}]}
-          - {label: Description, name: description, widget: string}
-          - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
+          - {label: Intro, name: intro, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
           - {label: Services Button, name: services_btn, widget: string}
-          - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
           - {label: Counter, name: counter, widget: list, fields: [{label: Title, name: title, widget: string}, {label: Number, name: number, widget: number,  default: 0, value_type: int}]}
           - {label: "Brands", name: brands, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Images, name: "brands_img", widget: list, fields: [{label: Image, name: image, widget: image}]}]}
 

@@ -1,9 +1,10 @@
 ---
-heading: Poznaj nasze usługi
-subheading: Studio Dekoracji Okien
 path: /
 templateKey: index-page
+lang: pl
 title: Kaja dekor
+heading: Poznaj nasze usługi
+subheading: Studio Dekoracji Okien
 bg_image:
   image: /img/curtains-8.png
 home_btn: Zamów darmową wycenę
@@ -17,12 +18,12 @@ features:
   - image: /img/chat.svg
     text: Fachowo doradzamy, dzielimy się wiedzą i doświadczeniem
 mainpitch:
-  title: Dla czego my?
+  title: Poznaj nasze usługi
   description: >
-    Kaldi is the coffee store for everyone who believes that great coffee
-    shouldn't just taste good, it should do good too. We source all of our beans
-    directly from small scale sustainable farmers and make sure part of the
-    profits are reinvested in their communities.
+    W Kaja - Studio Dekoracji Okien kazdy projekt to inna historia.
+    Kazdy dom zasługuje na wyjątkową dekorację okien, dającą satysfakcję
+    mieszkańcom i spełniającą ich oczekiwania.  Dla tego przykładamy jak najwięcej
+    uwagi i wysiłku aby osiągnąć zamierzony cel.
 description: W Kaja - Studio Dekoracji Okien kazdy projekt to inna historia.
   Kazdy dom zasługuje na wyjątkową dekorację okien, dającą satysfakcję
   mieszkańcom i spełniającą ich oczekiwania.  Dla tego przykładamy jak najwięcej
@@ -54,12 +55,12 @@ intro:
         Wciąż bardzo chętnie wybierane do dekoracji okien. Pasują zarówno do
         nowoczesnych jak i klasycznych wnętrz. Rolety są niezwykle funkcjonalne,
         a ich odpowiedni dobór będzie subtelnym uzupełnieniem aranżacji wnętrza.
-  heading: What we offer
+  title: Poznaj nasze usługi
   description: >
-    Kaldi is the ultimate spot for coffee lovers who want to learn about their
-    java’s origin and support the farmers that grew it. We take coffee
-    production, roasting and brewing seriously and we’re glad to pass that
-    knowledge to anyone. This is an edit via identity...
+    W Kaja - Studio Dekoracji Okien kazdy projekt to inna historia.
+    Kazdy dom zasługuje na wyjątkową dekorację okien, dającą satysfakcję
+    mieszkańcom i spełniającą ich oczekiwania.  Dla tego przykładamy jak najwięcej
+    uwagi i wysiłku aby osiągnąć zamierzony cel.
 services_btn: Poznaj nasze usługi
 main:
   heading: Great coffee with no compromises
@@ -84,7 +85,6 @@ brands:
     - image: /img/brand-2.png
     - image: /img/brand-3.png
     - image: /img/brand-4.png
-lang: pl
 counter:
   - title: Lat doświadczenia
     number: 20

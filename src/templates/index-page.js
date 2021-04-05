@@ -133,11 +133,11 @@ export const IndexPageTemplate = ({
                   <div className="column is-12">
                   <Fade  triggerOnce  direction="up" >
                     <h3 className="">
-                      {heading}
+                      {intro.title}
                     </h3>
                     </Fade>
                     <Fade  triggerOnce  direction="up" >
-                    <p>{description}</p>
+                    <p>{intro.description}</p>
                     </Fade>
                   </div>
                 </div>
@@ -245,7 +245,7 @@ const IndexPage = ({ data }) => {
   const filteredPosts = posts.filter(edge =>
     edge.node.frontmatter.lang.includes(intl.locale)
   )
-  //console.log(filteredPosts)
+  console.log(filteredPosts)
   const { node } = filteredPosts[0] // data.markdownRemark holds your post data
   const { frontmatter, html } = node;
   //const { frontmatter } = data.markdownRemark
@@ -330,7 +330,7 @@ export const pageQuery = graphql`
             title
             text
           }
-          heading
+          title
           description
         }
         services_btn
