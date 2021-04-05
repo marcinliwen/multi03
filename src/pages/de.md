@@ -45,7 +45,7 @@ intro:
   description: >
     Bei Kaja - Windows Decoration Studio ist jedes Projekt eine andere Geschichte. Jedes Haus verdient eine einzigartige Fensterdekoration, die die Bewohner zufriedenstellt und ihre Erwartungen erfüllt.
     Dafür setzen wir so viel Aufmerksamkeit und Mühe wie möglich ein, um das angestrebte Ziel zu erreichen.
-services_btn: Unsere Dienstleistungen
+  services_btn: Unsere Dienstleistungen
 main:
   heading: Great coffee with no compromises
   description: >

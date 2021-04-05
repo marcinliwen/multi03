@@ -36,7 +36,6 @@ export const IndexPageTemplate = ({
   brands,
   counter,
   home_btn,
-  services_btn,
   location
 }) => {
   const height = use100vh()
@@ -146,8 +145,8 @@ export const IndexPageTemplate = ({
                   <div className="column is-12 has-text-centered">
                   <Fade  triggerOnce  direction="up" >
                     {location && location==='admin'
-                      ? <a href='/uslugi' className="btn first">{services_btn}</a>  
-                      : <Link className="btn first" to="/uslugi">{services_btn}</Link>
+                      ? <a href='/uslugi' className="btn first">{intro.services_btn}</a>  
+                      : <Link className="btn first" to="/uslugi">{intro.services_btn}</Link>
                     } 
                   </Fade>
                   </div>
@@ -231,7 +230,6 @@ IndexPageTemplate.propTypes = {
   }),
   brands: PropTypes.object,
   home_btn: PropTypes.string,
-  services_btn: PropTypes.string
 }
 
 const IndexPage = ({ data }) => {
@@ -265,7 +263,6 @@ const IndexPage = ({ data }) => {
         brands={frontmatter.brands}
         counter={frontmatter.counter}
         home_btn={frontmatter.home_btn}
-        services_btn={frontmatter.services_btn}
       />
     </Layout>
   )
@@ -332,8 +329,8 @@ export const pageQuery = graphql`
           }
           title
           description
+          services_btn
         }
-        services_btn
         counter{
           title
           number

@@ -61,7 +61,7 @@ intro:
     Kazdy dom zasługuje na wyjątkową dekorację okien, dającą satysfakcję
     mieszkańcom i spełniającą ich oczekiwania.  Dla tego przykładamy jak najwięcej
     uwagi i wysiłku aby osiągnąć zamierzony cel.
-services_btn: Poznaj nasze usługi
+  services_btn: Poznaj nasze usługi
 main:
   heading: Great coffee with no compromises
   description: >

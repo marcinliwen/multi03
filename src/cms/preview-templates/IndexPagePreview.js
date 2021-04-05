@@ -22,7 +22,6 @@ const IndexPagePreview = ({ entry, getAsset }) => {
         brands={data.brands}
         counter={data.counter}
         home_btn={data.home_btn}
-        services_btn={data.services_btn}
         location="admin"
       />
     )

@@ -43,9 +43,7 @@ collections:
           - {label: Subheading, name: subheading, widget: string}
           - {label: Home Button, name: home_btn, widget: string}
           - {label: Features, name: features, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: string}]}
-          - {label: Mainpitch, name: mainpitch, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}]}
-          - {label: Intro, name: intro, widget: object, fields: [{label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
-          - {label: Services Button, name: services_btn, widget: string}
+          - {label: Intro, name: intro, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}, {label: Services Button, name: services_btn, widget: string}]}
           - {label: Counter, name: counter, widget: list, fields: [{label: Title, name: title, widget: string}, {label: Number, name: number, widget: number,  default: 0, value_type: int}]}
           - {label: "Brands", name: brands, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Images, name: "brands_img", widget: list, fields: [{label: Image, name: image, widget: image}]}]}
 
@@ -59,9 +57,7 @@ collections:
           - {label: Subheading, name: subheading, widget: string}
           - {label: Home Button, name: home_btn, widget: string}
           - {label: Features, name: features, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: string}]}
-          - {label: Mainpitch, name: mainpitch, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}]}
-          - {label: Intro, name: intro, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
-          - {label: Services Button, name: services_btn, widget: string}
+          - {label: Intro, name: intro, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}, {label: Services Button, name: services_btn, widget: string}]}
           - {label: Counter, name: counter, widget: list, fields: [{label: Title, name: title, widget: string}, {label: Number, name: number, widget: number,  default: 0, value_type: int}]}
           - {label: "Brands", name: brands, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Images, name: "brands_img", widget: list, fields: [{label: Image, name: image, widget: image}]}]}
 
