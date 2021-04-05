@@ -8,6 +8,7 @@ import CountUp from 'react-countup';
 import { InView } from 'react-intersection-observer';
 import { Fade } from "react-awesome-reveal";
 import { useIntl } from "gatsby-plugin-intl"
+import { use100vh } from 'react-div-100vh'
 
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import PreviewCompatibleSVG from '../components/PreviewCompatibleSVG'
@@ -34,10 +35,13 @@ export const IndexPageTemplate = ({
   intro,
   brands,
   counter
-}) => (
+}) => {
+  const height = use100vh()
+  return(
   <div>
     <div
       className="full-width-image margin-top-0"
+      style={{height: height}}
     >
       <div className="container header-section home">
         <div className="is-flex-direction-column is-flex">
@@ -204,7 +208,7 @@ export const IndexPageTemplate = ({
     </section>
     
   </div>
-)
+)}
 
 IndexPageTemplate.propTypes = {
   //image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
@@ -235,7 +239,7 @@ const IndexPage = ({ data }) => {
   const { node } = filteredPosts[0] // data.markdownRemark holds your post data
   const { frontmatter, html } = node;
   //const { frontmatter } = data.markdownRemark
-  console.log(frontmatter.image)
+ 
   return (
     <Layout>
       <IndexPageTemplate
