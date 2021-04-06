@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import { Link } from 'gatsby-plugin-intl'
+import { useIntl } from "gatsby-plugin-intl"
 
 import Layout from '../components/Layout'
 import Features from '../components/Features'
@@ -61,8 +62,8 @@ export const ProductPageTemplate = ({
         <div className="content">
           <div className="columns">
             <div className="column">
-              <h3 className="">{heading}</h3>
-              <p>{description}</p>
+              <h3 className="">{intro.heading}</h3>
+              <p>{intro.description}</p>
             </div>
           </div>
           <Features gridItems={intro.blurbs} />
@@ -171,7 +172,19 @@ ProductPageTemplate.propTypes = {
 }
 
 const ProductPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
+  const intl = useIntl()
+  //const locale = intl.locale !== "pt" ? `/${intl.locale}` : ""
+
+  // Raw query data
+  const posts = data.allMarkdownRemark.edges
+  console.log(posts)
+  // Filtering posts by locale
+  const filteredPosts = posts.filter(edge =>
+    edge.node.frontmatter.lang.includes(intl.locale)
+  )
+  //console.log(filteredPosts)
+  const { node } = filteredPosts[0] // data.markdownRemark holds your post data
+  const { frontmatter, html } = node;
   const img_cover  = data.file
   return (
     <Layout>
@@ -204,10 +217,13 @@ ProductPage.propTypes = {
 export default ProductPage
 
 export const productPageQuery = graphql`
-  query ProductPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
+  query{
+    allMarkdownRemark(filter: { frontmatter: { path: { eq: "/uslugi" } } }) {
+      edges {
+        node {
       frontmatter {
         title
+        lang
         image {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
@@ -298,6 +314,8 @@ export const productPageQuery = graphql`
           }
         }
       }
+    }
+  }
     },
     file(relativePath: {eq: "portfolio-cover.png"}){
       childImageSharp {
@@ -307,4 +325,5 @@ export const productPageQuery = graphql`
       }
     }
   }
+
 `

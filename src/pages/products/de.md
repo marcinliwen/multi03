@@ -1,6 +1,7 @@
 ---
 templateKey: 'product-page'
 path: /uslugi
+lang: de
 title: Usługi
 image: /img/jumbotron.jpg
 heading: Szyjemy na miarę
@@ -27,12 +28,10 @@ intro:
       title: Rolety
       text: >
         Wciąż bardzo chętnie wybierane do dekoracji okien. Pasują zarówno do nowoczesnych jak i klasycznych wnętrz. Rolety są niezwykle funkcjonalne, a ich odpowiedni dobór będzie subtelnym uzupełnieniem aranżacji wnętrza.
-  heading: What we offer
-  description: >
-    Kaldi is the ultimate spot for coffee lovers who want to learn about their
-    java’s origin and support the farmers that grew it. We take coffee
-    production, roasting and brewing seriously and we’re glad to pass that
-    knowledge to anyone. This is an edit via identity...
+  heading: Szyjemy na miarę
+  description: >-
+    Trzymamy fason i podpowiadamy jak dobra odpowiednie firany czy zasłony do domu lub mieszkania. Dysponujemy paletami wzorów i kolorów
+    Wszystko wykonujemy ręcznie w naszej firmie i z najwyższej klasy materiałów. Dowiedz się co możemy dla Ciebie uszyć.
 main:
   heading: Great coffee with no compromises
   description: >
