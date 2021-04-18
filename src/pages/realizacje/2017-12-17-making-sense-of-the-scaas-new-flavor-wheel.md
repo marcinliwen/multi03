@@ -1,7 +1,8 @@
 ---
 templateKey: blog-post
 title: Zasłony
-path: /realizacje/post4
+path: /realizacje/zaslony-cieplo
+lang: pl
 date: 2017-12-17T15:04:10.000Z
 featuredpost: false
 featuredimage: /img/portfolio-4.png

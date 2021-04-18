@@ -1,7 +1,8 @@
 ---
 templateKey: blog-post
 title: Załony
-path: /realizacje/post1
+path: /realizacje/zaslony
+lang: pl
 date: 2016-12-17T15:04:10.000Z
 featuredpost: false
 featuredimage: /img/portfolio-1.png

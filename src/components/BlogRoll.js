@@ -1,20 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql, StaticQuery } from 'gatsby'
+import { graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 import FullScreenDialog from './Fullscreendialog'
 import { Fade } from "react-awesome-reveal";
 import { InView } from 'react-intersection-observer';
+import { useIntl, Link} from 'gatsby-plugin-intl'
 
-class BlogRoll extends React.Component {
-  render() {
-    const isServicesPage = this.props.isServicesPage
-    const { data } = this.props
+const  BlogRoll = (props) => {
+    const isServicesPage = props.isServicesPage
+    const { data } = props
     var { edges: posts } = data.allMarkdownRemark
     const cover = data.file
     posts = isServicesPage ? posts : posts.slice(0, 4)
 
-    
+    const intl = useIntl()
     return (
       <div className="columns is-multiline" style={{}}>
         {posts &&
@@ -40,15 +40,15 @@ class BlogRoll extends React.Component {
                  
                   <div className="content portfolio-text">
                       <p className="post-meta" style={{padding: '1.25rem'}}>
-                        {/*<Link
+                        <Link
                           className="title is-spaced has-text-primary is-size-4 is-block"
                           to={post.frontmatter.path}
-                        >*/}
+                        >
                         <span className="title has-text-primary is-spaced is-size-4 is-block">
                         {post.frontmatter.title}
                         </span>
                          
-                        {/*</Link>*/}
+                        </Link>
                         <span className="subtitle is-block" style={{fontSize: '14px', lineHeight: '22px'}}>
                           {post.frontmatter.description}
                         </span>
@@ -88,15 +88,15 @@ class BlogRoll extends React.Component {
                      
                     <Fade  triggerOnce direction="up" >
                           
-                        <h3>Portfolio</h3>
+                        <h3>{intl.formatMessage({ id: "Portfolio" })}</h3>
 
                       <p className="post-meta">
-                        zobacz projekty, które juz wykonaliśmy i dowiedz się jak pracujemy
+                      {intl.formatMessage({ id: "zobacz projekty, które juz wykonaliśmy i dowiedz się jak pracujemy" })}
                       </p>
                     
                     <p>
                       <Link className="btn second" to="/blog">
-                        Zobacz więcej
+                      {intl.formatMessage({ id: "Zobacz więcej" })}
                       </Link>
                     </p>
                     </Fade>
@@ -107,7 +107,7 @@ class BlogRoll extends React.Component {
             }
       </div>
     )
-  }
+  
 }
 
 BlogRoll.propTypes = {

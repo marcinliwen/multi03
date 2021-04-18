@@ -1,7 +1,8 @@
 ---
 templateKey: blog-post
 title: Firany
-path: /realizacje/post5
+path: /realizacje/firany-roslinne
+lang: pl
 date: 2015-12-17T15:04:10.000Z
 featuredpost: false
 featuredimage: /img/portfolio-4.png

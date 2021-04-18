@@ -2,36 +2,35 @@
 templateKey: 'product-page'
 path: /uslugi
 lang: de
-title: Usługi
+title: Dienste
 image: /img/jumbotron.jpg
-heading: Szyjemy na miarę
+heading: Wir nähen nach Maß
 description: >-
-  Trzymamy fason i podpowiadamy jak dobra odpowiednie firany czy zasłony do domu lub mieszkania. Dysponujemy paletami wzorów i kolorów
-  Wszystko wykonujemy ręcznie w naszej firmie i z najwyższej klasy materiałów. Dowiedz się co możemy dla Ciebie uszyć.
+  Wir behalten den Stil bei und beraten über die richtigen Vorhänge oder Vorhänge für das Haus oder die Wohnung. Wir haben eine Palette von Mustern und Farben
+  Wir machen alles von Hand in unserem Unternehmen und aus den hochwertigsten Materialien. Finden Sie heraus, was wir für Sie nähen können.
 intro:
   blurbs:
     - image: /img/firany.png
-      title: Firany
+      title: Gardinen
       text: >
-       Firany nigdy nie wychodzą z mody. Są najczęściej wybieranym produktem do 
-       dekoracji okien w naszym salonie. Dobieramy najlepsze rodzaje firanek 
-       pasujące do Twojego wnętrza.
+       Gardinen kommen nie aus der Mode. Sie sind das am häufigsten ausgewählte Produkt für die Fensterdekoration in unserem Ausstellungsraum. 
+       Wir wählen die besten Arten von Gardinen aus, die zu Ihrem Interieur passen.
     - image: /img/zaslony.png
-      title: Zasłony
+      title: Vorhänge
       text: >
-       Piękne tkaniny dopasowane do wystroju pomieszczenia będą tworzyć spójną i stylową aranżację wnętrz. Bardzo często wykorzystujemy zasłony do dekoracji okien. Nadają one pomieszczeniu wyjątkowego charakteru. 
+       Schöne Stoffe, die auf das Innendesign abgestimmt sind, sorgen für ein stimmiges und stilvolles Innendesign. Wir verwenden oft Vorhänge, um Fenster zu dekorieren. Sie verleihen dem Raum einen einzigartigen Charakter. 
     - image: /img/rzymskie.png
-      title: Rolety rzymskie
+      title: Raffrollos
       text: >
-        Są połączeniem funkcjonalności z dekoracyjnym wyglądem. Uwielbiamy wykorzystywać rolety rzymskie do projektowania wystroju okien, ponieważ osłaniają przed słońcem (niczym tradycyjne rolety) oraz wyglądają niezwykle efektownie.
+        Sie sind eine Kombination aus Funktionalität und dekorativem Aussehen. Wir lieben es, Raffrollos für die Gestaltung von Fensterdekorationen zu verwenden, da diese (genau wie herkömmliche Jalousien) vor der Sonne schützen und äußerst effektiv aussehen.
     - image: /img/rolety.png
-      title: Rolety
+      title: Jalousie
       text: >
-        Wciąż bardzo chętnie wybierane do dekoracji okien. Pasują zarówno do nowoczesnych jak i klasycznych wnętrz. Rolety są niezwykle funkcjonalne, a ich odpowiedni dobór będzie subtelnym uzupełnieniem aranżacji wnętrza.
-  heading: Szyjemy na miarę
+        Immer noch sehr beliebt für die Fensterdekoration. Sie passen sowohl in moderne als auch in klassische Innenräume. Rollläden sind äußerst funktional und ihre geeignete Auswahl wird eine subtile Ergänzung der Inneneinrichtung sein.
+  heading: Wir nähen nach Maß
   description: >-
-    Trzymamy fason i podpowiadamy jak dobra odpowiednie firany czy zasłony do domu lub mieszkania. Dysponujemy paletami wzorów i kolorów
-    Wszystko wykonujemy ręcznie w naszej firmie i z najwyższej klasy materiałów. Dowiedz się co możemy dla Ciebie uszyć.
+    Wir behalten den Stil bei und beraten über die richtigen Vorhänge oder Vorhänge für das Haus oder die Wohnung. Wir haben eine Palette von Mustern und Farben
+    Wir machen alles von Hand in unserem Unternehmen und aus den hochwertigsten Materialien. Finden Sie heraus, was wir für Sie nähen können.
 main:
   heading: Great coffee with no compromises
   description: >
@@ -87,18 +86,18 @@ pricing:
       plan: Custom
       price: '??'
 services_steps:
-  title: Jak pracujemy?
+  title: Wie arbeiten wir?
   steps:
-    - title: Planujemy i projektujemy
-      description: Na tym etapie poznajemy Twoje oczekiwania, upodobania i ewentualne pomysły na wystrój okna. Bierzemy te informacje pod uwagę tworząc koncepcję na aranżację okienną. Na tym etapie dokonujemy również pomiarów pomieszczenia.
+    - title: Wir planen und gestalten
+      description: In dieser Phase lernen wir Ihre Erwartungen, Vorlieben und möglichen Ideen für die Fensterdekoration kennen. Diese Informationen berücksichtigen wir bei der Erstellung eines Konzepts für eine Fensteranordnung. In dieser Phase messen wir auch den Raum.
       image: /img/design.svg
-    - title: Wybieramy materiały
-      description: Dobieramy materiały, które najlepiej oddadzą charakter Twoich wnętrz. Posiadamy firany, zasłony, rolety rzymskie, żaluzje oraz wiele innych możliwości na udekorowanie okna. Wybieramy również kolory i wzory. Kalkulujemy koszty projektu oraz przystępujemy do jego realizacji po zaakceptowaniu koncepcji.
+    - title: Wir wählen Materialien aus
+      description: Wir wählen Materialien aus, die die Art Ihres Interieurs am besten widerspiegeln. Wir haben Vorhänge, Vorhänge, Raffrollos, Jalousien und viele andere Möglichkeiten, das Fenster zu dekorieren. Wir wählen auch Farben und Muster. Wir berechnen die Kosten des Projekts und fahren mit der Umsetzung fort, nachdem wir das Konzept akzeptiert haben.
       image: /img/material.svg
-    - title: Kroimy i szyjemy
-      description: Na tym etapie szyjemy, modelujemy wybrane materiały, które będą składać się na wystrój Twoich okien. Tworzymy oraz docinamy materiały idealnie na wymiar. Realizacja usługi trwa 2-6 tygodni.
+    - title: Wir schneiden und nähen
+      description: In dieser Phase nähen und modellieren wir ausgewählte Materialien, die das Dekor Ihrer Fenster bilden. Wir kreieren und schneiden Materialien perfekt zu. Der Service dauert 2-6 Wochen.
       image: /img/needle.svg
-    - title: Montujemy
-      description: Kiedy wszystko jest gotowe, przystępujemy do montażu dekoracji okna. Zakładamy materiały, modelujemy, a Ty cieszysz się wyjątkowym wystrojem swoich wnętrz.
+    - title: Wir montieren
+      description: Wenn alles fertig ist, fahren wir mit der Installation der Fensterdekorationen fort. Wir legen Materialien an, modellieren sie und Sie genießen das einzigartige Design Ihrer Innenräume.
       image: /img/curtains.svg
 ---

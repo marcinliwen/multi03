@@ -1,7 +1,8 @@
 ---
 templateKey: blog-post
 title: Zasłony
-path: /realizacje/post6
+path: /realizacje/zaslony-ciemne
+lang: pl
 date: 2014-12-17T15:04:10.000Z
 featuredpost: false
 featuredimage: /img/portfolio-4.png

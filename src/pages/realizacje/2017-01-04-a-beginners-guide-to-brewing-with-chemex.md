@@ -1,7 +1,8 @@
 ---
 templateKey: blog-post
 title: Firany
-path: /realizacje/post2
+path: /realizacje/firany
+lang: pl
 date: 2017-01-04T15:04:10.000Z
 featuredpost: false
 featuredimage: /img/portfolio-2.png

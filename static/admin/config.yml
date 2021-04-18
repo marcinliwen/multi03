@@ -81,7 +81,6 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-page"}
           - {label: Title, name: title, widget: string}
-          - {label: Image, name: image, widget: image}
           - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, summary: '{{fields.title}}', fields: [{label: Image, name: image, widget: image},{label: Title, name: title, widget: text}, {label: Text, name: text, widget: text}]}]}
           - {label: Services steps, name: services_steps, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Steps, name: steps, widget: list, fields: [{label: Title, name: title, widget: string}, {labet: Description, name: description, widget: string}, {label: Ikon, name: image, widget: image}]}]}
       - file: "src/pages/products/de.md"
@@ -90,7 +89,6 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-page"}
           - {label: Title, name: title, widget: string}
-          - {label: Image, name: image, widget: image}
           - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, summary: '{{fields.title}}', fields: [{label: Image, name: image, widget: image},{label: Title, name: title, widget: text}, {label: Text, name: text, widget: text}]}]}
           - {label: Services steps, name: services_steps, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Steps, name: steps, widget: list, fields: [{label: Title, name: title, widget: string}, {labet: Description, name: description, widget: string}, {label: Ikon, name: image, widget: image}]}]}
       - file: "src/pages/contact/pl.md"

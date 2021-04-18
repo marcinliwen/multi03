@@ -24,23 +24,22 @@ mainpitch:
 intro:
   blurbs:
     - image: /img/firany.png
-      title: Firany
+      title: Gardinen
       text: >
-       Firany nigdy nie wychodzą z mody. Są najczęściej wybieranym produktem do 
-       dekoracji okien w naszym salonie. Dobieramy najlepsze rodzaje firanek 
-       pasujące do Twojego wnętrza.
+       Gardinen kommen nie aus der Mode. Sie sind das am häufigsten ausgewählte Produkt für die Fensterdekoration in unserem Ausstellungsraum. 
+       Wir wählen die besten Arten von Gardinen aus, die zu Ihrem Interieur passen.
     - image: /img/zaslony.png
-      title: Zasłony
+      title: Vorhänge
       text: >
-       Piękne tkaniny dopasowane do wystroju pomieszczenia będą tworzyć spójną i stylową aranżację wnętrz. Bardzo często wykorzystujemy zasłony do dekoracji okien. Nadają one pomieszczeniu wyjątkowego charakteru. 
+       Schöne Stoffe, die auf das Innendesign abgestimmt sind, sorgen für ein stimmiges und stilvolles Innendesign. Wir verwenden oft Vorhänge, um Fenster zu dekorieren. Sie verleihen dem Raum einen einzigartigen Charakter. 
     - image: /img/rzymskie.png
-      title: Rolety rzymskie
+      title: Raffrollos
       text: >
-        Są połączeniem funkcjonalności z dekoracyjnym wyglądem. Uwielbiamy wykorzystywać rolety rzymskie do projektowania wystroju okien, ponieważ osłaniają przed słońcem (niczym tradycyjne rolety) oraz wyglądają niezwykle efektownie.
+        Sie sind eine Kombination aus Funktionalität und dekorativem Aussehen. Wir lieben es, Raffrollos für die Gestaltung von Fensterdekorationen zu verwenden, da diese (genau wie herkömmliche Jalousien) vor der Sonne schützen und äußerst effektiv aussehen.
     - image: /img/rolety.png
-      title: Rolety
+      title: Jalousie
       text: >
-        Wciąż bardzo chętnie wybierane do dekoracji okien. Pasują zarówno do nowoczesnych jak i klasycznych wnętrz. Rolety są niezwykle funkcjonalne, a ich odpowiedni dobór będzie subtelnym uzupełnieniem aranżacji wnętrza.
+        Immer noch sehr beliebt für die Fensterdekoration. Sie passen sowohl in moderne als auch in klassische Innenräume. Rollläden sind äußerst funktional und ihre geeignete Auswahl wird eine subtile Ergänzung der Inneneinrichtung sein.
   title: Unsere Dienstleistungen
   description: >
     Bei Kaja - Windows Decoration Studio ist jedes Projekt eine andere Geschichte. Jedes Haus verdient eine einzigartige Fensterdekoration, die die Bewohner zufriedenstellt und ihre Erwartungen erfüllt.
@@ -63,12 +62,12 @@ main:
     alt: Coffee beans
     image: /img/products-grid1.jpg
 counter:
-  - title: Lat doświadczenia
+  - title: Jahrelange Erfahrung
     number: 20
-  - title: Zadowolonych klientów
-    number: 320
-  - title: Uszytych metrów firan
-    number: 1300
+  - title: Zufriedene Kunden
+    number: 1320
+  - title: Meterlange Vorhänge genäht
+    number: 2300
 brands:
   title: Unsere Partner
   brands_img:
