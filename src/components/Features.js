@@ -6,11 +6,11 @@ import { InView } from 'react-intersection-observer';
 
 
 
-const FeatureGrid = ({ gridItems }) =>{ 
+const FeatureGrid = ({ gridItems, className}) =>{ 
   const [inView, setInView] = React.useState(false)
   
   return (
-  <div className="services-container">
+  <div className={`services-container ${className ? className : ""}`}>
     <div className="services">
       <Fade  triggerOnce  className="services-item" cascade childClassName="services-wrap"  damping={0.3}>
       {gridItems.map((item, index) => (

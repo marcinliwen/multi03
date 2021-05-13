@@ -65,7 +65,7 @@ export const ProductPageTemplate = ({
               <p>{intro.description}</p>
             </div>
           </div>
-          <Features gridItems={intro.blurbs} />
+          <Features gridItems={intro.blurbs} className="uslugi"/>
         </div>
       </div>
     </section>
