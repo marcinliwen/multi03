@@ -6,10 +6,11 @@ import logo from '../img/logo.svg'
 import LanguageSelect from './LanguageSelect'
 import { useIntl, Link, FormattedMessage } from 'gatsby-plugin-intl'
 import { Fade } from "react-awesome-reveal";
+import { graphql, StaticQuery } from 'gatsby'
 
 
 
-const Navbar = () => {
+const Navbar = (props) => {
   const [menu, setMenu] = useState(false)
   const toggleHamburger = () => {
     setMenu(!menu)
@@ -25,7 +26,8 @@ const Navbar = () => {
       document.querySelector('html').classList.remove('menu-open')
     }
   })
-  const phone_number = '+48 664 478 788'
+
+  const phone_number = props.data.allMarkdownRemark.edges[0].node.frontmatter.contact.telefon1;
 
   //dodawanie klasy do menu gdy scroll ponizej wysokości ekranu
  
@@ -94,20 +96,24 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+//export default Navbar
 
-export const getNumberQuery = graphql`
-  query {
-    allMarkdownRemark(filter: { frontmatter: { path: { eq: "/kontakt" } } }) {
-      edges {
-        node {
-          frontmatter {
-            contact {
-              telefon1
+export default () => (
+  <StaticQuery
+    query={graphql`
+    query {
+      allMarkdownRemark(filter: { frontmatter: { path: { eq: "/kontakt" } } }) {
+        edges {
+          node {
+            frontmatter {
+              contact {
+                telefon1
+              }
             }
           }
         }
       }
     }
-  }
-`
+  `}render={(data) => <Navbar data={data} />}
+  />
+)
