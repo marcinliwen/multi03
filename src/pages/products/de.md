@@ -85,19 +85,4 @@ pricing:
         - Unlimited varieties
       plan: Custom
       price: '??'
-services_steps:
-  title: Wie arbeiten wir?
-  steps:
-    - title: Wir planen und gestalten
-      description: In dieser Phase lernen wir Ihre Erwartungen, Vorlieben und möglichen Ideen für die Fensterdekoration kennen. Diese Informationen berücksichtigen wir bei der Erstellung eines Konzepts für eine Fensteranordnung. In dieser Phase messen wir auch den Raum.
-      image: /img/design.svg
-    - title: Wir wählen Materialien aus
-      description: Wir wählen Materialien aus, die die Art Ihres Interieurs am besten widerspiegeln. Wir haben Vorhänge, Vorhänge, Raffrollos, Jalousien und viele andere Möglichkeiten, das Fenster zu dekorieren. Wir wählen auch Farben und Muster. Wir berechnen die Kosten des Projekts und fahren mit der Umsetzung fort, nachdem wir das Konzept akzeptiert haben.
-      image: /img/material.svg
-    - title: Wir schneiden und nähen
-      description: In dieser Phase nähen und modellieren wir ausgewählte Materialien, die das Dekor Ihrer Fenster bilden. Wir kreieren und schneiden Materialien perfekt zu. Der Service dauert 2-6 Wochen.
-      image: /img/needle.svg
-    - title: Wir montieren
-      description: Wenn alles fertig ist, fahren wir mit der Installation der Fensterdekorationen fort. Wir legen Materialien an, modellieren sie und Sie genießen das einzigartige Design Ihrer Innenräume.
-      image: /img/curtains.svg
 ---

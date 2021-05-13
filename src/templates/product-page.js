@@ -51,8 +51,7 @@ export const ProductPageTemplate = ({
   main,
   testimonials,
   //fullImage,
-  pricing,
-  services_steps
+  pricing
 }) => {
 
   return(
@@ -69,28 +68,6 @@ export const ProductPageTemplate = ({
           <Features gridItems={intro.blurbs} />
         </div>
       </div>
-    </section>
-    <section className="section is-medium">
-      <div className="container">
-        <div className="steps-container">
-              <div className="content">
-                <h3>{services_steps.title}</h3>
-              </div>
-              {services_steps.steps && services_steps.steps.map((item, index)=>(
-                <div className="columns steps-item" key={index}>
-                <div className="column is-2 has-text-centered-touch ">
-                 <div className="icon-bg"> 
-                  <PreviewCompatibleSVG imageInfo={item} size={96}/>
-                 </div>
-                </div>
-                <div className="column is-10">
-                  <h4>{index + 1}. {item.title}</h4>
-                  <p>{item.description}</p>                 
-                </div>
-              </div>
-              ))}
-          </div>
-        </div>
     </section>
            
           {/*<div className="columns">
@@ -199,7 +176,6 @@ const ProductPage = ({ data }) => {
         testimonials={frontmatter.testimonials}
         //fullImage={frontmatter.full_image}
         pricing={frontmatter.pricing}
-        services_steps={frontmatter.services_steps}
       />
       <Tocontactform />
     </Layout>
@@ -295,22 +271,6 @@ export const productPageQuery = graphql`
             items
             plan
             price
-          }
-        }
-        services_steps{
-          title
-          steps{
-            title
-            description
-            image{
-              childImageSharp {
-                fluid(maxWidth: 96, quality: 92) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-              extension
-              publicURL
-            }
           }
         }
       }

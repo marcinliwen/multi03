@@ -12,8 +12,7 @@ const ProductPagePreview = ({ entry, getAsset }) => {
   const entryPricingPlans = entry.getIn(['data', 'pricing', 'plans'])
   const pricingPlans = entryPricingPlans ? entryPricingPlans.toJS() : []
 
-  const entryServicesSteps = entry.getIn(['data', 'services_steps', 'steps'])
-  const servicesSteps = entryServicesSteps ? entryServicesSteps.toJS() : []
+  
 
   return (
     <ProductPageTemplate
@@ -49,10 +48,7 @@ const ProductPagePreview = ({ entry, getAsset }) => {
         description: entry.getIn(['data', 'pricing', 'description']),
         plans: pricingPlans,
       }}
-      services_steps={{
-        title: entry.getIn(['data', 'services_steps', 'title' ]),
-        steps: servicesSteps
-      }}
+      
     />
   )
 }

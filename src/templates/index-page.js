@@ -36,7 +36,8 @@ export const IndexPageTemplate = ({
   brands,
   counter,
   home_btn,
-  location
+  location,
+  services_steps
 }) => {
   const height = use100vh()
   console.log(location)
@@ -175,7 +176,7 @@ export const IndexPageTemplate = ({
         </div>
       </div>
     </section>            
-    <section className="section is-medium counter">
+    <section className="section is-medium counter bg-primary">
       <div className="container">
         
         <InView  delay={300} triggerOnce	>
@@ -193,6 +194,39 @@ export const IndexPageTemplate = ({
         </InView>
           
       </div>
+    </section>
+    <section className="section is-medium steps">
+      <div className="container">
+        <div className="steps-container">
+              <div className="content">
+                <Fade  triggerOnce  direction="up" >
+                  <h3>{services_steps.title}</h3>
+                </Fade>
+              </div>
+              {services_steps.steps && services_steps.steps.map((item, index)=>(
+                <div className="columns steps-item" key={index}>
+                <div className="column is-2 has-text-centered-touch ">
+                <Fade  triggerOnce  direction="left" >
+
+                 <div className="icon-bg"> 
+                  <PreviewCompatibleSVG imageInfo={item} size={96}/>
+                 </div>
+                 </Fade>
+                </div>
+
+                <div className="column is-10">               
+                 <Fade  triggerOnce  direction="right" >
+
+
+                  <h4>{index + 1}. {item.title}</h4>
+                  <p>{item.description}</p>  
+                  </Fade>
+               
+                </div>
+              </div>
+              ))}
+          </div>
+        </div>
     </section>
     <section className="section is-medium brands bg-primary">
       <div className="container">
@@ -263,6 +297,7 @@ const IndexPage = ({ data }) => {
         brands={frontmatter.brands}
         counter={frontmatter.counter}
         home_btn={frontmatter.home_btn}
+        services_steps={frontmatter.services_steps}
       />
     </Layout>
   )
@@ -344,6 +379,22 @@ export const pageQuery = graphql`
                   ...GatsbyImageSharpFluid_noBase64
                 }
               }
+            }
+          }
+        }
+        services_steps{
+          title
+          steps{
+            title
+            description
+            image{
+              childImageSharp {
+                fluid(maxWidth: 96, quality: 92) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+              extension
+              publicURL
             }
           }
         }

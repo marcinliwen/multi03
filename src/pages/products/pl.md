@@ -86,19 +86,4 @@ pricing:
         - Unlimited varieties
       plan: Custom
       price: '??'
-services_steps:
-  title: Jak pracujemy?
-  steps:
-    - title: Planujemy i projektujemy
-      description: Na tym etapie poznajemy Twoje oczekiwania, upodobania i ewentualne pomysły na wystrój okna. Bierzemy te informacje pod uwagę tworząc koncepcję na aranżację okienną. Na tym etapie dokonujemy również pomiarów pomieszczenia.
-      image: /img/design.svg
-    - title: Wybieramy materiały
-      description: Dobieramy materiały, które najlepiej oddadzą charakter Twoich wnętrz. Posiadamy firany, zasłony, rolety rzymskie, żaluzje oraz wiele innych możliwości na udekorowanie okna. Wybieramy również kolory i wzory. Kalkulujemy koszty projektu oraz przystępujemy do jego realizacji po zaakceptowaniu koncepcji.
-      image: /img/material.svg
-    - title: Kroimy i szyjemy
-      description: Na tym etapie szyjemy, modelujemy wybrane materiały, które będą składać się na wystrój Twoich okien. Tworzymy oraz docinamy materiały idealnie na wymiar. Realizacja usługi trwa 2-6 tygodni.
-      image: /img/needle.svg
-    - title: Montujemy
-      description: Kiedy wszystko jest gotowe, przystępujemy do montażu dekoracji okna. Zakładamy materiały, modelujemy, a Ty cieszysz się wyjątkowym wystrojem swoich wnętrz.
-      image: /img/curtains.svg
 ---

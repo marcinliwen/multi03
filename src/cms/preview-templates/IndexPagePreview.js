@@ -8,6 +8,8 @@ const IndexPagePreview = ({ entry, getAsset }) => {
   const entryFeatures = entry.getIn(['data', 'features'])
   const features = entryFeatures ? entryFeatures.toJS() : []
 
+  const entryServicesSteps = entry.getIn(['data', 'services_steps', 'steps'])
+  const servicesSteps = entryServicesSteps ? entryServicesSteps.toJS() : []
   if (data) {
     return (
       <IndexPageTemplate
@@ -23,6 +25,10 @@ const IndexPagePreview = ({ entry, getAsset }) => {
         counter={data.counter}
         home_btn={data.home_btn}
         location="admin"
+        services_steps={{
+          title: entry.getIn(['data', 'services_steps', 'title' ]),
+          steps: servicesSteps
+        }}
       />
     )
   } else {
