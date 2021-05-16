@@ -25,7 +25,7 @@ const Language = () => {
                 display: `flex`,
                 justifyContent: `center`,
               }}
-              className="navbar-item"
+              className="navbar-item transition"
             >
               {languageName[language]}
             </a>

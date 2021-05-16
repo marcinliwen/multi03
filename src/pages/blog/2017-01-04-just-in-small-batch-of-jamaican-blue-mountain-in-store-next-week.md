@@ -1,7 +1,7 @@
 ---
 templateKey: 'blog-post'
 title: Żaluzje 
-path: /realizacje/zaluzje
+path: /blog/zaluzje
 lang: pl
 date: 2017-01-04T15:04:10.000Z
 featuredpost: false

@@ -1,13 +1,19 @@
 ---
 templateKey: blog-post
-title: Zasłony
-path: /realizacje/zaslony-cieplo
+title: Załony
+path: /blog/zaslony
 lang: pl
-date: 2017-12-17T15:04:10.000Z
+date: 2016-12-17T15:04:10.000Z
 featuredpost: false
-featuredimage: /img/portfolio-4.png
-subtitle: Ciepło i przytulnie
-description: The Coffee Taster’s Flavor Wheel, the official resource used by coffee tasters, has been revised for the first time this year.
+featuredimage: /img/portfolio-1.png
+imagegalery :
+  - image: /img/curtains-01.jpg
+  - image: /img/curtains-02.jpg
+  - image: /img/curtains-03.jpg
+  - image: /img/curtains-04.jpg
+  - image: /img/curtains-05.jpg
+subtitle: Przygotowaliśmy materiał i kolory
+description: Przygotowaliśmy materiał i kolory. Uszyliśmy i zawiesiliśmy firany. Pwiesiliśmy zasłony. Całość prezentuje się znakomicie.
 tags:
   - flavor
   - tasting

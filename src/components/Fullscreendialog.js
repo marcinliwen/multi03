@@ -12,23 +12,22 @@ import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import Slide from '@material-ui/core/Slide';
 import More from '../assets/more.svg'
-import Less from '../assets/less.svg'
+import Cancel from '../assets/close.svg'
 import Img from "gatsby-image"
 import Opengalery from '../assets/gallery.svg'
+import ArrowRight from '../assets/arrow-right.svg'
 
 import './gallery.css'
 import ImageGallery from 'react-image-gallery';
 
 const GaleryButton = withStyles((theme) => ({
   root: {
+    
     padding: '16px',
     '&:hover' :{
       background: 'transparent'
     },
-    '&:hover .MuiButton-label' : {
-        transform: 'scale(1.2)'
-    }
-
+    
   },
 }))(Button);
 
@@ -88,17 +87,18 @@ export default function FullScreenDialog(props) {
     return(
     {original: item.image.childImageSharp.fluid.src, thumbnail : item.image.childImageSharp.fixed.src}
   )})
-  console.log(newGalery)
+  //console.log(newGalery)
   return (
     <div>
       <GaleryButton   onClick={handleClickOpen}>
-        <Opengalery fill="#DAC596"  width="44px" height="44px" style={{verticalAlign:'bottom'}} />
+        <span style={{ color: '#D9C693',   marginRight: '25px'}}>Zobacz galerię</span>
+        <Opengalery className="galery-icon shake" fill="#DAC596"  width="44px" height="44px" style={{verticalAlign:'bottom'}} />
       </GaleryButton>
       <Dialog fullScreen open={open} onClose={handleClose} TransitionComponent={Transition} style={{background: 'rgb(45, 45, 47)'}} className={classes.allGallery}>
         
          
             <CloseButton edge="start" variant="outlined" onClick={handleClose} aria-label="close">
-              <Less fill="#fff"  width="24px" style={{verticalAlign:'bottom'}}/>
+              <Cancel fill="#fff"  width="24px" height="24px"/>
             </CloseButton>
         
            

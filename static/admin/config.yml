@@ -14,9 +14,9 @@ public_folder: /img
 locale: pl
 
 collections:
-  - name: "realizacje"
-    label: "Realizacje"
-    folder: "src/pages/realizacje"
+  - name: "blog"
+    label: "Blog"
+    folder: "src/pages/blog"
     create: true
     slug: "{{slug}}"
     fields:

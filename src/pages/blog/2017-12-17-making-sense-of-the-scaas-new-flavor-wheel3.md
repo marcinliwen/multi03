@@ -1,12 +1,12 @@
 ---
 templateKey: blog-post
-title: Firany
-path: /realizacje/firany-roslinne
+title: Zasłony
+path: /blog/zaslony-ciemne
 lang: pl
-date: 2015-12-17T15:04:10.000Z
+date: 2014-12-17T15:04:10.000Z
 featuredpost: false
 featuredimage: /img/portfolio-4.png
-subtitle: Przygotowaliśmy roślinne wzory
+subtitle: Od razu zrobiło się cieplej
 description: The Coffee Taster’s Flavor Wheel, the official resource used by coffee tasters, has been revised for the first time this year.
 tags:
   - flavor

@@ -1,19 +1,13 @@
 ---
 templateKey: blog-post
-title: Załony
-path: /realizacje/zaslony
+title: Firany
+path: /blog/firany-roslinne
 lang: pl
-date: 2016-12-17T15:04:10.000Z
+date: 2015-12-17T15:04:10.000Z
 featuredpost: false
-featuredimage: /img/portfolio-1.png
-imagegalery :
-  - image: /img/curtains-01.jpg
-  - image: /img/curtains-02.jpg
-  - image: /img/curtains-03.jpg
-  - image: /img/curtains-04.jpg
-  - image: /img/curtains-05.jpg
-subtitle: Przygotowaliśmy materiał i kolory
-description: Przygotowaliśmy materiał i kolory. Uszyliśmy i zawiesiliśmy firany. Pwiesiliśmy zasłony. Całość prezentuje się znakomicie.
+featuredimage: /img/portfolio-4.png
+subtitle: Przygotowaliśmy roślinne wzory
+description: The Coffee Taster’s Flavor Wheel, the official resource used by coffee tasters, has been revised for the first time this year.
 tags:
   - flavor
   - tasting

@@ -16,6 +16,7 @@ import PreviewCompatibleSVG from '../components/PreviewCompatibleSVG'
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
+import RealizaceHome from '../components/RealizacjeHome'
 
 import Brand1 from '../assets/brand-1.svg'
 import Brand2 from '../assets/brand-2.svg'
@@ -165,12 +166,7 @@ export const IndexPageTemplate = ({
                 Ostatnie realizacje
               </h3>
               </Fade>
-              <BlogRoll />
-              {/*<div className="column is-12 has-text-centered">
-                <Link className="btn second" to="/blog">
-                  Zobacz więcej
-                </Link>
-        </div>*/}
+              <RealizaceHome />
             </div>
           </div>
         </div>
@@ -206,8 +202,7 @@ export const IndexPageTemplate = ({
               {services_steps.steps && services_steps.steps.map((item, index)=>(
                 <div className="columns steps-item" key={index}>
                 <div className="column is-2 has-text-centered-touch ">
-                <Fade  triggerOnce  direction="left" >
-
+                <Fade  triggerOnce >
                  <div className="icon-bg"> 
                   <PreviewCompatibleSVG imageInfo={item} size={96}/>
                  </div>

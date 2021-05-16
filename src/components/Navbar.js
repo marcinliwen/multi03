@@ -69,24 +69,24 @@ const Navbar = (props) => {
         </div>
         <div id="navMenu" className={`navbar-menu ${menu ? 'is-active' : ''}`}>
           <div className="navbar-start has-text-centered">
-            <Link className="navbar-item" to="/">
+            <Link className="navbar-item transition" to="/">
               Home
             </Link>
-            <Link className="navbar-item" to="/o-nas">
+            <Link className="navbar-item transition" to="/o-nas">
               {intl.formatMessage({ id: "about" })}            
             </Link>
-            <Link className="navbar-item" to="/uslugi">
+            <Link className="navbar-item transition" to="/uslugi">
             {intl.formatMessage({ id: "services" })} 
             </Link>
-            <Link className="navbar-item" to="/realizacje">
+            <Link className="navbar-item transition" to="/realizacje">
             {intl.formatMessage({ id: "realisations" })} 
             </Link>
-            <Link className="navbar-item" to="/kontakt">
+            <Link className="navbar-item transition" to="/kontakt">
             {intl.formatMessage({ id: "contact" })} 
             </Link>
           </div>
           <div className="navbar-end has-text-centered">
-            <a className="navbar-item">{phone_number}</a>
+            <a className="navbar-item transition">{phone_number}</a>
           </div>
           <LanguageSelect />
         </div>

@@ -31,11 +31,12 @@ exports.createPages = ({ actions, graphql }) => {
     }
 
     const posts = result.data.allMarkdownRemark.edges
-
     posts.forEach((edge) => {
+      console.log(edge.node.frontmatter.path);
+
       const id = edge.node.id
       createPage({
-        path: edge.node.frontmatter.path,
+        path: `${edge.node.frontmatter.path}`,
         tags: edge.node.frontmatter.tags,
         component: path.resolve(
           `src/templates/${String(edge.node.frontmatter.templateKey)}.js`

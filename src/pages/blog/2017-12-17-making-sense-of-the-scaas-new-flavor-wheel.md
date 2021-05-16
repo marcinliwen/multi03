@@ -1,12 +1,12 @@
 ---
 templateKey: blog-post
 title: Zasłony
-path: /realizacje/zaslony-ciemne
+path: /blog/zaslony-cieplo
 lang: pl
-date: 2014-12-17T15:04:10.000Z
+date: 2017-12-17T15:04:10.000Z
 featuredpost: false
 featuredimage: /img/portfolio-4.png
-subtitle: Od razu zrobiło się cieplej
+subtitle: Ciepło i przytulnie
 description: The Coffee Taster’s Flavor Wheel, the official resource used by coffee tasters, has been revised for the first time this year.
 tags:
   - flavor
